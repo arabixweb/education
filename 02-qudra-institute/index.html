@@ -1,436 +1,199 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-lang="ar">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>معهد قدرة | Qudra Institute</title>
-<meta name="description" content="معهد قدرة للتدريب التقني والمهني — دورات احترافية في البرمجة، التصميم، والأمن السيبراني.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+<html data-lang="ar" dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>معهد قدرة | Qudra Institute</title>
+<meta content="معهد قدرة للتدريب التقني والمهني — دورات احترافية في البرمجة، التصميم، والأمن السيبراني." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&amp;family=Tajawal:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="style.css?v=qu02" rel="stylesheet"/>
+</head>
+<body><div id="loading"><div class="loader"></div></div>
 <!-- Navbar -->
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 60 60" width="44" height="44">
-        <rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="2"/>
-        <path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.8"/>
-        <text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text>
-      </svg>
-      <span class="logo-text">معهد <strong>قدرة</strong></span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="active">الرئيسية</a>
-      <a href="about.html">عن المعهد</a>
-      <a href="courses.html">الدورات</a>
-      <a href="contact.html">اتصل بنا</a>
-    </div>
-    <div class="nav-controls">
-      <button id="langToggle" class="lang-btn">EN</button>
-      <button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button>
-    </div>
-  </div>
+<div class="nav-container">
+<a class="nav-logo" href="index.html">
+<svg height="44" viewbox="0 0 60 60" width="44">
+<rect fill="#1a2a4a" height="56" rx="12" stroke="#00d4ff" stroke-width="2" width="56" x="2" y="2"></rect>
+<path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.8"></path>
+<text fill="#00d4ff" font-family="Tajawal,sans-serif" font-size="20" font-weight="bold" text-anchor="middle" x="30" y="44">ق</text>
+</svg>
+<span class="logo-text">معهد <strong>قدرة</strong></span>
+</a>
+<div class="nav-links" id="navLinks">
+<a class="active" href="index.html">الرئيسية</a>
+<a href="about.html">عن المعهد</a>
+<a href="courses.html">الدورات</a>
+<a href="contact.html">اتصل بنا</a>
+</div>
+<div class="nav-controls">
+<button class="lang-btn" id="langToggle">EN</button>
+<button class="menu-btn" id="menuToggle"><span></span><span></span><span></span></button>
+</div>
+</div>
 </nav>
-
 <!-- Hero modern split -->
 <section class="hero">
-  <div class="hero-shape"></div>
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <div class="hero-tag"><i class="fas fa-bolt"></i> تدريب تقني احترافي</div>
-      <h1>ابنِ <span class="blue-glow">قدرتك</span><br>واصنع مستقبلك</h1>
-      <p>شهادات معتمدة وتوظيف مباشر.</p>
-      <div class="hero-cta">
-        <a href="courses.html" class="btn btn-primary">استعرض الدورات <i class="fas fa-arrow-left"></i></a>
-        <a href="about.html" class="btn btn-outline">تعرف علينا <i class="fas fa-info-circle"></i></a>
-      </div>
-      <div class="hero-stats">
-        <div><span class="stat-num" data-target="50">0</span><span class="stat-label">+ دورة</span></div>
-        <div><span class="stat-num" data-target="5000">0</span><span class="stat-label">متدرب</span></div>
-        <div><span class="stat-num" data-target="92">0</span><span class="stat-label">% توظيف</span></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="code-card">
-        <div class="code-dots"><span></span><span></span><span></span></div>
-        <pre><span class="kw">const</span> <span class="fn">qudra</span> = {<br>  name: <span class="str">"معهد قدرة"</span>,<br>  mission: <span class="str">"تمكين الشباب"</span>,<br>  <span class="cm">// since 2018</span><br>  graduates: <span class="num">5000</span>+<br>};<br><span class="fn">console</span>.<span class="fn">log</span>(qudra);</pre>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-indicator"><span></span></div>
+<div class="hero-shape"></div>
+<div class="container hero-grid">
+<div class="hero-text reveal">
+<div class="hero-tag"><i class="fas fa-bolt"></i> تدريب تقني احترافي</div>
+<h1>ابنِ <span class="blue-glow">قدرتك</span><br/>واصنع مستقبلك</h1>
+<p>شهادات معتمدة وتوظيف مباشر.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="courses.html">استعرض الدورات <i class="fas fa-arrow-left"></i></a>
+<a class="btn btn-outline" href="about.html">تعرف علينا <i class="fas fa-info-circle"></i></a>
+</div>
+<div class="hero-stats">
+<div><span class="stat-num" data-target="50">0</span><span class="stat-label">+ دورة</span></div>
+<div><span class="stat-num" data-target="5000">0</span><span class="stat-label">متدرب</span></div>
+<div><span class="stat-num" data-target="92">0</span><span class="stat-label">% توظيف</span></div>
+</div>
+</div>
+<div class="hero-visual reveal">
+<div class="code-card reveal">
+<div class="code-dots"><span></span><span></span><span></span></div>
+<pre><span class="kw">const</span> <span class="fn">qudra</span> = {<br/>  name: <span class="str">"معهد قدرة"</span>,<br/>  mission: <span class="str">"تمكين الشباب"</span>,<br/>  <span class="cm">// since 2018</span><br/>  graduates: <span class="num">5000</span>+<br/>};<br/><span class="fn">console</span>.<span class="fn">log</span>(qudra);</pre>
+</div>
+</div>
+</div>
+<div class="scroll-indicator"><span></span></div>
 </section>
-
 <!-- Partners -->
 <section class="sec" style="padding:30px 0;background:var(--bg-card)">
-  <div class="container" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;opacity:.4">
-    <span style="font-size:1.2rem;font-weight:700">شركاؤنا:</span>
-    <i class="fab fa-microsoft" style="font-size:2rem"></i>
-    <i class="fab fa-google" style="font-size:2rem"></i>
-    <i class="fab fa-amazon" style="font-size:2rem"></i>
-    <i class="fab fa-apple" style="font-size:2rem"></i>
-    <i class="fab fa-meta" style="font-size:2rem"></i>
-  </div>
+<div class="container" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;opacity:.4">
+<span style="font-size:1.2rem;font-weight:700">شركاؤنا:</span>
+<i class="fab fa-microsoft" style="font-size:2rem"></i>
+<i class="fab fa-google" style="font-size:2rem"></i>
+<i class="fab fa-amazon" style="font-size:2rem"></i>
+<i class="fab fa-apple" style="font-size:2rem"></i>
+<i class="fab fa-meta" style="font-size:2rem"></i>
+</div>
 </section>
-
 <!-- Features -->
 <section class="sec">
-  <div class="container">
-    <div class="sec-head">
-      <h2>لماذا <span class="blue">قدرة</span>؟</h2>
-      <p>تدريب عملي، مدربون خبراء، ونتائج ملموسة</p>
-    </div>
-    <div class="features-grid">
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-laptop-code"></i></div>
-        <h3>منهج عملي</h3>
-        <p>٨٠٪ من وقت الدورة تطبيق عملي ومشاريع حقيقية — لا نظري فقط.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-users"></i></div>
-        <h3>مدربون خبراء</h3>
-        <p>كل مدرب لديه ٨+ سنوات خبرة في المجال مع شهادات مهنية دولية.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-certificate"></i></div>
-        <h3>شهادات معتمدة</h3>
-        <p>شهادات من المؤسسة العامة للتدريب التقني والمهني وشركاء دوليين.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-briefcase"></i></div>
-        <h3>توظيف مباشر</h3>
-        <p>شراكات مع ١٠٠+ شركة تقنية توظف خريجينا فور التخرج.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="sec-head reveal">
+<h2>لماذا <span class="blue">قدرة</span>؟</h2>
+<p>تدريب عملي، مدربون خبراء، ونتائج ملموسة</p>
+</div>
+<div class="features-grid">
+<div class="feat-card reveal">
+<div class="feat-icon"><i class="fas fa-laptop-code"></i></div>
+<h3>منهج عملي</h3>
+<p>٨٠٪ من وقت الدورة تطبيق عملي ومشاريع حقيقية — لا نظري فقط.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-icon"><i class="fas fa-users"></i></div>
+<h3>مدربون خبراء</h3>
+<p>كل مدرب لديه ٨+ سنوات خبرة في المجال مع شهادات مهنية دولية.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-icon"><i class="fas fa-certificate"></i></div>
+<h3>شهادات معتمدة</h3>
+<p>شهادات من المؤسسة العامة للتدريب التقني والمهني وشركاء دوليين.</p>
+</div>
+<div class="feat-card reveal">
+<div class="feat-icon"><i class="fas fa-briefcase"></i></div>
+<h3>توظيف مباشر</h3>
+<p>شراكات مع ١٠٠+ شركة تقنية توظف خريجينا فور التخرج.</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- Courses preview -->
 <section class="sec dark-sec">
-  <div class="container">
-    <div class="sec-head">
-      <h2>أشهر <span class="blue">الدورات</span></h2>
-      <p>اختر مسارك المهني وابدأ رحلة التعلم</p>
-    </div>
-    <div class="course-grid">
-      <a href="courses.html" class="course-card" style="--bg:#0d2137">
-        <div class="course-icon"><i class="fab fa-python"></i></div>
-        <h3>تطوير الويب</h3>
-        <p>HTML, CSS, JavaScript, React, Node.js — من الصفر إلى الاحتراف</p>
-        <span class="course-meta"><i class="far fa-clock"></i> ١٢ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ٢٠ متدرب</span>
-      </a>
-      <a href="courses.html" class="course-card" style="--bg:#1a0d30">
-        <div class="course-icon"><i class="fas fa-brain"></i></div>
-        <h3>الذكاء الاصطناعي</h3>
-        <p>Machine Learning, Deep Learning, NLP — مشاريع عملية بالبيانات الحقيقية</p>
-        <span class="course-meta"><i class="far fa-clock"></i> ١٦ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ١٥ متدرب</span>
-      </a>
-      <a href="courses.html" class="course-card" style="--bg:#1a2a1a">
-        <div class="course-icon"><i class="fas fa-shield-halved"></i></div>
-        <h3>الأمن السيبراني</h3>
-        <p>اختبار الاختراق، تحليل الثغرات، أمن الشبكات — معمل افتراضي متكامل</p>
-        <span class="course-meta"><i class="far fa-clock"></i> ٢٠ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ١٢ متدرب</span>
-      </a>
-      <a href="courses.html" class="course-card" style="--bg:#2a1a0d">
-        <div class="course-icon"><i class="fas fa-palette"></i></div>
-        <h3>التصميم الرقمي</h3>
-        <p>UX/UI, Figma, Adobe XD, تصميم تجربة المستخدم — مشاريع حقيقية</p>
-        <span class="course-meta"><i class="far fa-clock"></i> ١٠ أسابيع <span class="dot">·</span> <i class="fas fa-users"></i> ٢٠ متدرب</span>
-      </a>
-    </div>
-    <div class="text-center" style="margin-top:40px">
-      <a href="courses.html" class="btn btn-primary">جميع الدورات <i class="fas fa-arrow-left"></i></a>
-    </div>
-  </div>
+<div class="container">
+<div class="sec-head reveal">
+<h2>أشهر <span class="blue">الدورات</span></h2>
+<p>اختر مسارك المهني وابدأ رحلة التعلم</p>
+</div>
+<div class="course-grid">
+<a class="course-card reveal" href="courses.html" style="--bg:#0d2137">
+<div class="course-icon"><i class="fab fa-python"></i></div>
+<h3>تطوير الويب</h3>
+<p>HTML, CSS, JavaScript, React, Node.js — من الصفر إلى الاحتراف</p>
+<span class="course-meta"><i class="far fa-clock"></i> ١٢ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ٢٠ متدرب</span>
+</a>
+<a class="course-card reveal" href="courses.html" style="--bg:#1a0d30">
+<div class="course-icon"><i class="fas fa-brain"></i></div>
+<h3>الذكاء الاصطناعي</h3>
+<p>Machine Learning, Deep Learning, NLP — مشاريع عملية بالبيانات الحقيقية</p>
+<span class="course-meta"><i class="far fa-clock"></i> ١٦ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ١٥ متدرب</span>
+</a>
+<a class="course-card reveal" href="courses.html" style="--bg:#1a2a1a">
+<div class="course-icon"><i class="fas fa-shield-halved"></i></div>
+<h3>الأمن السيبراني</h3>
+<p>اختبار الاختراق، تحليل الثغرات، أمن الشبكات — معمل افتراضي متكامل</p>
+<span class="course-meta"><i class="far fa-clock"></i> ٢٠ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ١٢ متدرب</span>
+</a>
+<a class="course-card reveal" href="courses.html" style="--bg:#2a1a0d">
+<div class="course-icon"><i class="fas fa-palette"></i></div>
+<h3>التصميم الرقمي</h3>
+<p>UX/UI, Figma, Adobe XD, تصميم تجربة المستخدم — مشاريع حقيقية</p>
+<span class="course-meta"><i class="far fa-clock"></i> ١٠ أسابيع <span class="dot">·</span> <i class="fas fa-users"></i> ٢٠ متدرب</span>
+</a>
+</div>
+<div class="text-center" style="margin-top:40px">
+<a class="btn btn-primary" href="courses.html">جميع الدورات <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
 </section>
-
 <!-- Testimonials -->
 <section class="sec">
-  <div class="container">
-    <div class="sec-head"><h2>ماذا قال <span class="blue">خريجونا</span>؟</h2></div>
-    <div class="testimonials">
-      <div class="testimonial-card">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" alt="خريج">
-        <h4>سارة العتيبي</h4>
-        <span>مطور واجهات — شركة STC</span>
-        <p>"غيرت قدرة مساري المهني بالكامل. بعد ٦ شهور من التخرج حصلت على وظيفة في أكبر شركة اتصالات."</p>
-      </div>
-      <div class="testimonial-card">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80" alt="خريج">
-        <h4>فيصل الدوسري</h4>
-        <span>مهندس أمن سيبراني — SITE</span>
-        <p>"دورة الأمن السيبراني في قدرة كانت الأفضل. المدربون خبراء والمختبرات مجهزة بأحدث التقنيات."</p>
-      </div>
-      <div class="testimonial-card">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80" alt="خريج">
-        <h4>نورة الشمري</h4>
-        <span>مصممة UX — زين</span>
-        <p>"المنهج العملي والتطبيق على مشاريع حقيقية هو ما يميز قدرة. أنصح الجميع بالتسجيل!"</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="sec-head reveal"><h2>ماذا قال <span class="blue">خريجونا</span>؟</h2></div>
+<div class="testimonials">
+<div class="testimonial-card reveal">
+<img alt="خريج" class="img-zoom" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&amp;q=80"/>
+<h4>سارة العتيبي</h4>
+<span>مطور واجهات — شركة STC</span>
+<p>"غيرت قدرة مساري المهني بالكامل. بعد ٦ شهور من التخرج حصلت على وظيفة في أكبر شركة اتصالات."</p>
+</div>
+<div class="testimonial-card reveal">
+<img alt="خريج" class="img-zoom" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&amp;q=80"/>
+<h4>فيصل الدوسري</h4>
+<span>مهندس أمن سيبراني — SITE</span>
+<p>"دورة الأمن السيبراني في قدرة كانت الأفضل. المدربون خبراء والمختبرات مجهزة بأحدث التقنيات."</p>
+</div>
+<div class="testimonial-card reveal">
+<img alt="خريج" class="img-zoom" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&amp;q=80"/>
+<h4>نورة الشمري</h4>
+<span>مصممة UX — زين</span>
+<p>"المنهج العملي والتطبيق على مشاريع حقيقية هو ما يميز قدرة. أنصح الجميع بالتسجيل!"</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- CTA -->
 <section class="sec cta-sec" style="background:linear-gradient(135deg,#0044aa,#002266);color:#fff;text-align:center">
-  <div class="container">
-    <h2 style="font-size:2rem;margin-bottom:16px">جاهز تبدأ رحلة قدرة؟</h2>
-    <p style="color:rgba(255,255,255,.7);margin-bottom:28px">سجل الآن واستفد من خصم ٢٠٪ على أول دورة</p>
-    <a href="contact.html" class="btn btn-primary btn-lg" style="background:#fff;color:#0044aa">سجل الآن <i class="fas fa-paper-plane"></i></a>
-  </div>
+<div class="container">
+<h2 style="font-size:2rem;margin-bottom:16px">جاهز تبدأ رحلة قدرة؟</h2>
+<p style="color:rgba(255,255,255,.7);margin-bottom:28px">سجل الآن واستفد من خصم ٢٠٪ على أول دورة</p>
+<a class="btn btn-primary btn-lg" href="contact.html" style="background:#fff;color:#0044aa">سجل الآن <i class="fas fa-paper-plane"></i></a>
+</div>
 </section>
-
 <footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-col">
-      <div class="nav-logo" style="margin-bottom:14px">
-        <svg viewBox="0 0 60 60" width="40" height="40"><rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="1.5"/><path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.5"/><text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text></svg>
-        <span class="logo-text" style="font-size:1rem">معهد <strong>قدرة</strong></span>
-      </div>
-      <p>معهد التدريب التقني الرائد في المملكة — منذ 2018.</p>
-      <div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-snapchat"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
-    </div>
-    <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a><a href="#">المدونة</a></div>
-    <div class="footer-col"><h4>الدورات</h4><a href="courses.html">تطوير الويب</a><a href="courses.html">الذكاء الاصطناعي</a><a href="courses.html">الأمن السيبراني</a><a href="courses.html">التصميم الرقمي</a></div>
-    <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي المروج</p><p><i class="fas fa-phone"></i> 920022334</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p><p><i class="fas fa-clock"></i> ٨:٠٠ ص — ١٠:٠٠ م</p></div>
-  </div>
-  <div class="footer-bottom"><p>معهد قدرة — جميع الحقوق محفوظة.</p></div>
+<div class="container footer-grid">
+<div class="footer-col">
+<div class="nav-logo" style="margin-bottom:14px">
+<svg height="40" viewbox="0 0 60 60" width="40"><rect fill="#1a2a4a" height="56" rx="12" stroke="#00d4ff" stroke-width="1.5" width="56" x="2" y="2"></rect><path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.5"></path><text fill="#00d4ff" font-family="Tajawal,sans-serif" font-size="20" font-weight="bold" text-anchor="middle" x="30" y="44">ق</text></svg>
+<span class="logo-text" style="font-size:1rem">معهد <strong>قدرة</strong></span>
+</div>
+<p>معهد التدريب التقني الرائد في المملكة — منذ 2018.</p>
+<div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-snapchat"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+</div>
+<div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a><a href="#">المدونة</a></div>
+<div class="footer-col"><h4>الدورات</h4><a href="courses.html">تطوير الويب</a><a href="courses.html">الذكاء الاصطناعي</a><a href="courses.html">الأمن السيبراني</a><a href="courses.html">التصميم الرقمي</a></div>
+<div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي المروج</p><p><i class="fas fa-phone"></i> 920022334</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p><p><i class="fas fa-clock"></i> ٨:٠٠ ص — ١٠:٠٠ م</p></div>
+</div>
+<div class="footer-bottom"><p>معهد قدرة — جميع الحقوق محفوظة.</p></div><div class="footer-dev"><span class="en-text">Developed by </span><span class="ar-text">تم التطوير بواسطة </span><a class="dev-logo" href="https://arabixweb.com" rel="noopener" target="_blank"><img alt="arabixweb" class="dev-logo-img" src="../assets/arabix-logo.png"/><span class="dev-fallback">arabixweb.com</span></a></div>
 </footer>
-
 <script>window.__i18n={"ar": {"site_name": "معهد قدرة", "site_tagline": "قدراتك .. مستقبلك", "nav_home": "الرئيسية", "nav_about": "عن المعهد", "nav_courses": "الدورات", "nav_contact": "اتصل بنا", "lang_btn": "EN", "lang_btn_alt": "عربي", "hero_tag": "تدريب احترافي — نتائج ملموسة", "hero_title": "طوّر <strong>قدراتك</strong><br>وابنِ <span class='blue-accent'>مستقبلك</span>", "hero_desc": "معهد قدرة — وجهتك للتدريب الاحترافي في التقنية والإدارة. أكثر من ١٠٠ دورة تدريبية معتمدة، مدربون خبراء، وشهادات معترف بها في سوق العمل.", "hero_cta_primary": "تصفح الدورات", "hero_cta_secondary": "عن المعهد", "hero_stat1": "دورة تدريبية", "hero_stat2": "متدرب", "hero_stat3": "شهادة معتمدة", "sec_why_title": "وش <span class='blue-accent'>يميزنا</span>؟", "sec_why_desc": "أكثر من ١٠ سنوات في التدريب الاحترافي", "feat1_title": "مدربون خبراء", "feat1_desc": "ممارسون في المجال — ليسوا مجرد أكاديميين — يشاركونكم تجاربهم الواقعية.", "feat2_title": "شهادات احترافية", "feat2_desc": "شهادات معتمدة من الجهات الرسمية — أضفها لسيرتك الذاتية وارفع فرصك الوظيفية.", "feat3_title": "تدريب عملي", "feat3_desc": "مشاريع تطبيقية، ورش عمل، محاكاة واقعية — تتعلم بالممارسة لا بالتنظير.", "feat4_title": "مواعيد مرنة", "feat4_desc": "مسائي وصباحي — حضور فعلي أو عن بُعد — اختر ما يناسب جدولك.", "hero_accent1": "دورة", "hero_accent2": "متدرب", "hero_accent3": "شهادة", "page_title_about": "عن <span class='blue-accent'>معهد قدرة</span>", "about_heading": "قصتنا <span class='blue-accent'>في التدريب</span>", "about_p1": "انطلق معهد قدرة عام ٢٠١٤ كمنصة تدريب احترافي تهدف إلى سد الفجوة بين المهارات الأكاديمية ومتطلبات سوق العمل. اليوم، نحن واحد من أبرز معاهد التدريب في المملكة.", "about_p2": "نقدم أكثر من ١٠٠ دورة تدريبية في مجالات التقنية والإدارة واللغات، مع شراكات استراتيجية مع كبرى شركات التقنية مثل Microsoft وAWS وGoogle.", "about_p3": "معدل توظيف خريجينا يتجاوز ٨٥٪ خلال ٣ أشهر من إكمال البرنامج — وهذا هو مقياس نجاحنا الحقيقي.", "about_stat1_label": "متخرج", "about_stat2_label": "نسبة توظيف", "about_stat3_label": "شريك استراتيجي", "page_title_courses": "دوراتنا <span class='blue-accent'>التدريبية</span>", "courses_intro": "اختر مسارك المهني — أكثر من ١٠٠ دورة في مختلف المجالات", "course1_title": "إدارة المشاريع الاحترافية PMP", "course1_desc": "تحضير كامل لشهادة PMP مع مشروع تطبيقي — ٤ أسابيع مكثفة.", "course1_meta": "٤ أسابيع · حضوري + عن بُعد", "course2_title": "تحليل البيانات باستخدام Python", "course2_desc": "من الصفر إلى الاحتراف — Pandas, NumPy, Matplotlib, SQL.", "course2_meta": "٦ أسابيع · عن بُعد", "course3_title": "الأمن السيبراني للمبتدئين", "course3_desc": "أساسيات أمن المعلومات، اختبار الاختراق، شبكات — عملي بالكامل.", "course3_meta": "٨ أسابيع · حضوري", "course4_title": "الذكاء الاصطناعي التطبيقي", "course4_desc": "تعلم الآلة، الشبكات العصبية، ChatGPT API — مشاريع حقيقية.", "course4_meta": "١٠ أسابيع · عن بُعد", "course5_title": "القيادة والإدارة التنفيذية", "course5_desc": "مهارات القيادة، إدارة الفرق، اتخاذ القرارات — للمدراء والتنفيذيين.", "course5_meta": "٣ أسابيع · حضوري", "course6_title": "تطوير الويب Full-Stack", "course6_desc": "React, Node.js, MongoDB — اصنع تطبيقات ويب كاملة من البداية.", "course6_meta": "١٢ أسبوع · عن بُعد", "page_title_contact": "اتصل بنا — التسجيل في الدورات", "contact_heading": "تواصل مع <span class='blue-accent'>فريقنا</span>", "form_heading": "طلب التسجيل", "form_name": "الاسم الكامل", "form_name_ph": "أدخل اسمك", "form_email": "البريد الإلكتروني", "form_email_ph": "example@email.com", "form_phone": "رقم الجوال", "form_phone_ph": "05xxxxxxxx", "form_course": "الدورة المطلوبة", "form_course_ph": "اختر الدورة", "form_message": "استفسارك", "form_message_ph": "اكتب استفسارك هنا", "form_submit": "إرسال الطلب", "form_success": "تم إرسال طلبك! فريقنا سيتواصل معك خلال ٢٤ ساعة.", "form_course1": "إدارة المشاريع PMP", "form_course2": "تحليل البيانات Python", "form_course3": "الأمن السيبراني", "form_course4": "الذكاء الاصطناعي", "form_course5": "القيادة التنفيذية", "form_course6": "Full-Stack Web", "footer_desc": "وجهتك للتدريب الاحترافي — طور قدراتك وابنِ مستقبلك.", "footer_links": "روابط", "footer_progs": "الدورات", "footer_contact": "تواصل", "footer_course1": "إدارة المشاريع", "footer_course2": "تحليل البيانات", "footer_course3": "الأمن السيبراني", "footer_copy": "معهد قدرة — جميع الحقوق محفوظة.", "breadcrumb_home": "الرئيسية", "breadcrumb_about": "عن المعهد", "breadcrumb_courses": "الدورات", "breadcrumb_contact": "اتصل بنا", "cta_title": "مكانك يبدأ هنا", "cta_desc": "سجل في أي دورة وابدأ رحلتك المهنية", "cta_btn": "سجل الآن", "founder_quote": "نحن لا نقدم شهادات فقط — نصنع محترفين قادرين على المنافسة في سوق العمل.", "founder_name": "— أ. فهد العتيبي، المؤسس", "why1_title": "خبرة ١٠+ سنوات", "why1_desc": "في التدريب الاحترافي", "why2_title": "شهادات معتمدة", "why2_desc": "من جهات رسمية", "why3_title": "تدريب عملي", "why3_desc": "مشاريع وورش عمل", "why4_title": "دعم توظيف", "why4_desc": "شراكات مع ١٠٠+ شركة", "back_to_top": "العودة للأعلى", "contact_address": "جدة — حي الروضة", "contact_phone": "٩٢٠٠٢٢٣٤٥", "contact_email": "info@qudra.edu.sa", "contact_hours": "٩:٠٠ ص — ٩:٠٠ م (السبت — الخميس)", "contact_hours_label": "ساعات العمل", "address_label": "العنوان", "phone_label": "الهاتف", "email_label": "البريد الإلكتروني", "course_badge": "الأكثر طلباً"}, "en": {"site_name": "Qudra Institute", "site_tagline": "Your Skills .. Your Future", "nav_home": "Home", "nav_about": "About", "nav_courses": "Courses", "nav_contact": "Contact", "lang_btn": "عربي", "lang_btn_alt": "EN", "hero_tag": "Professional Training — Real Results", "hero_title": "Develop <strong>Your Skills</strong><br>Build <span class='blue-accent'>Your Future</span>", "hero_desc": "Qudra Institute — your destination for professional training in tech and management. Over 100 accredited courses, expert trainers, and certificates recognized in the job market.", "hero_cta_primary": "Browse Courses", "hero_cta_secondary": "About Institute", "hero_stat1": "Courses", "hero_stat2": "Trainees", "hero_stat3": "Certifications", "sec_why_title": "Why <span class='blue-accent'>Qudra</span>?", "sec_why_desc": "Over 10 years in professional training", "feat1_title": "Expert Trainers", "feat1_desc": "Industry practitioners — not just academics — sharing real-world experience.", "feat2_title": "Professional Certificates", "feat2_desc": "Official accredited certificates — add them to your resume and boost your career.", "feat3_title": "Hands-on Training", "feat3_desc": "Applied projects, workshops, real simulations — learn by doing, not just theory.", "feat4_title": "Flexible Schedules", "feat4_desc": "Morning and evening — in-person or remote — choose what fits your schedule.", "hero_accent1": "Courses", "hero_accent2": "Trainees", "hero_accent3": "Certificates", "page_title_about": "About <span class='blue-accent'>Qudra Institute</span>", "about_heading": "Our <span class='blue-accent'>Training Story</span>", "about_p1": "Qudra Institute launched in 2014 as a professional training platform aimed at bridging the gap between academic skills and labor market demands. Today, we are one of the leading training institutes in the Kingdom.", "about_p2": "We offer over 100 training courses in technology, management, and languages, with strategic partnerships with major tech companies such as Microsoft, AWS, and Google.", "about_p3": "Our graduates' employment rate exceeds 85% within 3 months of program completion — that's our true measure of success.", "about_stat1_label": "Graduates", "about_stat2_label": "Employment Rate", "about_stat3_label": "Partners", "page_title_courses": "Our <span class='blue-accent'>Courses</span>", "courses_intro": "Choose your career path — over 100 courses in various fields", "course1_title": "Project Management PMP", "course1_desc": "Full PMP certification prep with applied project — 4 intensive weeks.", "course1_meta": "4 Weeks · In-person + Remote", "course2_title": "Data Analysis with Python", "course2_desc": "From zero to pro — Pandas, NumPy, Matplotlib, SQL.", "course2_meta": "6 Weeks · Remote", "course3_title": "Cybersecurity for Beginners", "course3_desc": "InfoSec fundamentals, penetration testing, networks — fully hands-on.", "course3_meta": "8 Weeks · In-person", "course4_title": "Applied AI", "course4_desc": "Machine learning, neural networks, ChatGPT API — real projects.", "course4_meta": "10 Weeks · Remote", "course5_title": "Leadership & Executive Management", "course5_desc": "Leadership skills, team management, decision making — for managers.", "course5_meta": "3 Weeks · In-person", "course6_title": "Full-Stack Web Development", "course6_desc": "React, Node.js, MongoDB — build complete web apps from scratch.", "course6_meta": "12 Weeks · Remote", "page_title_contact": "Contact — Course Registration", "contact_heading": "Get in <span class='blue-accent'>Touch</span>", "form_heading": "Registration Request", "form_name": "Full Name", "form_name_ph": "Enter your name", "form_email": "Email", "form_email_ph": "example@email.com", "form_phone": "Phone Number", "form_phone_ph": "05xxxxxxxx", "form_course": "Desired Course", "form_course_ph": "Select a course", "form_message": "Your Inquiry", "form_message_ph": "Type your inquiry here", "form_submit": "Submit Request", "form_success": "Request sent! Our team will contact you within 24 hours.", "form_course1": "Project Management PMP", "form_course2": "Data Analysis Python", "form_course3": "Cybersecurity", "form_course4": "Artificial Intelligence", "form_course5": "Executive Leadership", "form_course6": "Full-Stack Web", "footer_desc": "Your destination for professional training — develop your skills, build your future.", "footer_links": "Links", "footer_progs": "Courses", "footer_contact": "Contact", "footer_course1": "Project Management", "footer_course2": "Data Analysis", "footer_course3": "Cybersecurity", "footer_copy": "Qudra Institute — All Rights Reserved.", "breadcrumb_home": "Home", "breadcrumb_about": "About", "breadcrumb_courses": "Courses", "breadcrumb_contact": "Contact", "cta_title": "Your Journey Starts Here", "cta_desc": "Enroll in any course and begin your professional journey", "cta_btn": "Register Now", "founder_quote": "We don't just hand out certificates — we create professionals ready to compete in the job market.", "founder_name": "— Fahad Al-Otaibi, Founder", "why1_title": "10+ Years Experience", "why1_desc": "In professional training", "why2_title": "Accredited Certificates", "why2_desc": "From official bodies", "why3_title": "Hands-on Training", "why3_desc": "Projects & workshops", "why4_title": "Job Support", "why4_desc": "Partnerships with 100+ companies", "back_to_top": "Back to Top", "contact_address": "Jeddah — Al Rawdah District", "contact_phone": "920022345", "contact_email": "info@qudra.edu.sa", "contact_hours": "9:00 AM — 9:00 PM (Sat — Thu)", "contact_hours_label": "Hours", "address_label": "Address", "phone_label": "Phone", "email_label": "Email", "course_badge": "Most Popular"}};</script>
-<script src="script.js"></script>
+<script src="script.js?v=qu02"></script>
 
-<script>قدراتك .. مستقبلك",
-    "nav_home": "الرئيسية",
-    "nav_about": "عن المعهد",
-    "nav_courses": "الدورات",
-    "nav_contact": "اتصل بنا",
-    "lang_btn": "EN",
-    "lang_btn_alt": "عربي",
-    "hero_tag": "تدريب احترافي — نتائج ملموسة",
-    "hero_title": "طوّر <strong>قدراتك</strong><br>وابنِ <span class='blue-accent'>مستقبلك</span>",
-    "hero_desc": "معهد قدرة — وجهتك للتدريب الاحترافي في التقنية والإدارة. أكثر من ١٠٠ دورة تدريبية معتمدة، مدربون خبراء، وشهادات معترف بها في سوق العمل.",
-    "hero_cta_primary": "تصفح الدورات",
-    "hero_cta_secondary": "عن المعهد",
-    "hero_stat1": "دورة تدريبية",
-    "hero_stat2": "متدرب",
-    "hero_stat3": "شهادة معتمدة",
-    "sec_why_title": "وش <span class='blue-accent'>يميزنا</span>؟",
-    "sec_why_desc": "أكثر من ١٠ سنوات في التدريب الاحترافي",
-    "feat1_title": "مدربون خبراء",
-    "feat1_desc": "ممارسون في المجال — ليسوا مجرد أكاديميين — يشاركونكم تجاربهم الواقعية.",
-    "feat2_title": "شهادات احترافية",
-    "feat2_desc": "شهادات معتمدة من الجهات الرسمية — أضفها لسيرتك الذاتية وارفع فرصك الوظيفية.",
-    "feat3_title": "تدريب عملي",
-    "feat3_desc": "مشاريع تطبيقية، ورش عمل، محاكاة واقعية — تتعلم بالممارسة لا بالتنظير.",
-    "feat4_title": "مواعيد مرنة",
-    "feat4_desc": "مسائي وصباحي — حضور فعلي أو عن بُعد — اختر ما يناسب جدولك.",
-    "hero_accent1": "دورة",
-    "hero_accent2": "متدرب",
-    "hero_accent3": "شهادة",
-    "page_title_about": "عن <span class='blue-accent'>معهد قدرة</span>",
-    "about_heading": "قصتنا <span class='blue-accent'>في التدريب</span>",
-    "about_p1": "انطلق معهد قدرة عام ٢٠١٤ كمنصة تدريب احترافي تهدف إلى سد الفجوة بين المهارات الأكاديمية ومتطلبات سوق العمل. اليوم، نحن واحد من أبرز معاهد التدريب في المملكة.",
-    "about_p2": "نقدم أكثر من ١٠٠ دورة تدريبية في مجالات التقنية والإدارة واللغات، مع شراكات استراتيجية مع كبرى شركات التقنية مثل Microsoft وAWS وGoogle.",
-    "about_p3": "معدل توظيف خريجينا يتجاوز ٨٥٪ خلال ٣ أشهر من إكمال البرنامج — وهذا هو مقياس نجاحنا الحقيقي.",
-    "about_stat1_label": "متخرج",
-    "about_stat2_label": "نسبة توظيف",
-    "about_stat3_label": "شريك استراتيجي",
-    "page_title_courses": "دوراتنا <span class='blue-accent'>التدريبية</span>",
-    "courses_intro": "اختر مسارك المهني — أكثر من ١٠٠ دورة في مختلف المجالات",
-    "course1_title": "إدارة المشاريع الاحترافية PMP",
-    "course1_desc": "تحضير كامل لشهادة PMP مع مشروع تطبيقي — ٤ أسابيع مكثفة.",
-    "course1_meta": "٤ أسابيع · حضوري + عن بُعد",
-    "course2_title": "تحليل البيانات باستخدام Python",
-    "course2_desc": "من الصفر إلى الاحتراف — Pandas, NumPy, Matplotlib, SQL.",
-    "course2_meta": "٦ أسابيع · عن بُعد",
-    "course3_title": "الأمن السيبراني للمبتدئين",
-    "course3_desc": "أساسيات أمن المعلومات، اختبار الاختراق، شبكات — عملي بالكامل.",
-    "course3_meta": "٨ أسابيع · حضوري",
-    "course4_title": "الذكاء الاصطناعي التطبيقي",
-    "course4_desc": "تعلم الآلة، الشبكات العصبية، ChatGPT API — مشاريع حقيقية.",
-    "course4_meta": "١٠ أسابيع · عن بُعد",
-    "course5_title": "القيادة والإدارة التنفيذية",
-    "course5_desc": "مهارات القيادة، إدارة الفرق، اتخاذ القرارات — للمدراء والتنفيذيين.",
-    "course5_meta": "٣ أسابيع · حضوري",
-    "course6_title": "تطوير الويب Full-Stack",
-    "course6_desc": "React, Node.js, MongoDB — اصنع تطبيقات ويب كاملة من البداية.",
-    "course6_meta": "١٢ أسبوع · عن بُعد",
-    "page_title_contact": "اتصل بنا — التسجيل في الدورات",
-    "contact_heading": "تواصل مع <span class='blue-accent'>فريقنا</span>",
-    "form_heading": "طلب التسجيل",
-    "form_name": "الاسم الكامل",
-    "form_name_ph": "أدخل اسمك",
-    "form_email": "البريد الإلكتروني",
-    "form_email_ph": "example@email.com",
-    "form_phone": "رقم الجوال",
-    "form_phone_ph": "05xxxxxxxx",
-    "form_course": "الدورة المطلوبة",
-    "form_course_ph": "اختر الدورة",
-    "form_message": "استفسارك",
-    "form_message_ph": "اكتب استفسارك هنا",
-    "form_submit": "إرسال الطلب",
-    "form_success": "تم إرسال طلبك! فريقنا سيتواصل معك خلال ٢٤ ساعة.",
-    "form_course1": "إدارة المشاريع PMP",
-    "form_course2": "تحليل البيانات Python",
-    "form_course3": "الأمن السيبراني",
-    "form_course4": "الذكاء الاصطناعي",
-    "form_course5": "القيادة التنفيذية",
-    "form_course6": "Full-Stack Web",
-    "footer_desc": "وجهتك للتدريب الاحترافي — طور قدراتك وابنِ مستقبلك.",
-    "footer_links": "روابط",
-    "footer_progs": "الدورات",
-    "footer_contact": "تواصل",
-    "footer_course1": "إدارة المشاريع",
-    "footer_course2": "تحليل البيانات",
-    "footer_course3": "الأمن السيبراني",
-    "footer_copy": "معهد قدرة — جميع الحقوق محفوظة.",
-    "breadcrumb_home": "الرئيسية",
-    "breadcrumb_about": "عن المعهد",
-    "breadcrumb_courses": "الدورات",
-    "breadcrumb_contact": "اتصل بنا",
-    "cta_title": "مكانك يبدأ هنا",
-    "cta_desc": "سجل في أي دورة وابدأ رحلتك المهنية",
-    "cta_btn": "سجل الآن",
-    "founder_quote": "نحن لا نقدم شهادات فقط — نصنع محترفين قادرين على المنافسة في سوق العمل.",
-    "founder_name": "— أ. فهد العتيبي، المؤسس",
-    "why1_title": "خبرة ١٠+ سنوات",
-    "why1_desc": "في التدريب الاحترافي",
-    "why2_title": "شهادات معتمدة",
-    "why2_desc": "من جهات رسمية",
-    "why3_title": "تدريب عملي",
-    "why3_desc": "مشاريع وورش عمل",
-    "why4_title": "دعم توظيف",
-    "why4_desc": "شراكات مع ١٠٠+ شركة",
-    "back_to_top": "العودة للأعلى",
-    "contact_address": "جدة — حي الروضة",
-    "contact_phone": "٩٢٠٠٢٢٣٤٥",
-    "contact_email": "info@qudra.edu.sa",
-    "contact_hours": "٩:٠٠ ص — ٩:٠٠ م (السبت — الخميس)",
-    "contact_hours_label": "ساعات العمل",
-    "address_label": "العنوان",
-    "phone_label": "الهاتف",
-    "email_label": "البريد الإلكتروني",
-    "course_badge": "الأكثر طلباً"
-  },
-  "en": {
-    "site_name": "Qudra Institute",
-    "site_tagline": "Your Skills .. Your Future",
-    "nav_home": "Home",
-    "nav_about": "About",
-    "nav_courses": "Courses",
-    "nav_contact": "Contact",
-    "lang_btn": "عربي",
-    "lang_btn_alt": "EN",
-    "hero_tag": "Professional Training — Real Results",
-    "hero_title": "Develop <strong>Your Skills</strong><br>Build <span class='blue-accent'>Your Future</span>",
-    "hero_desc": "Qudra Institute — your destination for professional training in tech and management. Over 100 accredited courses, expert trainers, and certificates recognized in the job market.",
-    "hero_cta_primary": "Browse Courses",
-    "hero_cta_secondary": "About Institute",
-    "hero_stat1": "Courses",
-    "hero_stat2": "Trainees",
-    "hero_stat3": "Certifications",
-    "sec_why_title": "Why <span class='blue-accent'>Qudra</span>?",
-    "sec_why_desc": "Over 10 years in professional training",
-    "feat1_title": "Expert Trainers",
-    "feat1_desc": "Industry practitioners — not just academics — sharing real-world experience.",
-    "feat2_title": "Professional Certificates",
-    "feat2_desc": "Official accredited certificates — add them to your resume and boost your career.",
-    "feat3_title": "Hands-on Training",
-    "feat3_desc": "Applied projects, workshops, real simulations — learn by doing, not just theory.",
-    "feat4_title": "Flexible Schedules",
-    "feat4_desc": "Morning and evening — in-person or remote — choose what fits your schedule.",
-    "hero_accent1": "Courses",
-    "hero_accent2": "Trainees",
-    "hero_accent3": "Certificates",
-    "page_title_about": "About <span class='blue-accent'>Qudra Institute</span>",
-    "about_heading": "Our <span class='blue-accent'>Training Story</span>",
-    "about_p1": "Qudra Institute launched in 2014 as a professional training platform aimed at bridging the gap between academic skills and labor market demands. Today, we are one of the leading training institutes in the Kingdom.",
-    "about_p2": "We offer over 100 training courses in technology, management, and languages, with strategic partnerships with major tech companies such as Microsoft, AWS, and Google.",
-    "about_p3": "Our graduates' employment rate exceeds 85% within 3 months of program completion — that's our true measure of success.",
-    "about_stat1_label": "Graduates",
-    "about_stat2_label": "Employment Rate",
-    "about_stat3_label": "Partners",
-    "page_title_courses": "Our <span class='blue-accent'>Courses</span>",
-    "courses_intro": "Choose your career path — over 100 courses in various fields",
-    "course1_title": "Project Management PMP",
-    "course1_desc": "Full PMP certification prep with applied project — 4 intensive weeks.",
-    "course1_meta": "4 Weeks · In-person + Remote",
-    "course2_title": "Data Analysis with Python",
-    "course2_desc": "From zero to pro — Pandas, NumPy, Matplotlib, SQL.",
-    "course2_meta": "6 Weeks · Remote",
-    "course3_title": "Cybersecurity for Beginners",
-    "course3_desc": "InfoSec fundamentals, penetration testing, networks — fully hands-on.",
-    "course3_meta": "8 Weeks · In-person",
-    "course4_title": "Applied AI",
-    "course4_desc": "Machine learning, neural networks, ChatGPT API — real projects.",
-    "course4_meta": "10 Weeks · Remote",
-    "course5_title": "Leadership & Executive Management",
-    "course5_desc": "Leadership skills, team management, decision making — for managers.",
-    "course5_meta": "3 Weeks · In-person",
-    "course6_title": "Full-Stack Web Development",
-    "course6_desc": "React, Node.js, MongoDB — build complete web apps from scratch.",
-    "course6_meta": "12 Weeks · Remote",
-    "page_title_contact": "Contact — Course Registration",
-    "contact_heading": "Get in <span class='blue-accent'>Touch</span>",
-    "form_heading": "Registration Request",
-    "form_name": "Full Name",
-    "form_name_ph": "Enter your name",
-    "form_email": "Email",
-    "form_email_ph": "example@email.com",
-    "form_phone": "Phone Number",
-    "form_phone_ph": "05xxxxxxxx",
-    "form_course": "Desired Course",
-    "form_course_ph": "Select a course",
-    "form_message": "Your Inquiry",
-    "form_message_ph": "Type your inquiry here",
-    "form_submit": "Submit Request",
-    "form_success": "Request sent! Our team will contact you within 24 hours.",
-    "form_course1": "Project Management PMP",
-    "form_course2": "Data Analysis Python",
-    "form_course3": "Cybersecurity",
-    "form_course4": "Artificial Intelligence",
-    "form_course5": "Executive Leadership",
-    "form_course6": "Full-Stack Web",
-    "footer_desc": "Your destination for professional training — develop your skills, build your future.",
-    "footer_links": "Links",
-    "footer_progs": "Courses",
-    "footer_contact": "Contact",
-    "footer_course1": "Project Management",
-    "footer_course2": "Data Analysis",
-    "footer_course3": "Cybersecurity",
-    "footer_copy": "Qudra Institute — All Rights Reserved.",
-    "breadcrumb_home": "Home",
-    "breadcrumb_about": "About",
-    "breadcrumb_courses": "Courses",
-    "breadcrumb_contact": "Contact",
-    "cta_title": "Your Journey Starts Here",
-    "cta_desc": "Enroll in any course and begin your professional journey",
-    "cta_btn": "Register Now",
-    "founder_quote": "We don't just hand out certificates — we create professionals ready to compete in the job market.",
-    "founder_name": "— Fahad Al-Otaibi, Founder",
-    "why1_title": "10+ Years Experience",
-    "why1_desc": "In professional training",
-    "why2_title": "Accredited Certificates",
-    "why2_desc": "From official bodies",
-    "why3_title": "Hands-on Training",
-    "why3_desc": "Projects & workshops",
-    "why4_title": "Job Support",
-    "why4_desc": "Partnerships with 100+ companies",
-    "back_to_top": "Back to Top",
-    "contact_address": "Jeddah — Al Rawdah District",
-    "contact_phone": "920022345",
-    "contact_email": "info@qudra.edu.sa",
-    "contact_hours": "9:00 AM — 9:00 PM (Sat — Thu)",
-    "contact_hours_label": "Hours",
-    "address_label": "Address",
-    "phone_label": "Phone",
-    "email_label": "Email",
-    "course_badge": "Most Popular"
-  }
-};</script>
 </body>
 </html>

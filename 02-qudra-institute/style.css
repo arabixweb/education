@@ -189,3 +189,71 @@ img { max-width: 100%; display: block; }
 /* Fade in */
 .fade-in { opacity: 0; transform: translateY(30px); transition: 0.7s; }
 .fade-in.show { opacity: 1; transform: translateY(0); }
+
+/* === ANIMATIONS === */
+.js .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal { opacity: 1; transform: translateY(0); }
+.reveal.show { opacity: 1; transform: translateY(0); }
+.js .reveal.show { opacity: 1; transform: translateY(0); }
+.reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal:nth-child(4) { transition-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+.img-zoom { transition: transform 0.5s ease, box-shadow 0.5s ease; }
+.img-zoom:hover { transform: scale(1.04); box-shadow: 0 16px 48px rgba(0,212,255,.12); }
+.feat-card, .course-card, .course-full-card, .testimonial-card, .stat-box, .contact-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.feat-card:hover, .course-card:hover, .course-full-card:hover, .testimonial-card:hover, .stat-box:hover, .contact-card:hover {
+  transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,.3);
+}
+/* Nav English LTR direction */
+[lang="en"] .nav-container { direction: ltr; }
+[lang="en"] .nav-links { margin-right: 0; margin-left: auto; }
+@media (max-width: 768px) { [lang="en"] .nav-links { margin-left: 0; } }
+/* Footer Arabix branding */
+.footer-dev { padding: 16px 0 20px; text-align: center; border-top: 1px solid rgba(0,212,255,.04); margin-top: 0; font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; }
+.footer-dev .ar-text { display: inline; }
+.footer-dev .en-text { display: none; }
+[lang="en"] .footer-dev .ar-text { display: none; }
+[lang="en"] .footer-dev .en-text { display: inline; }
+.dev-logo { display: inline-flex; align-items: center; gap: 4px; }
+.dev-logo-img { height: 20px; width: auto; vertical-align: middle; transition: opacity 0.3s; }
+.dev-logo-img:hover { opacity: 0.75; }
+.dev-fallback { display: none; font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+.dev-logo img[src*="arabix"] { filter: brightness(0) invert(1); opacity: 0.7; }
+.dev-logo img[src*="arabix"]:hover { opacity: 1; }
+/* Social icon animation */
+.social a { transition: transform 0.3s ease, background 0.3s ease; }
+.social a:hover { transform: translateY(-3px) scale(1.1); }
+/* Page banner animation */
+.page-banner .breadcrumb,
+.page-banner h1 { opacity: 0; transform: translateY(20px); animation: bannerReveal 0.8s ease forwards; }
+.page-banner h1 { animation-delay: 0.2s; }
+@keyframes bannerReveal { to { opacity: 1; transform: translateY(0); } }
+/* Counter animation */
+.counter { display: inline-block; }
+/* Lang toggle spin */
+.lang-btn { transition: transform 0.3s ease, background 0.3s; }
+.lang-btn:hover { transform: rotate(-8deg) scale(1.05); }
+[lang="en"] .lang-btn:hover { transform: rotate(8deg) scale(1.05); }
+/* Nav link glow */
+.nav-links a { position: relative; transition: background 0.3s, color 0.3s; }
+.nav-links a::after { content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); width: 0; height: 2px; background: var(--accent); border-radius: 1px; transition: width 0.35s ease, opacity 0.35s; opacity: 0; }
+.nav-links a:hover::after, .nav-links a.active::after { width: 60%; opacity: 1; }
+/* Button pulse */
+.btn-primary { animation: btnPulse 3s infinite ease-in-out; }
+@keyframes btnPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(0,212,255,.3); } 50% { box-shadow: 0 0 0 8px rgba(0,212,255,0); } }
+/* Footer gradient top */
+.footer { position: relative; }
+.footer::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 60%; max-width: 300px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
+/* Section subtle parallax-like */
+.dark-sec { position: relative; }
+.dark-sec::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(0,212,255,.03) 0%, transparent 60%); pointer-events: none; }
+/* Navbar scroll */
+.navbar.scrolled { background: rgba(8,14,26,.96); }
+/* Testimonial quote styling */
+.testimonial-card { position: relative; }

@@ -157,5 +157,34 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(a.getAttribute('href'));
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
     });
-  });
+  
+  /* ANIMATIONS */
+  document.documentElement.classList.add('js');
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var revealObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('show'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+    revealEls.forEach(function(el) { revealObs.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('show'); });
+  }
+
+  /* Navbar scroll */
+  var nbar = document.querySelector('.navbar');
+  if (nbar) {
+    window.addEventListener('scroll', function() { nbar.classList.toggle('scrolled', window.scrollY > 80); });
+  }
+
+  /* Hero visual parallax */
+  var hv2 = document.querySelector('.hero-visual');
+  if (hv2) {
+    window.addEventListener('scroll', function() {
+      var y = window.scrollY;
+      if (y < window.innerHeight) { hv2.style.transform = 'translateY(' + (y * 0.03) + 'px)'; }
+    });
+  }
+});
 });
