@@ -1,4 +1,36 @@
-// 04 Saudi Future University — Final Script: i18n toggle + polish
+#!/usr/bin/env python3
+"""
+Final i18n fix:
+1. Remove ALL data-i18n attributes (broken ones included) from HTML files
+2. Keep the injected window.__i18n data (dedupe if needed)
+3. Write final script.js with runtime bidirectional text matching
+"""
+import json, re, sys
+from pathlib import Path
+
+BASE = Path(r"C:\Users\paule\OneDrive\Desktop\Arabix Theme\education")
+
+# Load SITES dict from generate_i18n.py
+with open(BASE / 'generate_i18n.py', 'r', encoding='utf-8') as f:
+    content = f.read()
+start = content.find("SITES = {}")
+end = content.find("def get_main_script")
+exec(content[start:end].strip())
+
+print(f"Loaded: {list(SITES.keys())}")
+
+
+def clean_html(html):
+    """Remove all data-i18n / data-i18n-html attributes."""
+    # Broken variants first: data-i18n="key data-i18n-html"
+    html = re.sub(r'\s+data-i18n="[^"]*"', '', html)
+    html = re.sub(r"\s+data-i18n='[^']*'", '', html)
+    html = re.sub(r'\s+data-i18n-html="[^"]*"', '', html)
+    html = re.sub(r'\s+data-i18n-html\b(?!=)', '', html)
+    return html
+
+
+SCRIPT_TEMPLATE = '''// __SITE_NAME__ — Final Script: i18n toggle + polish
 document.addEventListener('DOMContentLoaded', () => {
   // ===== Loading Screen =====
   const loadingEl = document.getElementById('loading');
@@ -25,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const langToggle = document.getElementById('langToggle');
   let currentLang = 'ar';
 
-  function cleanText(s) { return (s || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(); }
+  function cleanText(s) { return (s || '').replace(/<[^>]+>/g, '').replace(/\\s+/g, ' ').trim(); }
 
   // Build lookup: cleanedText -> key (from both languages)
   const lookup = {};
@@ -124,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTop.id = 'backToTop';
     backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
     backToTop.setAttribute('aria-label', 'Back to top');
-    backToTop.style.cssText = 'position:fixed;bottom:24px;left:24px;z-index:999;width:44px;height:44px;border-radius:12px;background:#6d28d9;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transform:translateY(20px);transition:0.4s;box-shadow:0 4px 16px rgba(0,0,0,.3);pointer-events:none;';
+    backToTop.style.cssText = 'position:fixed;bottom:24px;left:24px;z-index:999;width:44px;height:44px;border-radius:12px;background:__ACCENT__;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transform:translateY(20px);transition:0.4s;box-shadow:0 4px 16px rgba(0,0,0,.3);pointer-events:none;';
     document.body.appendChild(backToTop);
     window.addEventListener('scroll', () => {
       const show = window.scrollY > 400;
@@ -159,3 +191,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+'''
+
+ACCENTS = {
+    "01-alriyadh-academy": "#0d5c3f",
+    "02-qudra-institute": "#2563eb",
+    "03-noor-alhuda": "#c8a24a",
+    "04-saudi-future-university": "#6d28d9",
+    "05-alwaha-center": "#e87a5d",
+}
+
+for site_key, lang_data in SITES.items():
+    site_dir = BASE / site_key
+    if not site_dir.exists():
+        continue
+    print(f"\n=== {site_key} ===")
+    
+    for html_file in sorted(site_dir.glob("*.html")):
+        html = html_file.read_text(encoding='utf-8')
+        html = clean_html(html)
+        # Remove existing injected i18n scripts (dedupe)
+        html = re.sub(r'\s*<script>window\.__i18n=.*?</script>\s*', '\n', html, flags=re.DOTALL)
+        # Inject fresh i18n data BEFORE script.js tag so it's available
+        data_tag = f'<script>window.__i18n={json.dumps(lang_data, ensure_ascii=False)};</script>'
+        if '<script src="script.js"></script>' in html:
+            html = html.replace('<script src="script.js"></script>', f'{data_tag}\n<script src="script.js"></script>')
+        else:
+            html = html.replace('</body>', f'{data_tag}\n</body>')
+        html_file.write_text(html, encoding='utf-8')
+        print(f"  [OK] {html_file.name}")
+    
+    # Write final script.js
+    script = SCRIPT_TEMPLATE.replace('__SITE_NAME__', site_key.replace('-', ' ').title())
+    script = script.replace('__ACCENT__', ACCENTS.get(site_key, '#7c3aed'))
+    (site_dir / 'script.js').write_text(script, encoding='utf-8')
+    print(f"  [OK] script.js")
+
+print("\nDONE - all sites cleaned and finalized")
