@@ -55,6 +55,22 @@
 
     document.querySelectorAll('.program-filter button').forEach(btn => btn.addEventListener('click', () => { btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active')); btn.classList.add('active'); }));
     document.querySelectorAll('form').forEach(form => form.addEventListener('submit', e => { e.preventDefault(); const status=form.querySelector('.form-status'); if(status) status.textContent=lang==='ar'?'تم استلام طلبك بنجاح. سنتواصل معك قريباً بإذن الله.':'Your request has been received. We will contact you shortly.'; form.reset(); }));
+    // Stagger common card collections independently so each section feels intentional.
+    document.querySelectorAll('.pillars-grid,.values-grid,.courses-grid,.program-showcase,.steps-line').forEach(group => {
+      [...group.children].forEach((card, index) => card.style.setProperty('--card-index', index));
+    });
+
+    // Gentle magnetic lift on primary controls (fine pointers only).
+    if (!reduceMotion && matchMedia('(pointer:fine)').matches) {
+      document.querySelectorAll('.btn,.portal-cta,.nav-enroll').forEach(el => {
+        el.addEventListener('pointermove', e => { const r=el.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)*.07,y=(e.clientY-r.top-r.height/2)*.1;el.style.transform=`translate(${x}px,${y}px) translateY(-2px)`; });
+        el.addEventListener('pointerleave', () => el.style.transform='');
+      });
+    }
+
+    // Footer has its own visible back-to-top control in addition to the floating helper.
+    document.querySelector('.footer-to-top')?.addEventListener('click', () => scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
+
     const top=document.createElement('button');top.id='backToTop';top.innerHTML='<i class="fas fa-arrow-up"></i>';top.setAttribute('aria-label','Back to top');document.body.appendChild(top);const showTop=()=>top.classList.toggle('visible',scrollY>550);addEventListener('scroll',showTop,{passive:true});showTop();top.addEventListener('click',()=>scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
     window.noorSiteReady=true; dispatchEvent(new Event('noor:ready'));
   });
