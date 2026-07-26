@@ -1,4 +1,4 @@
-(function() {
+﻿(function() {
   'use strict';
   var LS = 'aracademy_lang';
   var current = localStorage.getItem(LS) || 'ar';
@@ -102,5 +102,30 @@
         setTimeout(function() { m.remove(); }, 4500);
       });
     });
+
+  /* ANIMATIONS */
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('show'); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+
+  /* Navbar scroll effect */
+  var nbar = document.querySelector('.navbar');
+  if (nbar) {
+    window.addEventListener('scroll', function() {
+      nbar.classList.toggle('scrolled', window.scrollY > 80);
+    });
+  }
+
+  /* Hero-visual parallax on scroll */
+  var hv = document.querySelector('.hero-visual');
+  if (hv) {
+    window.addEventListener('scroll', function() {
+      var y = window.scrollY;
+      if (y < window.innerHeight) { hv.style.transform = 'translateY(' + (y * 0.03) + 'px)'; }
+    });
+  }
   });
 })();
