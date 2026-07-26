@@ -189,9 +189,10 @@ img { max-width: 100%; display: block; }
 .fade-in.show { opacity: 1; transform: translateY(0); }
 
 /* === ANIMATIONS === */
-/* Scroll reveal */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.show { opacity: 1; transform: translateY(0); }
+/* Scroll reveal: content remains visible if JS is disabled or fails. */
+.reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+.js .reveal { opacity: 0; transform: translateY(30px); }
+.js .reveal.show { opacity: 1; transform: translateY(0); }
 .reveal:nth-child(2) { transition-delay: 0.1s; }
 .reveal:nth-child(3) { transition-delay: 0.2s; }
 .reveal:nth-child(4) { transition-delay: 0.3s; }
@@ -327,6 +328,12 @@ img { max-width: 100%; display: block; }
 
 /* Floating decor animation */
 .hero-visual-decor { animation: floatDecor 8s infinite alternate ease-in-out; }
+
+/* Respect accessibility settings and keep all content visible. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
 
 /* Footer staggered animation */
 .footer { position: relative; }

@@ -55,26 +55,28 @@
       apply(current);
       toggle.addEventListener('click', function() { apply(current === 'ar' ? 'en' : 'ar'); });
     }
-    // Counter animation
-    new IntersectionObserver(function(es) {
-      es.forEach(function(e) {
-        if (!e.isIntersecting) return;
-        var el = e.target;
-        var target = parseInt(el.getAttribute('data-target'));
-        if (!target || el.getAttribute('data-animated') === 'true') return;
-        el.setAttribute('data-animated', 'true');
-        var cur = 0;
-        var step = Math.max(1, Math.ceil(target / 50));
-        var tmr = setInterval(function() {
-          cur = Math.min(cur + step, target);
-          el.firstChild.textContent = cur.toLocaleString();
-          if (cur >= target) clearInterval(tmr);
-        }, 20);
-      });
-    }, { threshold: 0.5 }).observe(document.querySelectorAll('[data-target]'));
-    new IntersectionObserver(function(es) {
-      es.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('show'); } });
-    }, { threshold: 0.1 }).observe(document.querySelectorAll('.feat-card, .prog-card, .sec-head, .director-msg, .hero-content'));
+    // Counter animation — observe each element separately (observe() cannot accept a NodeList).
+    var counters = document.querySelectorAll('[data-target]');
+    if ('IntersectionObserver' in window) {
+      var counterObserver = new IntersectionObserver(function(es) {
+        es.forEach(function(e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          var target = parseInt(el.getAttribute('data-target'), 10);
+          if (!target || el.getAttribute('data-animated') === 'true') return;
+          el.setAttribute('data-animated', 'true');
+          var cur = 0;
+          var step = Math.max(1, Math.ceil(target / 50));
+          var tmr = setInterval(function() {
+            cur = Math.min(cur + step, target);
+            if (el.firstChild) el.firstChild.textContent = cur.toLocaleString();
+            if (cur >= target) clearInterval(tmr);
+          }, 20);
+          counterObserver.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(function(el) { counterObserver.observe(el); });
+    }
     var bt = document.getElementById('backToTop') || (function() {
       var b = document.createElement('button');
       b.id = 'backToTop'; b.innerHTML = '<i class="fas fa-arrow-up"></i>';
@@ -103,13 +105,22 @@
       });
     });
 
-  /* ANIMATIONS */
-  var revealObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) { e.target.classList.add('show'); }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+  /* ANIMATIONS — enable hidden start only after the page logic reached this safe point. */
+  document.documentElement.classList.add('js');
+  var revealElements = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('show');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+    revealElements.forEach(function(el) { revealObserver.observe(el); });
+  } else {
+    revealElements.forEach(function(el) { el.classList.add('show'); });
+  }
 
   /* Navbar scroll effect */
   var nbar = document.querySelector('.navbar');
