@@ -1,190 +1,163 @@
-// 02 Qudra Institute — Final Script: i18n toggle + polish
-document.addEventListener('DOMContentLoaded', () => {
-  // ===== Loading Screen =====
-  const loadingEl = document.getElementById('loading');
-  if (loadingEl) setTimeout(() => loadingEl.classList.add('hide'), 600);
-
-  // ===== Mobile Menu =====
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-  }
-
-  // ===== Active Nav Link =====
-  if (navLinks) {
-    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-    navLinks.querySelectorAll('a').forEach(a => {
-      const href = a.getAttribute('href');
-      a.classList.toggle('active', href === currentFile || (currentFile === '' && href === 'index.html'));
-    });
-  }
-
-  // ===== i18n: bidirectional runtime matching =====
-  const langToggle = document.getElementById('langToggle');
-  let currentLang = 'ar';
-
-  function cleanText(s) { return (s || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(); }
-
-  // Build lookup: cleanedText -> key (from both languages)
-  const lookup = {};
-  if (window.__i18n) {
-    for (const lang of ['ar', 'en']) {
-      const dict = window.__i18n[lang] || {};
-      for (const [key, value] of Object.entries(dict)) {
-        const c = cleanText(value);
-        if (c.length >= 2) lookup[c] = key;
-      }
-    }
-  }
-
-  function tagElements() {
-    // Tag translatable elements by matching their text against the lookup
-    document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,button,li,label,cite,option,strong,em,small,div').forEach(el => {
-      if (el.hasAttribute('data-i18n')) return;
-      // Skip elements with element children EXCEPT allowed inline tags (span, strong, em, i, b)
-      const badChild = Array.from(el.children).some(c => !['SPAN','STRONG','EM','I','B','BR'].includes(c.tagName));
-      if (badChild) return;
-      const text = cleanText(el.textContent);
-      if (text.length < 2) return;
-      const key = lookup[text];
-      if (key) el.setAttribute('data-i18n', key);
-    });
-  }
-
-  function applyTranslation(lang) {
-    if (!window.__i18n || !window.__i18n[lang]) return;
-    const dict = window.__i18n[lang];
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const trans = dict[key];
-      if (!trans) return;
-      if (el.tagName === 'OPTION') { el.textContent = cleanText(trans); }
-      else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { /* placeholders below */ }
-      else el.innerHTML = trans;
-    });
-    // Placeholders
-    document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
-      const ph = el.getAttribute('data-i18n-ph');
-      if (ph && dict[ph]) el.placeholder = dict[ph];
-    });
-    if (langToggle) langToggle.textContent = lang === 'ar' ? 'EN' : 'عربي';
-    // Page title
-    const titleKey = document.title && lookup[cleanText(document.title)];
-    if (titleKey && dict[titleKey]) document.title = cleanText(dict[titleKey]);
-  }
-
-  if (langToggle && window.__i18n) {
-    tagElements();
-    const saved = localStorage.getItem('edu_lang');
-    if (saved === 'en') { currentLang = 'en'; applyTranslation('en'); }
-    langToggle.addEventListener('click', () => {
-      currentLang = currentLang === 'ar' ? 'en' : 'ar';
-      localStorage.setItem('edu_lang', currentLang);
-      applyTranslation(currentLang);
-    });
-  }
-
-  // ===== Scroll Animations =====
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); observer.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in, [class*="feat-"], [class*="prog-"], [class*="waha-"], .why-card, .program-full-card').forEach(el => {
-    if (!el.classList.contains('fade-in')) el.classList.add('fade-in');
-    observer.observe(el);
-  });
-
-  // ===== Counter Animation =====
-  const counterObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseInt(el.dataset.target);
-      if (!target || el.dataset.animated === 'true') return;
-      el.dataset.animated = 'true';
-      let current = 0;
-      const step = Math.max(1, Math.ceil(target / 50));
-      const timer = setInterval(() => {
-        current = Math.min(current + step, target);
-        el.textContent = current.toLocaleString() + '+';
-        if (current >= target) clearInterval(timer);
-      }, 20);
-      counterObserver.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
-
-  // ===== Back to Top =====
-  let backToTop = document.getElementById('backToTop');
-  if (!backToTop) {
-    backToTop = document.createElement('button');
-    backToTop.id = 'backToTop';
-    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTop.setAttribute('aria-label', 'Back to top');
-    backToTop.style.cssText = 'position:fixed;bottom:24px;left:24px;z-index:999;width:44px;height:44px;border-radius:12px;background:#2563eb;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transform:translateY(20px);transition:0.4s;box-shadow:0 4px 16px rgba(0,0,0,.3);pointer-events:none;';
-    document.body.appendChild(backToTop);
-    window.addEventListener('scroll', () => {
-      const show = window.scrollY > 400;
-      backToTop.style.opacity = show ? '1' : '0';
-      backToTop.style.transform = show ? 'translateY(0)' : 'translateY(20px)';
-      backToTop.style.pointerEvents = show ? 'auto' : 'none';
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
-
-  // ===== Form Handling =====
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"], button:not([type])');
-      if (btn) btn.disabled = true;
-      const dict = window.__i18n && window.__i18n[currentLang];
-      const msgBox = document.createElement('div');
-      msgBox.style.cssText = 'padding:14px 18px;margin-top:16px;border-radius:10px;background:rgba(74,222,128,.15);color:#4ade80;text-align:center;font-weight:600;';
-      msgBox.textContent = (dict && dict.form_success) || (currentLang === 'ar' ? '✓ تم إرسال الطلب بنجاح!' : '✓ Submitted successfully!');
-      form.appendChild(msgBox);
-      setTimeout(() => { form.reset(); if (btn) btn.disabled = false; }, 2000);
-      setTimeout(() => msgBox.remove(), 4500);
-    });
-  });
-
-  // ===== Smooth scroll =====
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  
-  /* ANIMATIONS */
+// Qudra Institute — reliable explicit i18n, premium motion and interactions
+(() => {
+  'use strict';
   document.documentElement.classList.add('js');
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var revealObs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('show'); revealObs.unobserve(e.target); }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const root = document.documentElement;
+    const dictionary = window.__i18n || { ar: {}, en: {} };
+    const langToggle = document.getElementById('langToggle');
+    const loading = document.getElementById('loading');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let currentLang = localStorage.getItem('edu_lang') === 'en' ? 'en' : 'ar';
+
+    const valueFor = (lang, key) => dictionary[lang] && dictionary[lang][key];
+
+    function applyLanguage(lang) {
+      if (!dictionary[lang]) return;
+      currentLang = lang;
+      root.lang = lang;
+      root.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      root.dataset.lang = lang;
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const value = valueFor(lang, el.dataset.i18n);
+        if (typeof value === 'string') el.textContent = value;
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-    revealEls.forEach(function(el) { revealObs.observe(el); });
-  } else {
-    revealEls.forEach(function(el) { el.classList.add('show'); });
-  }
+      document.querySelectorAll('[data-i18n-ph]').forEach((el) => {
+        const value = valueFor(lang, el.dataset.i18nPh);
+        if (typeof value === 'string') el.placeholder = value;
+      });
+      document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+        const value = valueFor(lang, el.dataset.i18nAlt);
+        if (typeof value === 'string') el.alt = value;
+      });
 
-  /* Navbar scroll */
-  var nbar = document.querySelector('.navbar');
-  if (nbar) {
-    window.addEventListener('scroll', function() { nbar.classList.toggle('scrolled', window.scrollY > 80); });
-  }
+      const titleKey = root.dataset.titleI18n;
+      if (titleKey && valueFor(lang, titleKey)) document.title = valueFor(lang, titleKey);
+      if (langToggle) {
+        langToggle.textContent = lang === 'ar' ? 'EN' : 'عربي';
+        langToggle.setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
+      }
+      document.querySelectorAll('.nav-logo svg text').forEach((text) => { text.textContent = lang === 'ar' ? 'ق' : 'Q'; });
+      document.querySelectorAll('.fa-arrow-left, .fa-arrow-right').forEach((icon) => {
+        icon.classList.toggle('fa-arrow-left', lang === 'ar');
+        icon.classList.toggle('fa-arrow-right', lang === 'en');
+      });
+      localStorage.setItem('edu_lang', lang);
+      window.dispatchEvent(new CustomEvent('qudra:languagechange', { detail: { lang } }));
+    }
 
-  /* Hero visual parallax */
-  var hv2 = document.querySelector('.hero-visual');
-  if (hv2) {
-    window.addEventListener('scroll', function() {
-      var y = window.scrollY;
-      if (y < window.innerHeight) { hv2.style.transform = 'translateY(' + (y * 0.03) + 'px)'; }
-    });
-  }
-});
-});
+    applyLanguage(currentLang);
+    if (langToggle) langToggle.addEventListener('click', () => applyLanguage(currentLang === 'ar' ? 'en' : 'ar'));
+    window.qudraLanguageReady = true;
+
+    // Loading screen always releases, even if another feature fails.
+    const releaseLoader = () => loading && loading.classList.add('hide');
+    window.addEventListener('load', releaseLoader, { once: true });
+    setTimeout(releaseLoader, 850);
+
+    // Navigation.
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (menuToggle && navLinks) {
+      menuToggle.setAttribute('aria-label', 'Menu');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        menuToggle.classList.toggle('open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+      });
+      navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }));
+      const file = location.pathname.split('/').pop() || 'index.html';
+      navLinks.querySelectorAll('a').forEach((a) => a.classList.toggle('active', a.getAttribute('href') === file));
+    }
+
+    const navbar = document.querySelector('.navbar');
+    const onScroll = () => navbar && navbar.classList.toggle('scrolled', scrollY > 50);
+    onScroll();
+    addEventListener('scroll', onScroll, { passive: true });
+
+    // Progressive reveal: content is visible without JS; observers only enhance it.
+    const revealElements = document.querySelectorAll('.reveal, .fade-in');
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+      revealElements.forEach((el, i) => {
+        el.style.setProperty('--reveal-delay', `${Math.min(i % 4, 3) * 80}ms`);
+        revealObserver.observe(el);
+      });
+    } else revealElements.forEach((el) => el.classList.add('show'));
+
+    // Counters; labels are never overwritten.
+    const animateCounter = (el) => {
+      if (el.dataset.animated) return;
+      el.dataset.animated = 'true';
+      const target = Number.parseInt(el.dataset.target || '0', 10);
+      if (!target) return;
+      const started = performance.now();
+      const duration = 1500;
+      const tick = (now) => {
+        const progress = Math.min((now - started) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased).toLocaleString(currentLang === 'ar' ? 'ar-SA' : 'en-US');
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const counters = document.querySelectorAll('[data-target]');
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      const counterObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) { animateCounter(entry.target); counterObserver.unobserve(entry.target); }
+      }), { threshold: 0.4 });
+      counters.forEach((el) => counterObserver.observe(el));
+    } else counters.forEach(animateCounter);
+
+    // Hero depth follows pointer without obscuring content.
+    const heroVisual = document.getElementById('heroVisual') || document.querySelector('.hero-visual');
+    if (heroVisual && !reduceMotion && matchMedia('(pointer:fine)').matches) {
+      const shell = heroVisual.querySelector('.hero-image-shell') || heroVisual;
+      heroVisual.addEventListener('pointermove', (event) => {
+        const rect = heroVisual.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        shell.style.transform = `perspective(1100px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateY(-4px)`;
+      });
+      heroVisual.addEventListener('pointerleave', () => { shell.style.transform = ''; });
+    }
+
+    // Back to top.
+    const back = document.createElement('button');
+    back.id = 'backToTop';
+    back.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    back.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(back);
+    const toggleBack = () => back.classList.toggle('visible', scrollY > 500);
+    addEventListener('scroll', toggleBack, { passive: true }); toggleBack();
+    back.addEventListener('click', () => scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+    // Demo form feedback.
+    document.querySelectorAll('form').forEach((form) => form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      form.querySelector('.form-success')?.remove();
+      const box = document.createElement('div');
+      box.className = 'form-success';
+      box.textContent = currentLang === 'ar' ? 'تم إرسال طلبك بنجاح. سيتواصل معك فريقنا قريباً.' : 'Your request was sent successfully. Our team will contact you shortly.';
+      form.appendChild(box);
+      setTimeout(() => box.remove(), 5000);
+    }));
+
+    window.qudraSiteReady = true;
+    window.dispatchEvent(new Event('qudra:ready'));
+  });
+})();
