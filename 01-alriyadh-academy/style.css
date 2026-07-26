@@ -55,10 +55,20 @@ img { max-width: 100%; display: block; }
 
 /* Hero */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+.hero-inner { display: flex; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 40px; width: 100%; }
+@media (max-width: 768px) { .hero-inner { flex-direction: column; gap: 20px; } }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transform: scale(1.05); animation: heroZoom 12s infinite alternate ease-in-out; }
 @keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1.15); } }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,17,23,.92), rgba(13,17,23,.75), rgba(26,92,42,.5)); }
-.hero-content { position: relative; z-index: 2; max-width: 700px; padding: 120px 20px 60px; }
+.hero-content { position: relative; z-index: 2; max-width: 640px; padding: 120px 20px 60px; }
+.hero-visual { position: relative; z-index: 2; flex: 1; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 120px 20px 60px; }
+.hero-visual img { width: 100%; max-width: 480px; border-radius: 24px; object-fit: cover; aspect-ratio: 3/4; box-shadow: 0 20px 60px rgba(0,0,0,.4); transform: perspective(800px) rotateY(-8deg); transition: 0.5s; border: 1px solid rgba(201,168,76,.15); }
+.hero-visual img:hover { transform: perspective(800px) rotateY(-2deg) scale(1.02); box-shadow: 0 30px 80px rgba(201,168,76,.2); }
+.hero-visual-decor { position: absolute; width: 200px; height: 200px; border: 2px solid rgba(201,168,76,.15); border-radius: 50%; bottom: 60px; right: 10%; animation: floatDecor 6s infinite alternate ease-in-out; pointer-events: none; }
+@keyframes floatDecor { from { transform: translateY(0) scale(1); } to { transform: translateY(-20px) scale(1.05); } }
+[lang="en"] .hero-visual img { transform: perspective(800px) rotateY(8deg); }
+[lang="en"] .hero-visual img:hover { transform: perspective(800px) rotateY(2deg) scale(1.02); }
+@media (max-width: 768px) { .hero-visual { padding: 0 20px 40px; min-height: auto; } .hero-visual img { max-width: 320px; aspect-ratio: 4/5; } }
 .hero-badge { display: inline-block; padding: 6px 18px; background: rgba(201,168,76,.15); border: 1px solid rgba(201,168,76,.3); border-radius: 20px; font-size: 0.82rem; color: var(--accent); margin-bottom: 20px; }
 .hero h1 { font-size: clamp(2.2rem,6vw,4rem); line-height: 1.15; margin-bottom: 18px; }
 .gold { color: var(--accent); }

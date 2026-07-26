@@ -8,15 +8,22 @@
   function apply(lang) {
     var dict = window.__i18n && window.__i18n[lang];
     if (!dict) return;
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n');
-      var val = dict[key];
-      if (!val) return;
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
-      if (el.tagName === 'OPTION') { el.textContent = val.replace(/<[^>]+>/g,''); return; }
-      if (el.hasAttribute('data-i18n-html') || val.indexOf('<') !== -1) { el.innerHTML = val; return; }
-      el.textContent = val;
-    });
+    elsToArray(document.querySelectorAll('[data-i18n]')).
+      sort(depthSort).
+      forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        var val = dict[key];
+        if (!val) return;
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+        if (el.tagName === 'OPTION') { el.textContent = val.replace(/<[^>]+>/g,''); return; }
+        if (el.hasAttribute('data-i18n-html') || val.indexOf('<') !== -1) { el.innerHTML = val; return; }
+        el.textContent = val;
+      });
+    function depthSort(a,b) {
+      function depth(n) { var d=0; while(n.parentNode) { d++; n=n.parentNode; } return d; }
+      return depth(b) - depth(a);
+    }
+    function elsToArray(nl) { var a=[]; for(var i=0;i<nl.length;i++) a.push(nl[i]); return a; }
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     var btn = document.getElementById('langToggle');
