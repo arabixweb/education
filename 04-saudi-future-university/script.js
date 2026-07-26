@@ -1,161 +1,280 @@
-// 04 Saudi Future University — Final Script: i18n toggle + polish
-document.addEventListener('DOMContentLoaded', () => {
-  // ===== Loading Screen =====
-  const loadingEl = document.getElementById('loading');
-  if (loadingEl) setTimeout(() => loadingEl.classList.add('hide'), 600);
+// Saudi Future University v2 — premium bilingual static i18n, dynamic hero, loader, reveals, counters, filter, form, network canvas
+(function(){
+'use strict';
 
-  // ===== Mobile Menu =====
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-  }
+// ====== LOADER ======
+const loading = document.getElementById('loading');
 
-  // ===== Active Nav Link =====
-  if (navLinks) {
-    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-    navLinks.querySelectorAll('a').forEach(a => {
-      const href = a.getAttribute('href');
-      a.classList.toggle('active', href === currentFile || (currentFile === '' && href === 'index.html'));
-    });
-  }
+// ====== REDUCED MOTION ======
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduceMotion) document.documentElement.classList.add('no-motion');
 
-  // ===== i18n: bidirectional runtime matching =====
+function domReady(fn) {
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+  else fn();
+}
+
+domReady(function(){
+  // ====== loading screen ======
+  if (loading) setTimeout(() => loading.classList.add('hide'), 600);
+
+  // ====== i18n ======
+  const i18n = window.__i18n || {};
   const langToggle = document.getElementById('langToggle');
-  let currentLang = 'ar';
+  let currentLang = localStorage.getItem('sfu_lang') || 'ar';
 
-  function cleanText(s) { return (s || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(); }
-
-  // Build lookup: cleanedText -> key (from both languages)
-  const lookup = {};
-  if (window.__i18n) {
-    for (const lang of ['ar', 'en']) {
-      const dict = window.__i18n[lang] || {};
-      for (const [key, value] of Object.entries(dict)) {
-        const c = cleanText(value);
-        if (c.length >= 2) lookup[c] = key;
-      }
-    }
-  }
-
-  function tagElements() {
-    // Tag translatable elements by matching their text against the lookup
-    document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,button,li,label,cite,option,strong,em,small,div').forEach(el => {
-      if (el.hasAttribute('data-i18n')) return;
-      // Skip elements with element children EXCEPT allowed inline tags (span, strong, em, i, b)
-      const badChild = Array.from(el.children).some(c => !['SPAN','STRONG','EM','I','B','BR'].includes(c.tagName));
-      if (badChild) return;
-      const text = cleanText(el.textContent);
-      if (text.length < 2) return;
-      const key = lookup[text];
-      if (key) el.setAttribute('data-i18n', key);
-    });
-  }
-
-  function applyTranslation(lang) {
-    if (!window.__i18n || !window.__i18n[lang]) return;
-    const dict = window.__i18n[lang];
+  function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('sfu_lang', lang);
+    const dict = i18n[lang];
+    if (!dict) return;
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    // data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      const trans = dict[key];
-      if (!trans) return;
-      if (el.tagName === 'OPTION') { el.textContent = cleanText(trans); }
-      else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { /* placeholders below */ }
-      else el.innerHTML = trans;
+      if (dict[key]) el.textContent = dict[key];
     });
-    // Placeholders
-    document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
-      const ph = el.getAttribute('data-i18n-ph');
-      if (ph && dict[ph]) el.placeholder = dict[ph];
+    // data-i18n-html
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key]) el.innerHTML = dict[key];
     });
-    if (langToggle) langToggle.textContent = lang === 'ar' ? 'EN' : 'عربي';
-    // Page title
-    const titleKey = document.title && lookup[cleanText(document.title)];
-    if (titleKey && dict[titleKey]) document.title = cleanText(dict[titleKey]);
+    // data-i18n-placeholder
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key]) el.placeholder = dict[key];
+    });
+    // data-i18n-alt
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.getAttribute('data-i18n-alt');
+      if (dict[key]) el.alt = dict[key];
+    });
+    // page title
+    const titleKey = dict.page_title;
+    if (titleKey) document.title = titleKey;
+    // lang toggle button text
+    if (langToggle) langToggle.innerHTML = `<i class="fa-solid fa-globe"></i><span>${lang === 'ar' ? 'EN' : 'عربي'}</span>`;
+    // brand name from shared dict
+    const brandName = document.querySelector('.brand-copy strong');
+    if (brandName && dict.brand_name) brandName.textContent = dict.brand_name;
+    // brand tag
+    const brandTag = document.querySelector('.brand-copy small');
+    if (brandTag && dict.brand_tag) brandTag.textContent = dict.brand_tag;
   }
 
-  if (langToggle && window.__i18n) {
-    tagElements();
-    const saved = localStorage.getItem('edu_lang');
-    if (saved === 'en') { currentLang = 'en'; applyTranslation('en'); }
-    langToggle.addEventListener('click', () => {
-      currentLang = currentLang === 'ar' ? 'en' : 'ar';
-      localStorage.setItem('edu_lang', currentLang);
-      applyTranslation(currentLang);
+  if (langToggle && i18n.ar) {
+    // if saved lang is english, apply it
+    if (currentLang === 'en') applyLang('en');
+    langToggle.addEventListener('click', () => applyLang(currentLang === 'ar' ? 'en' : 'ar'));
+  }
+
+  // ====== MOBILE MENU ======
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const menuBackdrop = document.getElementById('menuBackdrop');
+
+  function closeMenu() {
+    navLinks && navLinks.classList.remove('open');
+    menuToggle && menuToggle.classList.remove('open');
+    menuBackdrop && menuBackdrop.classList.remove('open');
+    menuToggle && menuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openMenu() {
+    navLinks && navLinks.classList.add('open');
+    menuToggle && menuToggle.classList.add('open');
+    menuBackdrop && menuBackdrop.classList.add('open');
+    menuToggle && menuToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.contains('open');
+      open ? closeMenu() : openMenu();
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+    // escape key
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  }
+
+  // ====== ACTIVE NAV LINK ======
+  if (navLinks) {
+    const file = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.querySelectorAll('a').forEach(a => {
+      const href = a.getAttribute('href');
+      if (href === file || (file === 'index.html' && href === 'index.html')) a.classList.add('active');
     });
   }
 
-  // ===== Scroll Animations =====
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); observer.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in, [class*="feat-"], [class*="prog-"], [class*="waha-"], .why-card, .program-full-card').forEach(el => {
-    if (!el.classList.contains('fade-in')) el.classList.add('fade-in');
-    observer.observe(el);
-  });
+  // ====== SCROLL REVEALS ======
+  let observer;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('show'));
+  }
 
-  // ===== Counter Animation =====
-  const counterObserver = new IntersectionObserver(entries => {
+  // ====== COUNTERS ======
+  const counterObs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
-      const target = parseInt(el.dataset.target);
-      if (!target || el.dataset.animated === 'true') return;
-      el.dataset.animated = 'true';
+      const target = parseFloat(el.getAttribute('data-count'));
+      if (!target || el.dataset.animated === '1') return;
+      el.dataset.animated = '1';
+      const isFloat = target % 1 !== 0;
       let current = 0;
-      const step = Math.max(1, Math.ceil(target / 50));
+      const steps = 45;
+      const increment = target / steps;
       const timer = setInterval(() => {
-        current = Math.min(current + step, target);
-        el.textContent = current.toLocaleString() + '+';
+        current = Math.min(current + increment, target);
+        el.textContent = isFloat ? Math.round(current) + '%' : Math.floor(current).toLocaleString() + '+';
         if (current >= target) clearInterval(timer);
-      }, 20);
-      counterObserver.unobserve(el);
+      }, 24);
+      counterObs.unobserve(el);
     });
   }, { threshold: 0.5 });
-  document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+  document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
 
-  // ===== Back to Top =====
-  let backToTop = document.getElementById('backToTop');
-  if (!backToTop) {
-    backToTop = document.createElement('button');
-    backToTop.id = 'backToTop';
-    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTop.setAttribute('aria-label', 'Back to top');
-    backToTop.style.cssText = 'position:fixed;bottom:24px;left:24px;z-index:999;width:44px;height:44px;border-radius:12px;background:#6d28d9;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transform:translateY(20px);transition:0.4s;box-shadow:0 4px 16px rgba(0,0,0,.3);pointer-events:none;';
-    document.body.appendChild(backToTop);
-    window.addEventListener('scroll', () => {
-      const show = window.scrollY > 400;
-      backToTop.style.opacity = show ? '1' : '0';
-      backToTop.style.transform = show ? 'translateY(0)' : 'translateY(20px)';
-      backToTop.style.pointerEvents = show ? 'auto' : 'none';
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  // ====== COMMAND WINDOW 3D TILT ======
+  if (!reduceMotion && matchMedia('(pointer:fine)').matches) {
+    const cmd = document.getElementById('commandWindow');
+    if (cmd) {
+      cmd.addEventListener('mousemove', e => {
+        const r = cmd.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        const tiltX = (y - 0.5) * 8;
+        const tiltY = (x - 0.5) * -12;
+        cmd.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      });
+      cmd.addEventListener('mouseleave', () => { cmd.style.transform = ''; });
+    }
   }
 
-  // ===== Form Handling =====
-  document.querySelectorAll('form').forEach(form => {
+  // ====== NETWORK CANVAS (HERO & PAGE HERO) ======
+  if (!reduceMotion) {
+    document.querySelectorAll('.network-canvas').forEach(canvas => {
+      const ctx = canvas.getContext('2d');
+      let w, h, particles = [];
+      const count = Math.min(55, Math.floor(window.innerWidth / 18));
+
+      function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width * devicePixelRatio;
+        canvas.height = rect.height * devicePixelRatio;
+        w = rect.width; h = rect.height;
+        ctx.scale(devicePixelRatio, devicePixelRatio);
+      }
+
+      function createParticles() {
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * w, y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.35,
+            vy: (Math.random() - 0.5) * 0.35,
+            r: Math.random() * 1.5 + 0.5
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach((p, i) => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
+          if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(73,229,255,0.35)';
+          ctx.fill();
+          // lines
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = p.x - particles[j].x, dy = p.y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(117,89,255,${(1 - dist / 120) * 0.18})`;
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          }
+        });
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      createParticles();
+      draw();
+      window.addEventListener('resize', () => { resize(); createParticles(); });
+    });
+  }
+
+  // ====== PROGRAM FILTER ======
+  const filterToolbar = document.querySelector('.program-toolbar');
+  if (filterToolbar) {
+    const buttons = filterToolbar.querySelectorAll('button');
+    const cards = document.querySelectorAll('.degree-card');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.level === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // ====== APPLICATION FORM ======
+  const form = document.getElementById('applicationForm');
+  if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"], button:not([type])');
+      const btn = form.querySelector('.form-submit');
       if (btn) btn.disabled = true;
-      const dict = window.__i18n && window.__i18n[currentLang];
-      const msgBox = document.createElement('div');
-      msgBox.style.cssText = 'padding:14px 18px;margin-top:16px;border-radius:10px;background:rgba(74,222,128,.15);color:#4ade80;text-align:center;font-weight:600;';
-      msgBox.textContent = (dict && dict.form_success) || (currentLang === 'ar' ? '✓ تم إرسال الطلب بنجاح!' : '✓ Submitted successfully!');
-      form.appendChild(msgBox);
-      setTimeout(() => { form.reset(); if (btn) btn.disabled = false; }, 2000);
-      setTimeout(() => msgBox.remove(), 4500);
+      const status = form.querySelector('.form-status');
+      const dict = i18n[currentLang];
+      const msg = (dict && dict.form_success) || '✓ Application submitted. We will contact you soon.';
+      if (status) { status.textContent = msg; status.style.color = '#168c65'; }
+      setTimeout(() => { form.reset(); if (btn) btn.disabled = false; }, 2500);
+      setTimeout(() => { if (status) status.textContent = ''; }, 5000);
     });
-  });
+  }
 
-  // ===== Smooth scroll =====
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
+  // ====== BACK TO TOP ======
+  const topBtn = document.getElementById('backToTop');
+  if (topBtn) {
+    const showTop = () => topBtn.classList.toggle('visible', scrollY > 500);
+    addEventListener('scroll', showTop, { passive: true });
+    showTop();
+    topBtn.addEventListener('click', () => scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+  }
+
+  // ====== FOOTER TOP BTN ======
+  document.querySelector('.footer-top')?.addEventListener('click', () => scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+  // ====== SIGNS OF LIFE ======
+  window.sfuSiteReady = true;
+  document.dispatchEvent(new Event('sfu:ready'));
 });
+
+})();
