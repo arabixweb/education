@@ -1,71 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اتصل بنا | معهد قدرة — التسجيل</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .page-banner { padding: 130px 0 50px; background: linear-gradient(135deg,var(--primary-dark),var(--primary)); color: white; text-align: center; }
-    .page-banner h1 { font-size: 2.5rem; }
-    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-weight: 600; margin-bottom: 6px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 18px; border: 2px solid #dce3ef; border-radius: 12px; font-family: var(--font); font-size: 0.95rem; transition: 0.3s; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
-    .form-group textarea { height: 120px; resize: vertical; }
-    .info-item { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
-    .info-item i { width: 50px; height: 50px; border-radius: 14px; background: linear-gradient(135deg, var(--accent), #1a5bcf); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
-    @media (max-width:768px) { .contact-wrap { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>اتصل بنا | معهد قدرة — التسجيل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><i class="fas fa-bolt"></i><span>معهد <strong>قدرة</strong></span></a>
-      <nav class="nav" id="nav">
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">عن المعهد</a>
-        <a href="courses.html">الدورات</a>
-        <a href="contact.html" class="active">اتصل بنا</a>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-  <section class="page-banner"><div class="container"><h1>اتصل بنا</h1><p style="color:rgba(255,255,255,0.7);">سجل الآن في الدورة التي تناسبك.</p></div></section>
-  <section class="section">
-    <div class="container contact-wrap">
-      <div>
-        <h2 style="font-size:1.6rem;margin-bottom:30px;">معلومات <span class="blue">الاتصال</span></h2>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h4 style="margin-bottom:4px;">الموقع</h4><p style="color:var(--text-muted);font-size:0.9rem;">الرياض — حي العليا، طريق الملك فهد</p></div></div>
-        <div class="info-item"><i class="fas fa-phone"></i><div><h4 style="margin-bottom:4px;">الهاتف</h4><p style="color:var(--text-muted);font-size:0.9rem;">920022345</p></div></div>
-        <div class="info-item"><i class="fas fa-envelope"></i><div><h4 style="margin-bottom:4px;">الإيميل</h4><p style="color:var(--text-muted);font-size:0.9rem;">info@qudra-institute.edu.sa</p></div></div>
-        <div class="info-item"><i class="fas fa-clock"></i><div><h4 style="margin-bottom:4px;">ساعات العمل</h4><p style="color:var(--text-muted);font-size:0.9rem;">الأحد — الخميس 8:00 ص — 8:00 م</p></div></div>
+<div id="loading"><div class="loader"></div></div>
+<nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo"><svg viewBox="0 0 60 60" width="44" height="44"><rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="2"/><path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.8"/><text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text></svg><span class="logo-text">معهد <strong>قدرة</strong></span></a><div class="nav-links" id="navLinks"><a href="index.html">الرئيسية</a><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html" class="active">اتصل بنا</a></div><div class="nav-controls"><button id="langToggle" class="lang-btn">EN</button><button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button></div></div></nav>
+
+<section class="page-banner"><div class="container"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / <span>اتصل بنا</span></div><h1>اتصل <span class="blue">بنا</span></h1><p style="color:var(--text-muted);margin-top:10px">سجل في الدورة التي تناسبك أو استفسر عن أي شيء</p></div></section>
+
+<section class="sec">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>الموقع</h4><p>الرياض — حي المروج، طريق الأمير محمد بن سلمان<br>ص.ب ٤٥٢١، الرياض ١٢٤٥١</p></div></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone"></i></div><div><h4>الهاتف</h4><p>التسجيل: 920022334<br>الاستفسارات: 920022335</p></div></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>البريد الإلكتروني</h4><p>info@qudra-institute.edu.sa<br>register@qudra-institute.edu.sa</p></div></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-clock"></i></div><div><h4>مواعيد العمل</h4><p>السبت — الخميس: ٨:٠٠ ص — ١٠:٠٠ م<br>الجمعة: ٢:٠٠ م — ٨:٠٠ م</p></div></div>
+        <div style="width:100%;height:220px;border-radius:12px;overflow:hidden;margin-top:4px"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.5!2d46.65!3d24.68!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2YXYs9mD2Ycg2KfZhNmH2LPYqSDZhNmE2YXYqti02KfZhA!5e0!3m2!1sar!2ssa!4v1" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe></div>
       </div>
-      <div>
-        <h2 style="font-size:1.6rem;margin-bottom:30px;">طلب <span class="blue">التسجيل</span></h2>
-        <form>
-          <div class="form-group"><label>الاسم الثلاثي</label><input type="text" placeholder="الاسم الكامل" required></div>
-          <div class="form-group"><label>رقم الجوال</label><input type="tel" placeholder="05xxxxxxxx" required></div>
-          <div class="form-group"><label>البريد الإلكتروني</label><input type="email" placeholder="example@domain.com"></div>
-          <div class="form-group"><label>الدورة المطلوبة</label><select><option>الذكاء الاصطناعي — المستوى الأول</option><option>الأمن السيبراني المتكامل</option><option>تطوير الويب Full-Stack</option><option>الحوسبة السحابية AWS</option><option>إدارة المشاريع</option><option>الإنجليزية للأعمال</option></select></div>
-          <div class="form-group"><label>ملاحظات</label><textarea placeholder="أي استفسار إضافي..."></textarea></div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">إرسال <i class="fas fa-paper-plane"></i></button>
-        </form>
-      </div>
+      <form id="contactForm">
+        <h3 style="font-size:1.3rem;margin-bottom:16px">طلب تسجيل جديد</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label>الاسم الكامل *</label><input type="text" required id="fullName" placeholder="أدخل اسمك"></div>
+          <div class="form-group"><label>رقم الجوال *</label><input type="tel" required id="phone" placeholder="05xxxxxxxx"></div>
+        </div>
+        <div class="form-group"><label>البريد الإلكتروني</label><input type="email" id="email" placeholder="example@email.com"></div>
+        <div class="form-group"><label>الدورة المطلوبة *</label><select required id="course"><option value="">— اختر الدورة —</option><option>Full-Stack Web Development</option><option>Machine Learning & AI</option><option>Cybersecurity Professional</option><option>UX/UI Design</option><option>Data Science & Analytics</option><option>Front-End Advanced</option><option>Deep Learning</option><option>Network Security</option></select></div>
+        <div class="form-group"><label>الرسالة أو الاستفسار</label><textarea id="message" placeholder="هل لديك أي استفسار؟"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">إرسال طلب التسجيل <i class="fas fa-paper-plane"></i></button>
+        <p id="formStatus" style="margin-top:12px;font-size:0.85rem;display:none"></p>
+      </form>
     </div>
-  </section>
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-bolt"></i>معهد <strong>قدرة</strong></a><p>تمكين الكفاءات الوطنية لسوق العمل — منذ 2018.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
-      <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a></div>
-      <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي العليا</p><p><i class="fas fa-phone"></i> 920022345</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p></div>
-    </div>
-    <div class="footer-bottom container"><p>© 2026 معهد قدرة — جميع الحقوق محفوظة.</p></div>
-  </footer>
-  <script src="script.js"></script>
+  </div>
+</section>
+
+<section class="sec dark-sec"><div class="container"><div class="sec-head"><h2>الدفع <span class="blue">والتقسيط</span></h2><p>نوفر خطط دفع مرنة تناسب الجميع</p></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px"><div style="text-align:center;padding:24px;background:var(--bg-card);border-radius:12px"><i class="fas fa-credit-card" style="font-size:2rem;color:var(--accent);margin-bottom:10px"></i><h4 style="font-size:.95rem">دفع عن طريق مدى</h4></div><div style="text-align:center;padding:24px;background:var(--bg-card);border-radius:12px"><i class="fas fa-building-columns" style="font-size:2rem;color:var(--accent);margin-bottom:10px"></i><h4 style="font-size:.95rem">تحويل بنكي</h4></div><div style="text-align:center;padding:24px;background:var(--bg-card);border-radius:12px"><i class="fas fa-hand" style="font-size:2rem;color:var(--accent);margin-bottom:10px"></i><h4 style="font-size:.95rem">تقسيط حتى ٦ شهور</h4></div><div style="text-align:center;padding:24px;background:var(--bg-card);border-radius:12px"><i class="fas fa-gem" style="font-size:2rem;color:var(--accent);margin-bottom:10px"></i><h4 style="font-size:.95rem">خصم ٢٠٪ للمجموعات</h4></div></div></div></section>
+
+<footer class="footer"><div class="container footer-grid"><div class="footer-col"><div class="nav-logo" style="margin-bottom:14px"><svg viewBox="0 0 60 60" width="40" height="40"><rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="1.5"/><path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.5"/><text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text></svg><span class="logo-text" style="font-size:1rem">معهد <strong>قدرة</strong></span></div><p>معهد التدريب التقني الرائد في المملكة — منذ 2018.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-snapchat"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div><div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a><a href="#">المدونة</a></div><div class="footer-col"><h4>الدورات</h4><a href="courses.html">تطوير الويب</a><a href="courses.html">الذكاء الاصطناعي</a><a href="courses.html">الأمن السيبراني</a><a href="courses.html">التصميم الرقمي</a></div><div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي المروج</p><p><i class="fas fa-phone"></i> 920022334</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p><p><i class="fas fa-clock"></i> ٨:٠٠ ص — ١٠:٠٠ م</p></div></div><div class="footer-bottom"><p>© 2026 معهد قدرة — جميع الحقوق محفوظة.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>

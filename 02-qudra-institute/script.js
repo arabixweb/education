@@ -1,27 +1,63 @@
-// ===== Qudra Institute — Script =====
+// معهد قدرة — Script
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => document.getElementById('loading')?.classList.add('hide'), 700);
 
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
-hamburger?.addEventListener('click', () => nav?.classList.toggle('open'));
-document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav?.classList.remove('open')));
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  }
 
-// Stats animation
-const counters = document.querySelectorAll('.num');
-const speed = 150;
-const animateCounters = () => {
-  counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target');
-    const increment = target / speed;
-    const updateCount = () => {
-      const count = +counter.innerText;
-      if (count < target) { counter.innerText = Math.ceil(count + increment); requestAnimationFrame(updateCount); }
-      else { counter.innerText = target; }
-    };
-    updateCount();
+  const langToggle = document.getElementById('langToggle');
+  let currentLang = 'ar';
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      langToggle.textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+    });
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('show'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.feat-card, .course-card, .course-full-card, .testimonial-card').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
   });
-};
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if (entry.isIntersecting) { animateCounters(); observer.disconnect(); } });
-}, { threshold: 0.5 });
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) observer.observe(heroStats);
+
+  // Counters
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        if (!target) return;
+        let current = 0;
+        const step = Math.ceil(target / 50);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = current.toLocaleString() + (target === 92 ? '%' : '');
+        }, 30);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat-num').forEach(el => counterObserver.observe(el));
+
+  // Navbar scroll
+  window.addEventListener('scroll', () => {
+    const n = document.querySelector('.navbar');
+    if (window.scrollY > 80) {
+      n.style.background = 'rgba(8,14,26,.97)';
+      n.style.boxShadow = '0 4px 20px rgba(0,0,0,.3)';
+    } else {
+      n.style.background = 'rgba(8,14,26,.92)';
+      n.style.boxShadow = 'none';
+    }
+  });
+});

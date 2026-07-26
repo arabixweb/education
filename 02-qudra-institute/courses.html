@@ -1,76 +1,44 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الدورات | معهد قدرة — جميع البرامج التدريبية</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .page-banner { padding: 130px 0 50px; background: linear-gradient(135deg,var(--primary-dark),var(--primary)); color: white; text-align: center; }
-    .page-banner h1 { font-size: 2.5rem; }
-    .filters { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
-    .filters button { padding: 10px 24px; border: 2px solid #dce3ef; border-radius: 50px; background: var(--bg-white); font-family: var(--font); font-weight: 600; cursor: pointer; transition: 0.3s; }
-    .filters button.active, .filters button:hover { border-color: var(--accent); background: var(--accent); color: white; }
-    .courses-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-    .course-card { background: var(--bg-white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: 0.4s; }
-    .course-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-    .course-img { padding: 40px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; }
-    .course-img i { font-size: 2.5rem; margin-bottom: 8px; }
-    .course-body { padding: 22px; }
-    .course-body h3 { font-size: 1.1rem; margin-bottom: 8px; }
-    .course-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px; }
-    .course-meta { display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: var(--text-muted); }
-    .course-meta i { color: var(--accent); margin-left: 4px; }
-    .course-price { font-weight: 900; color: var(--primary); font-size: 1rem; }
-    @media (max-width: 992px) { .courses-grid { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 768px) { .courses-grid { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>الدورات | معهد قدرة — Qudra Institute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><i class="fas fa-bolt"></i><span>معهد <strong>قدرة</strong></span></a>
-      <nav class="nav" id="nav">
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">عن المعهد</a>
-        <a href="courses.html" class="active">الدورات</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+<div id="loading"><div class="loader"></div></div>
+<nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo"><svg viewBox="0 0 60 60" width="44" height="44"><rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="2"/><path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.8"/><text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text></svg><span class="logo-text">معهد <strong>قدرة</strong></span></a><div class="nav-links" id="navLinks"><a href="index.html">الرئيسية</a><a href="about.html">عن المعهد</a><a href="courses.html" class="active">الدورات</a><a href="contact.html">اتصل بنا</a></div><div class="nav-controls"><button id="langToggle" class="lang-btn">EN</button><button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button></div></div></nav>
+
+<section class="page-banner"><div class="container"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / <span>الدورات</span></div><h1>جميع <span class="blue">الدورات</span></h1><p style="color:var(--text-muted);margin-top:10px">اختر مسارك المهني وابدأ رحلة التعلم — ٥٠+ دورة احترافية</p></div></section>
+
+<section class="sec">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px">
+      <span class="btn" style="background:var(--accent);color:var(--bg-dark);padding:8px 18px;font-size:.82rem;border-radius:8px">الكل</span>
+      <span class="btn" style="background:var(--bg-card);padding:8px 18px;font-size:.82rem;border-radius:8px;cursor:pointer">تطوير الويب</span>
+      <span class="btn" style="background:var(--bg-card);padding:8px 18px;font-size:.82rem;border-radius:8px;cursor:pointer">الذكاء الاصطناعي</span>
+      <span class="btn" style="background:var(--bg-card);padding:8px 18px;font-size:.82rem;border-radius:8px;cursor:pointer">الأمن السيبراني</span>
+      <span class="btn" style="background:var(--bg-card);padding:8px 18px;font-size:.82rem;border-radius:8px;cursor:pointer">التصميم الرقمي</span>
+      <span class="btn" style="background:var(--bg-card);padding:8px 18px;font-size:.82rem;border-radius:8px;cursor:pointer">علم البيانات</span>
     </div>
-  </header>
-  <section class="page-banner"><div class="container"><h1>دوراتنا التدريبية</h1><p style="color:rgba(255,255,255,0.7);">85+ دورة في التقنية والإدارة — اختر مسارك وانطلق.</p></div></section>
-  <section class="section">
-    <div class="container">
-      <div class="filters">
-        <button class="active">الكل</button>
-        <button>الذكاء الاصطناعي</button>
-        <button>الأمن السيبراني</button>
-        <button>تطوير البرمجيات</button>
-        <button>إدارة الأعمال</button>
-        <button>المهارات الشخصية</button>
-      </div>
-      <div class="courses-grid" id="coursesGrid">
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#0a2558,#2b7fff);"><i class="fas fa-robot"></i><span style="font-size:0.85rem;">AI-101</span></div><div class="course-body"><div class="course-tag">تقني</div><h3>الذكاء الاصطناعي — المستوى الأول</h3><p>أساسيات الذكاء الاصطناعي وتعلم الآلة باستخدام Python.</p><div class="course-meta"><span><i class="far fa-clock"></i> 12 أسبوع</span><span class="course-price">6,900 ر.س</span></div></div></div>
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#0d2f6e,#3a7dff);"><i class="fas fa-shield-halved"></i><span style="font-size:0.85rem;">SEC-201</span></div><div class="course-body"><div class="course-tag">تقني</div><h3>الأمن السيبراني المتكامل</h3><p>اختبار الاختراق، الدفاع الرقمي، وإدارة الثغرات.</p><div class="course-meta"><span><i class="far fa-clock"></i> 16 أسبوع</span><span class="course-price">8,900 ر.س</span></div></div></div>
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#0a1f4a,#1f5fcf);"><i class="fas fa-code"></i><span style="font-size:0.85rem;">WEB-301</span></div><div class="course-body"><div class="course-tag">تقني</div><h3>تطوير الويب Full-Stack</h3><p>React, Node.js, MongoDB — مشروع متكامل.</p><div class="course-meta"><span><i class="far fa-clock"></i> 14 أسبوع</span><span class="course-price">7,900 ر.س</span></div></div></div>
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#061a3e,#1b4d9e);"><i class="fas fa-cloud"></i><span style="font-size:0.85rem;">CLD-401</span></div><div class="course-body"><div class="course-tag">تقني</div><h3>الحوسبة السحابية — AWS</h3><p>بنية تحتية سحابية، DevOps، و Kubernetes.</p><div class="course-meta"><span><i class="far fa-clock"></i> 10 أسبوع</span><span class="course-price">5,900 ر.س</span></div></div></div>
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#0d2b5e,#2564cf);"><i class="fas fa-chart-line"></i><span style="font-size:0.85rem;">MGT-501</span></div><div class="course-body"><div class="course-tag">إدارة</div><h3>إدارة المشاريع الاحترافية PMP</h3><p>تحضير كامل لشهادة PMP.</p><div class="course-meta"><span><i class="far fa-clock"></i> 8 أسابيع</span><span class="course-price">4,900 ر.س</span></div></div></div>
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#07204a,#1a56b8);"><i class="fas fa-language"></i><span style="font-size:0.85rem;">SKL-601</span></div><div class="course-body"><div class="course-tag">مهارات</div><h3>الإنجليزية للأعمال</h3><p>TOEFL/IELTS ومهارات التواصل الوظيفي.</p><div class="course-meta"><span><i class="far fa-clock"></i> 10 أسابيع</span><span class="course-price">3,900 ر.س</span></div></div></div>
-      </div>
+
+    <div class="courses-full-grid">
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&q=80')"></div><div class="body"><span class="tag">تطوير الويب</span><h3>Full-Stack Web Development</h3><p>تعلم HTML, CSS, JavaScript, React, Node.js, MongoDB. مشروع تخرج متكامل يشمل بناء متجر إلكتروني.</p><div class="meta"><span><i class="far fa-clock"></i> ١٢ أسبوع</span><span><i class="fas fa-users"></i> ٢٠ متدرب</span><span><i class="fas fa-tag"></i> ٤٩٩٩ رس</span></div></div></div>
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80')"></div><div class="body"><span class="tag">الذكاء الاصطناعي</span><h3>Machine Learning & AI</h3><p>Python, Scikit-learn, TensorFlow, NLP, Computer Vision. مشاريع مع بيانات حقيقية من Kaggle.</p><div class="meta"><span><i class="far fa-clock"></i> ١٦ أسبوع</span><span><i class="fas fa-users"></i> ١٥ متدرب</span><span><i class="fas fa-tag"></i> ٦٩٩٩ رس</span></div></div></div>
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')"></div><div class="body"><span class="tag">الأمن السيبراني</span><h3>Cybersecurity Professional</h3><p>اختبار الاختراق، تحليل الثغرات، أمن الشبكات، Kali Linux. معمل افتراضي ومسابقات CTF.</p><div class="meta"><span><i class="far fa-clock"></i> ٢٠ أسبوع</span><span><i class="fas fa-users"></i> ١٢ متدرب</span><span><i class="fas fa-tag"></i> ٨٩٩٩ رس</span></div></div></div>
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80')"></div><div class="body"><span class="tag">التصميم الرقمي</span><h3>UX/UI Design</h3><p>Figma, Adobe XD, تصميم تجربة المستخدم، واجهات التطبيقات. مشاريع حقيقية مع عملاء.</p><div class="meta"><span><i class="far fa-clock"></i> ١٠ أسابيع</span><span><i class="fas fa-users"></i> ٢٠ متدرب</span><span><i class="fas fa-tag"></i> ٣٩٩٩ رس</span></div></div></div>
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')"></div><div class="body"><span class="tag">علم البيانات</span><h3>Data Science & Analytics</h3><p>تحليل البيانات، SQL, Python (Pandas, Matplotlib), Power BI. شهادة معتمدة من Google.</p><div class="meta"><span><i class="far fa-clock"></i> ١٢ أسبوع</span><span><i class="fas fa-users"></i> ١٨ متدرب</span><span><i class="fas fa-tag"></i> ٤٩٩٩ رس</span></div></div></div>
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80')"></div><div class="body"><span class="tag">تطوير الويب</span><h3>Front-End Advanced</h3><p>React, Next.js, TypeScript, Tailwind, Framer Motion. تطبيقات تفاعلية وأداء عالي.</p><div class="meta"><span><i class="far fa-clock"></i> ٨ أسابيع</span><span><i class="fas fa-users"></i> ٢٠ متدرب</span><span><i class="fas fa-tag"></i> ٣٩٩٩ رس</span></div></div></div>
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80')"></div><div class="body"><span class="tag">الذكاء الاصطناعي</span><h3>Deep Learning & Neural Networks</h3><p>شبكات عصبية، CNN, RNN, GANs, Transformers. تطبيقات في الرؤية الحاسوبية ومعالجة النصوص.</p><div class="meta"><span><i class="far fa-clock"></i> ١٠ أسابيع</span><span><i class="fas fa-users"></i> ١٢ متدرب</span><span><i class="fas fa-tag"></i> ٥٩٩٩ رس</span></div></div></div>
+      <div class="course-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80')"></div><div class="body"><span class="tag">الأمن السيبراني</span><h3>Network Security & Defense</h3><p>Cisco, Firewalls, IDS/IPS, إدارة الثغرات. تحضير لشهادة CCNA + CompTIA Security+.</p><div class="meta"><span><i class="far fa-clock"></i> ١٤ أسبوع</span><span><i class="fas fa-users"></i> ١٥ متدرب</span><span><i class="fas fa-tag"></i> ٦٩٩٩ رس</span></div></div></div>
     </div>
-  </section>
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-bolt"></i>معهد <strong>قدرة</strong></a><p>تمكين الكفاءات الوطنية لسوق العمل — منذ 2018.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
-      <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a></div>
-      <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي العليا</p><p><i class="fas fa-phone"></i> 920022345</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p></div>
-    </div>
-    <div class="footer-bottom container"><p>© 2026 معهد قدرة — جميع الحقوق محفوظة.</p></div>
-  </footer>
-  <script src="script.js"></script>
+  </div>
+</section>
+
+<footer class="footer"><div class="container footer-grid"><div class="footer-col"><div class="nav-logo" style="margin-bottom:14px"><svg viewBox="0 0 60 60" width="40" height="40"><rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="1.5"/><path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.5"/><text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text></svg><span class="logo-text" style="font-size:1rem">معهد <strong>قدرة</strong></span></div><p>معهد التدريب التقني الرائد في المملكة — منذ 2018.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-snapchat"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div><div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a><a href="#">المدونة</a></div><div class="footer-col"><h4>الدورات</h4><a href="courses.html">تطوير الويب</a><a href="courses.html">الذكاء الاصطناعي</a><a href="courses.html">الأمن السيبراني</a><a href="courses.html">التصميم الرقمي</a></div><div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي المروج</p><p><i class="fas fa-phone"></i> 920022334</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p><p><i class="fas fa-clock"></i> ٨:٠٠ ص — ١٠:٠٠ م</p></div></div><div class="footer-bottom"><p>© 2026 معهد قدرة — جميع الحقوق محفوظة.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>اتصل بنا | نور الهدى — التسجيل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loading"><div class="loader"></div></div>
+<nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo"><svg viewBox="0 0 60 60" width="48" height="48"><circle cx="30" cy="30" r="28" fill="#0d2137" stroke="#c8a96e" stroke-width="1.5"/><circle cx="30" cy="30" r="22" fill="none" stroke="rgba(200,169,110,.15)" stroke-width="8"/><path d="M30 8 Q40 22 30 38 Q20 22 30 8" fill="#c8a96e" opacity=".9"/><text x="30" y="52" text-anchor="middle" fill="#c8a96e" font-size="6" font-weight="bold">نور الهدى</text></svg><span class="logo-text">نور <strong>الهدى</strong></span></a><div class="nav-links" id="navLinks"><a href="index.html">الرئيسية</a><a href="about.html">عن المعهد</a><a href="programs.html">البرامج</a><a href="contact.html" class="active">اتصل بنا</a></div><div class="nav-controls"><button id="langToggle" class="lang-btn">EN</button><button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button></div></div></nav>
+
+<section class="page-banner"><div class="container"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / <span>اتصل بنا</span></div><h1>اتصل <span class="gold">بنا</span></h1><p style="color:var(--text-muted);margin-top:10px">سجل في حلقات التحفيظ أو استفسر عن البرامج</p></div></section>
+
+<section class="sec">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>الموقع الرئيسي</h4><p>مكة المكرمة — حي العزيزية، طريق مكة — جدة السريع</p></div></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone"></i></div><div><h4>الهاتف</h4><p>المقر الرئيسي: 920033445<br>التسجيل عبر واتساب: 0500112233</p></div></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>البريد الإلكتروني</h4><p>info@nooralhuda.edu.sa<br>register@nooralhuda.edu.sa</p></div></div>
+        <div class="contact-card"><div class="contact-icon"><i class="fas fa-clock"></i></div><div><h4>مواعيد الحلقات</h4><p>الفترة الصباحية: بعد صلاة الفجر حتى الظهر<br>الفترة المسائية: بعد العصر حتى العشاء</p></div></div>
+        <div style="width:100%;height:220px;border-radius:12px;overflow:hidden"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.6!2d39.823!3d21.402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2YXYs9mD2Ycg2KfZhNmH2LPYqSDZg9mF2YfYsdiqINmB2YjZg9mB2YbZig!5e0!3m2!1sar!2ssa!4v1" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <form id="contactForm">
+        <h3 style="font-size:1.3rem;margin-bottom:16px">طلب التسجيل في حلقات التحفيظ</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label>الاسم الكامل *</label><input type="text" required placeholder="أدخل اسمك"></div>
+          <div class="form-group"><label>العمر *</label><input type="number" required placeholder="مثال: 20"></div>
+        </div>
+        <div class="form-group"><label>رقم الجوال *</label><input type="tel" required placeholder="05xxxxxxxx"></div>
+        <div class="form-group"><label>البريد الإلكتروني</label><input type="email" placeholder="example@email.com"></div>
+        <div class="form-group"><label>البرنامج المطلوب *</label><select required><option>— اختر —</option><option>برنامج الحفظ العام</option><option>برنامج الإجازة بالسند</option><option>برنامج الأطفال</option><option>العلوم الشرعية</option><option>التحفيظ عن بُعد</option><option>الدورات الصيفية</option></select></div>
+        <div class="form-group"><label>الفرع</label><select><option>مكة — المقر الرئيسي</option><option>مكة — العزيزية</option><option>جدة — الشاطئ</option><option>المدينة المنورة</option><option>عن بُعد</option></select></div>
+        <div class="form-group"><label>ملاحظات</label><textarea placeholder="هل لديك أي استفسار حول البرامج أو المواعيد؟"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">إرسال طلب التسجيل <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container footer-grid"><div class="footer-col"><div class="nav-logo" style="margin-bottom:14px"><svg viewBox="0 0 60 60" width="42" height="42"><circle cx="30" cy="30" r="28" fill="#0d2137" stroke="#c8a96e" stroke-width="1.5"/><path d="M30 8 Q40 22 30 38 Q20 22 30 8" fill="#c8a96e" opacity=".9"/></svg><span class="logo-text" style="font-size:1rem">نور <strong>الهدى</strong></span></div><p>معهد تحفيظ القرآن والعلوم الشرعية — منذ 1996.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div><div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="programs.html">البرامج</a><a href="contact.html">التسجيل</a><a href="#">المكتبة</a></div><div class="footer-col"><h4>البرامج</h4><a href="programs.html">الحفظ العام</a><a href="programs.html">الإجازة بالسند</a><a href="programs.html">برنامج الأطفال</a><a href="programs.html">العلوم الشرعية</a></div><div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> مكة — حي العزيزية</p><p><i class="fas fa-phone"></i> 920033445</p><p><i class="fas fa-envelope"></i> info@nooralhuda.edu.sa</p></div></div><div class="footer-bottom"><p>© 2026 معهد نور الهدى — جميع الحقوق محفوظة.</p></div></footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>التخصصات | جامعة المستقبل السعودي</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .page-banner { padding: 130px 0 50px; background: linear-gradient(135deg,var(--primary-dark),var(--primary)); color: white; text-align: center; }
-    .page-banner h1 { font-size: 2.5rem; }
-    .major-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-    .major-card { background: var(--bg-white); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); transition: 0.4s; }
-    .major-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-    .major-card .icon { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg,var(--primary-light),var(--primary)); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
-    .major-card .icon i { font-size: 1.4rem; color: var(--accent); }
-    .major-card h3 { margin-bottom: 8px; }
-    .major-card p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; }
-    .major-card .degree { display: inline-block; padding: 4px 14px; background: rgba(212,168,67,0.1); color: var(--accent); border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
-    @media (max-width:992px) { .major-grid { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width:768px) { .major-grid { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>البرامج | جامعة المستقبل السعودي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header"><div class="container header-inner"><a href="index.html" class="logo"><i class="fas fa-university"></i><span>جامعة <strong>المستقبل</strong></span></a><nav class="nav" id="nav"><a href="index.html">الرئيسية</a><a href="about.html">عن الجامعة</a><a href="programs.html" class="active">التخصصات</a><a href="contact.html">اتصل بنا</a></nav><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></header>
-  <section class="page-banner"><div class="container"><h1>التخصصات الأكاديمية</h1><p style="color:rgba(255,255,255,0.7);">23 تخصصاً في البكالوريوس والماجستير — رقمية بالكامل.</p></div></section>
-  <section class="section">
-    <div class="container">
-      <div class="major-grid">
-        <div class="major-card"><div class="icon"><i class="fas fa-laptop-code"></i></div><h3>علوم الحاسب</h3><p>برمجة، شبكات، أمن سيبراني، ذكاء اصطناعي.</p><span class="degree">بكالوريوس</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-chart-bar"></i></div><h3>إدارة الأعمال</h3><p>إدارة، تسويق، مالية، ريادة أعمال.</p><span class="degree">بكالوريوس / ماجستير</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-heart-pulse"></i></div><h3>العلوم الصحية</h3><p>صحة عامة، إدارة صحية، تغذية.</p><span class="degree">بكالوريوس</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-robot"></i></div><h3>الذكاء الاصطناعي</h3><p>تعلم آلة، معالجة لغة طبيعية، روبوتات.</p><span class="degree">بكالوريوس / ماجستير</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-gavel"></i></div><h3>القانون</h3><p>أنظمة، قانون تجاري، تحكيم.</p><span class="degree">بكالوريوس</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-palette"></i></div><h3>التصميم الرقمي</h3><p>UX/UI، جرافيك، وسائط متعددة.</p><span class="degree">بكالوريوس</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-cogs"></i></div><h3>الهندسة الصناعية</h3><p>إنتاج، جودة، لوجستيات.</p><span class="degree">بكالوريوس</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-graduation-cap"></i></div><h3>القيادة التربوية</h3><p>إدارة تعليمية، مناهج، تقويم.</p><span class="degree">ماجستير</span></div>
-        <div class="major-card"><div class="icon"><i class="fas fa-globe"></i></div><h3>العلاقات الدولية</h3><p>دبلوماسية، اقتصاد دولي، دراسات إقليمية.</p><span class="degree">بكالوريوس / ماجستير</span></div>
-      </div>
+<div id="loading"><div class="loader"></div></div>
+<nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo"><svg viewBox="0 0 50 50" width="46" height="46"><rect x="2" y="2" width="46" height="46" rx="10" fill="url(#upg)" stroke="rgba(245,158,11,.3)" stroke-width="1.5"/><text x="25" y="20" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">SFU</text><text x="25" y="40" text-anchor="middle" fill="rgba(255,255,255,.7)" font-size="5">DIGITAL</text></svg><span class="logo-text">جامعة المستقبل <strong>السعودي</strong></span></a><div class="nav-links" id="navLinks"><a href="index.html">الرئيسية</a><a href="about.html">عن الجامعة</a><a href="programs.html" class="active">البرامج</a><a href="contact.html">اتصل بنا</a></div><div class="nav-controls"><button id="langToggle" class="lang-btn">EN</button><button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button></div></div></nav>
+
+<section class="page-banner"><div class="container"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / <span>البرامج</span></div><h1>التخصصات <span class="gold-uni">الرقمية</span></h1><p style="color:var(--text-muted);margin-top:10px">١٥ تخصصاً — بكالوريوس وماجستير — في أحدث المجالات التقنية والإدارية</p></div></section>
+
+<section class="sec">
+  <div class="container">
+    <div class="programs-full-grid">
+      <div class="program-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80')"></div><div class="body"><span class="tag">بكالوريوس</span><h3>الذكاء الاصطناعي</h3><p>تعلم الآلة، الشبكات العصبية، معالجة اللغات الطبيعية، الرؤية الحاسوبية — مع مشاريع تطبيقية في الروبوتات.</p><div class="meta"><span><i class="far fa-clock"></i> ٤ سنوات</span><span><i class="fas fa-globe"></i> عن بُعد</span></div></div></div>
+      <div class="program-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80')"></div><div class="body"><span class="tag">بكالوريوس</span><h3>علوم البيانات</h3><p>تحليل البيانات الضخمة، BI، التعلم الإحصائي، SQL/Python — تحضير لشهادات Google Data Analytics.</p><div class="meta"><span><i class="far fa-clock"></i> ٤ سنوات</span><span><i class="fas fa-globe"></i> عن بُعد</span></div></div></div>
+      <div class="program-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80')"></div><div class="body"><span class="tag">بكالوريوس</span><h3>الأمن السيبراني</h3><p>أمن المعلومات، اختبار الاختراق، حوكمة، تحليل الثغرات — بالتعاون مع SANS وEC-Council.</p><div class="meta"><span><i class="far fa-clock"></i> ٤ سنوات</span><span><i class="fas fa-globe"></i> عن بُعد</span></div></div></div>
+      <div class="program-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80')"></div><div class="body"><span class="tag">بكالوريوس</span><h3>الحوسبة السحابية</h3><p>AWS, Azure, GCP, DevOps, Kubernetes — تحضير لشهادات AWS Certified Solutions Architect.</p><div class="meta"><span><i class="far fa-clock"></i> ٤ سنوات</span><span><i class="fas fa-globe"></i> عن بُعد</span></div></div></div>
+      <div class="program-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80')"></div><div class="body"><span class="tag">بكالوريوس</span><h3>التجارة الإلكترونية</h3><p>متاجر إلكترونية، تسويق رقمي، لغويات، تحليلات، وإدارة منصات — بالتعاون مع Shopify وSalla.</p><div class="meta"><span><i class="far fa-clock"></i> ٤ سنوات</span><span><i class="fas fa-globe"></i> عن بُعد</span></div></div></div>
+      <div class="program-full-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80')"></div><div class="body"><span class="tag">ماجستير</span><h3>إدارة التقنية (MTech)</h3><p>ماجستير تنفيذي في إدارة التقنية والتحول الرقمي — للقادة وصناع القرار.</p><div class="meta"><span><i class="far fa-clock"></i> ١.٥ سنة</span><span><i class="fas fa-globe"></i> عن بُعد</span></div></div></div>
     </div>
-  </section>
-  <footer class="footer"><div class="container footer-inner"><div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-university"></i>جامعة <strong>المستقبل</strong></a><p>جامعة رقمية رائدة — من السعودية للعالم.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div><div class="footer-col"><h4>روابط</h4><a href="about.html">عن الجامعة</a><a href="programs.html">التخصصات</a><a href="contact.html">التقديم</a></div><div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي القدس</p><p><i class="fas fa-phone"></i> 920044567</p><p><i class="fas fa-envelope"></i> info@saudifuture.edu.sa</p></div></div><div class="footer-bottom container"><p>© 2026 جامعة المستقبل السعودي — جميع الحقوق محفوظة.</p></div></footer>
-  <script src="script.js"></script>
+  </div>
+</section>
+
+<footer class="footer"><div class="container footer-grid"><div class="footer-col"><div class="nav-logo" style="margin-bottom:14px"><svg viewBox="0 0 50 50" width="40" height="40"><rect x="2" y="2" width="46" height="46" rx="10" fill="url(#upg)" stroke="rgba(245,158,11,.3)" stroke-width="1.5"/><text x="25" y="20" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">SFU</text></svg><span class="logo-text" style="font-size:.95rem">جامعة المستقبل <strong>السعودي</strong></span></div><p>أول جامعة رقمية معتمدة بالكامل في المملكة — منذ 2020.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div><div class="footer-col"><h4>روابط</h4><a href="about.html">عن الجامعة</a><a href="programs.html">التخصصات</a><a href="contact.html">القبول</a><a href="#">المنح الدراسية</a></div><div class="footer-col"><h4>التخصصات</h4><a href="programs.html">الذكاء الاصطناعي</a><a href="programs.html">علوم البيانات</a><a href="programs.html">الحوسبة السحابية</a><a href="programs.html">الأمن السيبراني</a></div><div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي القدس</p><p><i class="fas fa-phone"></i> 920044556</p><p><i class="fas fa-envelope"></i> info@sfu.edu.sa</p></div></div><div class="footer-bottom"><p>© 2026 جامعة المستقبل السعودي — جميع الحقوق محفوظة.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,75 +1,162 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نور الهدى | Noor Alhuda – معهد تحفيظ القرآن والعلوم الشرعية</title>
-  <meta name="description" content="معهد نور الهدى لتحفيظ القرآن الكريم والعلوم الشرعية في مكة المكرمة — منهاج متكامل للحفظ والفهم والعمل.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>نور الهدى | Noor Alhuda Institute</title>
+<meta name="description" content="معهد نور الهدى لتحفيظ القرآن والعلوم الشرعية — مكة المكرمة">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><i class="fas fa-mosque"></i><span>نور <strong>الهدى</strong></span></a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="about.html">عن المعهد</a>
-        <a href="programs.html">البرامج</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </header>
+<div id="loading"><div class="loader"></div></div>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-dome"><i class="fas fa-moon"></i></div>
-      <h1>نور <span class="amber">الهدى</span> — حيث <span class="amber">القرآن</span> يضيء <span class="amber">الحياة</span></h1>
-      <p>معهد رائد في تحفيظ القرآن الكريم وتعليم العلوم الشرعية بمنهاج متكامل يجمع بين الحفظ المتقن والفهم العميق والتطبيق العملي.</p>
-      <div class="hero-btns">
-        <a href="programs.html" class="btn btn-primary">استعرض البرامج <i class="fas fa-arrow-left"></i></a>
-        <a href="about.html" class="btn btn-outline">عن المعهد</a>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 60 60" width="48" height="48">
+        <circle cx="30" cy="30" r="28" fill="#0d2137" stroke="#c8a96e" stroke-width="1.5"/>
+        <circle cx="30" cy="30" r="22" fill="none" stroke="rgba(200,169,110,.15)" stroke-width="8"/>
+        <path d="M30 8 Q40 22 30 38 Q20 22 30 8" fill="#c8a96e" opacity=".9"/>
+        <text x="30" y="52" text-anchor="middle" fill="#c8a96e" font-size="6" font-weight="bold" font-family="Tajawal,sans-serif">نور الهدى</text>
+      </svg>
+      <span class="logo-text">نور <strong>الهدى</strong></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="about.html">عن المعهد</a>
+      <a href="programs.html">البرامج</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="nav-controls">
+      <button id="langToggle" class="lang-btn">EN</button>
+      <button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Islamic Pattern -->
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-light"></div>
+  <div class="container hero-content">
+    <div class="hero-badge"><i class="fas fa-quran"></i> معهد شرعي معتمد</div>
+    <h1>وَرَتِّلِ الْقُرْآنَ <span class="gold">تَرْتِيلًا</span></h1>
+    <p>معهد نور الهدى لتحفيظ القرآن الكريم والعلوم الشرعية — منهاج متكامل جمع بين الحفظ والفهم والعمل في رحاب مكة المكرمة.</p>
+    <div class="hero-cta">
+      <a href="programs.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> برامج التحفيظ</a>
+      <a href="about.html" class="btn btn-outline">تعرف علينا</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat-num" data-target="1500">0</span><span class="stat-label">+ حافظ وحافظة</span></div>
+      <div><span class="stat-num" data-target="30">0</span><span class="stat-label">عاماً من العطاء</span></div>
+      <div><span class="stat-num" data-target="8">0</span><span class="stat-label">فروع في المملكة</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Islamic -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head"><h2>رسالتنا <span class="gold">القرآنية</span></h2><p>نحو جيل قرآني متمسك بدينه وأخلاقه</p></div>
+    <div class="feats-islamic">
+      <div class="islamic-card">
+        <svg viewBox="0 0 80 80" width="70" height="70"><circle cx="40" cy="40" r="36" fill="rgba(200,169,110,.06)" stroke="rgba(200,169,110,.2)" stroke-width="1"/><path d="M40 12 Q50 26 40 42 Q30 26 40 12" fill="#c8a96e" opacity=".6"/><text x="40" y="60" text-anchor="middle" fill="#c8a96e" font-size="20" font-family="Amiri">ح</text></svg>
+        <h4>حفظ القرآن</h4>
+        <p>برنامج متكامل لحفظ القرآن الكريم بمراحله المختلفة من التمهيدي إلى الإتقان.</p>
+      </div>
+      <div class="islamic-card">
+        <svg viewBox="0 0 80 80" width="70" height="70"><circle cx="40" cy="40" r="36" fill="rgba(200,169,110,.06)" stroke="rgba(200,169,110,.2)" stroke-width="1"/><path d="M40 12 Q50 26 40 42 Q30 26 40 12" fill="#c8a96e" opacity=".6"/><text x="40" y="60" text-anchor="middle" fill="#c8a96e" font-size="20" font-family="Amiri">ف</text></svg>
+        <h4>الفهم والتفسير</h4>
+        <p>تفسير القرآن الكريم وبيان معانيه وأسباب النزول وأحكام التلاوة والتجويد.</p>
+      </div>
+      <div class="islamic-card">
+        <svg viewBox="0 0 80 80" width="70" height="70"><circle cx="40" cy="40" r="36" fill="rgba(200,169,110,.06)" stroke="rgba(200,169,110,.2)" stroke-width="1"/><path d="M40 12 Q50 26 40 42 Q30 26 40 12" fill="#c8a96e" opacity=".6"/><text x="40" y="60" text-anchor="middle" fill="#c8a96e" font-size="20" font-family="Amiri">ع</text></svg>
+        <h4>العلوم الشرعية</h4>
+        <p>الفقه، العقيدة، الحديث، والسيرة النبوية على منهج أهل السنة والجماعة.</p>
+      </div>
+      <div class="islamic-card">
+        <svg viewBox="0 0 80 80" width="70" height="70"><circle cx="40" cy="40" r="36" fill="rgba(200,169,110,.06)" stroke="rgba(200,169,110,.2)" stroke-width="1"/><path d="M40 12 Q50 26 40 42 Q30 26 40 12" fill="#c8a96e" opacity=".6"/><text x="40" y="60" text-anchor="middle" fill="#c8a96e" font-size="20" font-family="Amiri">ر</text></svg>
+        <h4>التربية والأخلاق</h4>
+        <p>بناء شخصية الطالب على القيم الإسلامية والأخلاق القرآنية والآداب المحمدية.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section features">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">مميزاتنا</span>
-        <h2>لماذا <span class="amber">نور الهدى</span> هو الخيار الأمثل؟</h2>
+<section class="sec dark-sec">
+  <div class="container">
+    <div class="sec-head"><h2>برامجنا <span class="gold">القرآنية</span></h2></div>
+    <div class="prog-grid-isl">
+      <div class="prog-isl-card">
+        <div class="quran-ayat">الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ</div>
+        <h3>برنامج الحفظ العام</h3>
+        <p>حفظ القرآن الكريم كاملاً بمراحله الثمان مع مراجعة دورية مكثفة وإجازة بالسند المتصل.</p>
+        <div class="prog-isl-meta"><span><i class="far fa-clock"></i> ٣-٥ سنوات</span><span><i class="fas fa-users"></i> من ٧ إلى ٦٠ سنة</span></div>
       </div>
-      <div class="features-grid">
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-book-quran"></i></div><h3>إتقان الحفظ</h3><p>برامج حفظ معتمدة برواية حفص عن عاصم والشاطبية، مع متابعة فردية لكل طالب.</p></div>
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>رعاية شاملة</h3><p>إقامة كاملة للطلاب المغتربين مع برنامج تربوي متكامل وأنشطة يومية.</p></div>
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-globe"></i></div><h3>تعليم عن بُعد</h3><p>برامج حفظ وتجويد للرجال والنساء عن بُعد على أيدي قراء معتمدين.</p></div>
+      <div class="prog-isl-card">
+        <div class="quran-ayat">وَعَلَّمَ آدَمَ الْأَسْمَاءَ كُلَّهَا</div>
+        <h3>برنامج الإجازة بالسند</h3>
+        <p>إجازة متصلة بسند صحيح إلى النبي صلى الله عليه وسلم بقراءة حفص عن عاصم والقراءات العشر.</p>
+        <div class="prog-isl-meta"><span><i class="far fa-clock"></i> سنتان</span><span><i class="fas fa-users"></i> للحافظين</span></div>
+      </div>
+      <div class="prog-isl-card">
+        <div class="quran-ayat">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</div>
+        <h3>برنامج الأطفال</h3>
+        <p>تحفيظ الأطفال من ٤ إلى ١٢ سنة بأسلوب شيق وممتع يجمع بين الحفظ واللعب والأنشطة.</p>
+        <div class="prog-isl-meta"><span><i class="far fa-clock"></i> مستمر</span><span><i class="fas fa-users"></i> ٤-١٢ سنة</span></div>
+      </div>
+      <div class="prog-isl-card">
+        <div class="quran-ayat">إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ</div>
+        <h3>العلوم الشرعية</h3>
+        <p>دورات في الفقه والعقيدة والحديث والسيرة — على منهج السلف الصالح.</p>
+        <div class="prog-isl-meta"><span><i class="far fa-clock"></i> حسب المستوى</span><span><i class="fas fa-users"></i> جميع الفئات</span></div>
       </div>
     </div>
-  </section>
+    <div class="text-center" style="margin-top:40px">
+      <a href="programs.html" class="btn btn-primary">عرض جميع البرامج <i class="fas fa-arrow-left"></i></a>
+    </div>
+  </div>
+</section>
 
-  <section class="section stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item"><span class="num" data-target="5000">0</span><span class="label">طالب حفظوا القرآن</span></div>
-        <div class="stat-item"><span class="num" data-target="150">0</span><span class="label">معلم معتمد</span></div>
-        <div class="stat-item"><span class="num" data-target="30">0</span><span class="label">عاماً من العطاء</span></div>
-        <div class="stat-item"><span class="num" data-target="12">0</span><span class="label">رواقاً قرآنياً</span></div>
+<!-- Quran Quote -->
+<section class="sec quran-quote-sec">
+  <div class="container">
+    <div class="quran-quote">
+      <div class="quran-icon">﴿ ﴾</div>
+      <blockquote>إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ</blockquote>
+      <cite>— سورة الإسراء، الآية ٩</cite>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec cta-sec" style="background:linear-gradient(135deg,#0d2137,#1a3a2a);color:#fff;text-align:center">
+  <div class="container">
+    <h2 style="font-size:2rem;margin-bottom:16px">انضم إلى حلقة النور</h2>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:28px">سجل الآن في أحد برامجنا القرآنية أو الشرعية</p>
+    <a href="contact.html" class="btn btn-primary btn-lg">سجل الآن <i class="fas fa-paper-plane"></i></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="nav-logo" style="margin-bottom:14px">
+        <svg viewBox="0 0 60 60" width="42" height="42"><circle cx="30" cy="30" r="28" fill="#0d2137" stroke="#c8a96e" stroke-width="1.5"/><path d="M30 8 Q40 22 30 38 Q20 22 30 8" fill="#c8a96e" opacity=".9"/></svg>
+        <span class="logo-text" style="font-size:1rem">نور <strong>الهدى</strong></span>
       </div>
+      <p>معهد تحفيظ القرآن والعلوم الشرعية — رافد علمي في خدمة كتاب الله منذ 1996.</p>
+      <div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div>
     </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-mosque"></i>نور <strong>الهدى</strong></a><p>نور القرآن يضيء القلوب — في مكة المكرمة منذ 1996.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-telegram"></i></a></div></div>
-      <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="programs.html">البرامج</a><a href="contact.html">التسجيل</a></div>
-      <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> مكة المكرمة — حي العزيزية</p><p><i class="fas fa-phone"></i> 920033456</p><p><i class="fas fa-envelope"></i> info@nooralhuda.edu.sa</p></div>
-    </div>
-    <div class="footer-bottom container"><p>© 2026 معهد نور الهدى — جميع الحقوق محفوظة.</p></div>
-  </footer>
-  <script src="script.js"></script>
+    <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="programs.html">البرامج</a><a href="contact.html">التسجيل</a><a href="#">المكتبة</a></div>
+    <div class="footer-col"><h4>البرامج</h4><a href="programs.html">الحفظ العام</a><a href="programs.html">الإجازة بالسند</a><a href="programs.html">برنامج الأطفال</a><a href="programs.html">العلوم الشرعية</a></div>
+    <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> مكة — حي العزيزية</p><p><i class="fas fa-phone"></i> 920033445</p><p><i class="fas fa-envelope"></i> info@nooralhuda.edu.sa</p></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 معهد نور الهدى — جميع الحقوق محفوظة.</p></div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

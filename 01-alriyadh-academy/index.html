@@ -1,210 +1,192 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أكاديمية الرياض | Al-Riyadh Academy – تعليم يجمع بين الأصالة والحداثة</title>
-  <meta name="description" content="أكاديمية الرياض – مؤسسة تعليمية سعودية رائدة تجمع بين المناهج الإسلامية والعصرية في قلب الرياض.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>أكاديمية الرياض | Al Riyadh Academy</title>
+<meta name="description" content="أكاديمية الرياض - مؤسسة تعليمية رائدة في الرياض تجمع بين الأصالة والحداثة منذ 1995.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="loading">
+  <div class="loader"></div>
+</div>
 
-  <!-- ===== HEADER ===== -->
-  <header class="header" id="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <i class="fas fa-graduation-cap"></i>
-        <span>أكاديمية <strong>الرياض</strong></span>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 60 60" width="50" height="50">
+        <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a5c2a"/><stop offset="100%" stop-color="#c9a84c"/></linearGradient></defs>
+        <circle cx="30" cy="30" r="28" fill="url(#lg)" stroke="#c9a84c" stroke-width="2"/>
+        <text x="30" y="24" text-anchor="middle" fill="#c9a84c" font-size="18" font-weight="bold" font-family="serif">أ</text>
+        <text x="30" y="44" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="sans-serif">RIYADH</text>
+        <path d="M20 48 Q30 38 40 48" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+      </svg>
+      <span class="logo-text">أكاديمية <strong>الرياض</strong></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="about.html">عن الأكاديمية</a>
+      <a href="programs.html">البرامج</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="nav-controls">
+      <button id="langToggle" class="lang-btn" aria-label="Switch to English">EN</button>
+      <button id="menuToggle" class="menu-btn" aria-label="القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1600&q=80')"></div>
+  <div class="hero-content">
+    <div class="hero-badge">منذ ١٩٩٥ — Since 1995</div>
+    <h1>شريكك في <span class="gold">التميز التعليمي</span></h1>
+    <p>نحو جيل واعٍ ومبدع — أكثر من ١٠ آلاف خريج وأكثر من ٢٠ برنامجاً تعليمياً معتمداً.</p>
+    <div class="hero-cta">
+      <a href="programs.html" class="btn btn-primary">برامجنا <i class="fas fa-arrow-left"></i></a>
+      <a href="about.html" class="btn btn-outline">اكتشف المزيد</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat-num" data-target="25">0</span><span class="stat-label">عاماً من التميز</span></div>
+      <div><span class="stat-num" data-target="10000">0</span><span class="stat-label">خريج</span></div>
+      <div><span class="stat-num" data-target="20">0</span><span class="stat-label">برنامج</span></div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<section class="sec">
+  <div class="container">
+    <div class="sec-head">
+      <h2>لماذا <span class="gold">أكاديمية الرياض</span>؟</h2>
+      <p>أكثر من ربع قرن من العطاء التعليمي يجمع بين الأصالة والابتكار</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>تعليم معتمد</h3>
+        <p>جميع برامجنا معتمدة من وزارة التعليم السعودية ومنظمة الاعتماد الأكاديمي الدولية.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-chalkboard-user"></i></div>
+        <h3>كفاءات متميزة</h3>
+        <p>أكثر من ٢٠٠ عضو هيئة تدريس من حملة الدكتوراه والماجستير من أفضل الجامعات العالمية.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-building-columns"></i></div>
+        <h3>بيئة محفزة</h3>
+        <p>حرم جامعي متكامل بمساحة ٥٠ ألف متر مربع يشمل مختبرات ومكتبات ومرافق رياضية.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-globe"></i></div>
+        <h3>شراكات عالمية</h3>
+        <p>اتفاقيات تبادل طلابي مع ١٥ جامعة في ٨ دول حول العالم.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark-sec programs-preview">
+  <div class="container">
+    <div class="sec-head">
+      <h2>برامجنا <span class="gold">الأكاديمية</span></h2>
+      <p>مسارات تعليمية متنوعة تناسب جميع الطموحات</p>
+    </div>
+    <div class="prog-grid">
+      <a href="programs.html" class="prog-card">
+        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80')"></div>
+        <div class="prog-body">
+          <span class="prog-level">بكالوريوس</span>
+          <h3>علوم الحاسب</h3>
+          <p>الذكاء الاصطناعي، الأمن السيبراني، وهندسة البرمجيات</p>
+        </div>
       </a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="about.html">عن الأكاديمية</a>
-        <a href="programs.html">البرامج</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+      <a href="programs.html" class="prog-card">
+        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80')"></div>
+        <div class="prog-body">
+          <span class="prog-level">دبلوم</span>
+          <h3>إدارة الأعمال</h3>
+          <p>قيادة، تسويق، وريادة أعمال</p>
+        </div>
+      </a>
+      <a href="programs.html" class="prog-card">
+        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1576602976047-174e57a47881?w=600&q=80')"></div>
+        <div class="prog-body">
+          <span class="prog-level">ماجستير</span>
+          <h3>الهندسة</h3>
+          <p>هندسة مدنية، كهربائية، وميكانيكية</p>
+        </div>
+      </a>
+      <a href="programs.html" class="prog-card">
+        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1555431189-0fabf2667795?w=600&q=80')"></div>
+        <div class="prog-body">
+          <span class="prog-level">بكالوريوس</span>
+          <h3>الطب والجراحة</h3>
+          <p>برنامج طبي متكامل مع تدريب سريري</p>
+        </div>
+      </a>
     </div>
-  </header>
+    <div class="text-center" style="margin-top:40px">
+      <a href="programs.html" class="btn btn-primary">استعرض جميع البرامج <i class="fas fa-arrow-left"></i></a>
+    </div>
+  </div>
+</section>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <h1>نحو جيلٍ <span class="gold">متمكن</span> يجمع بين <span class="gold">الأصالة</span> والعصر</h1>
-      <p>في أكاديمية الرياض، نؤمن بأن العلم نور. نقدم منهاجاً متكاملاً يجمع بين القيم الإسلامية والعلوم الحديثة لبناء قادة المستقبل.</p>
-      <div class="hero-btns">
-        <a href="programs.html" class="btn btn-primary">استكشف برامجنا <i class="fas fa-arrow-left"></i></a>
-        <a href="about.html" class="btn btn-outline">تعرف علينا</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="num" data-target="25">0</span><span class="label">عاماً من التميز</span></div>
-        <div class="stat"><span class="num" data-target="4200">0</span><span class="label">خريجاً</span></div>
-        <div class="stat"><span class="num" data-target="180">0</span><span class="label">عضواً في الهيئة</span></div>
+<section class="sec">
+  <div class="container">
+    <div class="testimonial-wrap">
+      <h2>كلمة <span class="gold">المدير</span></h2>
+      <div class="director-msg">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="مدير الأكاديمية" class="director-img">
+        <blockquote>
+          "نؤمن في أكاديمية الرياض أن التعليم ليس مجرد نقل للمعرفة، بل بناء للإنسان والمجتمع. نسعى دائماً لتقديم تعليم متميز يجمع بين القيم الأصيلة وأحدث المناهج العالمية."
+          <cite>— د. عبدالعزيز السليم، مدير الأكاديمية</cite>
+        </blockquote>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== FEATURES ===== -->
-  <section class="section features">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">لماذا أكاديمية الرياض؟</span>
-        <h2>أسسنا <span class="gold">التميز</span> على ثلاثة ركائز</h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feat-icon"><i class="fas fa-book-quran"></i></div>
-          <h3>منهاج إسلامي أصيل</h3>
-          <p>تحفيظ القرآن، الفقه، السيرة والعقيدة على منهج السلف الصالح بإشراف نخبة من المشايخ.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feat-icon"><i class="fas fa-microchip"></i></div>
-          <h3>علوم عصرية متطورة</h3>
-          <p>الرياضيات، الفيزياء، البرمجة والذكاء الاصطناعي بأحدث المناهج العالمية وباللغة الإنجليزية.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feat-icon"><i class="fas fa-users-gear"></i></div>
-          <h3>رعاية شاملة للطالب</h3>
-          <p>إرشاد أكاديمي، أنشطة لامنهجية، رياضة وفنون — لبناء شخصية متوازنة قيادية.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="sec cta-sec" style="background:linear-gradient(135deg,#1a5c2a,#0d3318);color:#fff;text-align:center">
+  <div class="container">
+    <h2 style="font-size:2rem;margin-bottom:16px">ابدأ رحلتك معنا اليوم</h2>
+    <p style="color:rgba(255,255,255,.7);margin-bottom:28px">سجل الآن وانطلق نحو مستقبل مشرق</p>
+    <a href="contact.html" class="btn btn-primary btn-lg">تسجيل الآن <i class="fas fa-paper-plane"></i></a>
+  </div>
+</section>
 
-  <!-- ===== ABOUT PREVIEW ===== -->
-  <section class="section about-preview">
-    <div class="container about-preview-inner">
-      <div class="about-text">
-        <span class="badge">نبذة عنا</span>
-        <h2>أكثر من <span class="gold">مدرسة</span> — إنها <span class="gold">مؤسسة</span> بناء أجيال</h2>
-        <p>تأسست أكاديمية الرياض عام 2001م برؤية واضحة: تخريج جيل مسلم معاصر يعتز بدينه ويواكب عصره. نمونا من صف واحد إلى حرم جامعي متكامل على مساحة 50 ألف متر مربع يضم أحدث المعامل والمكتبات والمرافق الرياضية.</p>
-        <a href="about.html" class="link-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="nav-logo" style="margin-bottom:14px">
+        <svg viewBox="0 0 60 60" width="40" height="40">
+          <circle cx="30" cy="30" r="28" fill="#1a5c2a" stroke="#c9a84c" stroke-width="2"/>
+          <text x="30" y="24" text-anchor="middle" fill="#c9a84c" font-size="18" font-weight="bold" font-family="serif">أ</text>
+          <text x="30" y="44" text-anchor="middle" fill="#fff" font-size="7" font-weight="bold">RIYADH</text>
+        </svg>
+        <span class="logo-text" style="font-size:1rem">أكاديمية الرياض</span>
       </div>
-      <div class="about-image">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%231b4d3d'/%3E%3Cpath d='M300 80 L450 180 L450 320 L300 380 L150 320 L150 180 Z' fill='%232a6b50'/%3E%3Cpath d='M300 100 L420 185 L420 310 L300 365 L180 310 L180 185 Z' fill='%233a8a68'/%3E%3Ccircle cx='300' cy='240' r='50' fill='%23c9a84c'/%3E%3Ctext x='300' y='250' text-anchor='middle' fill='white' font-size='30' font-family='sans'%3E⭐%3C/text%3E%3C/svg%3E"
-             alt="الحرم الجامعي لأكاديمية الرياض">
+      <p>مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.</p>
+      <div class="social">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
-  </section>
+    <div class="footer-col"><h4>روابط</h4><a href="about.html">عن الأكاديمية</a><a href="programs.html">البرامج</a><a href="contact.html">الخدمات الطلابية</a><a href="#">المكتبة الرقمية</a></div>
+    <div class="footer-col"><h4>برامج</h4><a href="programs.html">علوم الحاسب</a><a href="programs.html">الهندسة</a><a href="programs.html">الطب</a><a href="programs.html">إدارة الأعمال</a></div>
+    <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — طريق الملك عبدالله</p><p><i class="fas fa-phone"></i> 920011223</p><p><i class="fas fa-envelope"></i> info@riyadh-academy.edu.sa</p><p><i class="fas fa-clock"></i> ٧:٠٠ ص — ٩:٠٠ م</p></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.</p></div>
+</footer>
 
-  <!-- ===== PROGRAMS ===== -->
-  <section class="section programs">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">برامجنا</span>
-        <h2>مسارات <span class="gold">أكاديمية</span> متكاملة</h2>
-      </div>
-      <div class="programs-grid">
-        <div class="prog-card">
-          <div class="prog-num">01</div>
-          <h3>المرحلة الابتدائية</h3>
-          <p>تأسيس قوي في القراءة والكتابة والحساب مع تحفيظ القرآن الكريم وتعزيز القيم الإسلامية.</p>
-          <div class="prog-meta"><span><i class="far fa-clock"></i> 6 سنوات</span><span><i class="fas fa-user-graduate"></i> من 5 – 11 سنة</span></div>
-        </div>
-        <div class="prog-card">
-          <div class="prog-num">02</div>
-          <h3>المرحلة المتوسطة</h3>
-          <p>تعمق في العلوم الشرعية واللغات والرياضيات مع بداية التوجيه المهني والأكاديمي.</p>
-          <div class="prog-meta"><span><i class="far fa-clock"></i> 3 سنوات</span><span><i class="fas fa-user-graduate"></i> من 12 – 14 سنة</span></div>
-        </div>
-        <div class="prog-card">
-          <div class="prog-num">03</div>
-          <h3>المرحلة الثانوية</h3>
-          <p>مساران: علوم شرعية أو علوم تطبيقية — بإعداد مكثف للالتحاق بأعرق الجامعات محلياً وعالمياً.</p>
-          <div class="prog-meta"><span><i class="far fa-clock"></i> 3 سنوات</span><span><i class="fas fa-user-graduate"></i> من 15 – 17 سنة</span></div>
-        </div>
-        <div class="prog-card">
-          <div class="prog-num">04</div>
-          <h3>برامج التطوير المهني</h3>
-          <p>دورات تدريبية معتمدة في القيادة، الإدارة، البرمجة، والذكاء الاصطناعي للمهنيين والطلاب.</p>
-          <div class="prog-meta"><span><i class="far fa-clock"></i> مرنة</span><span><i class="fas fa-users"></i> لجميع الأعمار</span></div>
-        </div>
-      </div>
-      <div class="section-cta">
-        <a href="programs.html" class="btn btn-primary">عرض كل البرامج <i class="fas fa-arrow-left"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="section testimonials">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">شهادات</span>
-        <h2>ماذا يقول عنا <span class="gold">الطلاب وأولياء الأمور؟</span></h2>
-      </div>
-      <div class="test-grid">
-        <div class="test-card">
-          <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"أكاديمية الرياض غيرت مسار ابني — من طالب عادي إلى شاب واثق بنفسه، حافظ لكتاب الله ومتفوق في دراسته."</p>
-          <div class="test-author">
-            <div class="test-avatar"><i class="fas fa-user-circle"></i></div>
-            <div><strong>أبو عبدالعزيز</strong><span>ولي أمر طالب — المرحلة الثانوية</span></div>
-          </div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"بيئة تعليمية استثنائية. المعلمون ليسوا مجرد مدرسين — هم مربون وقدوات. فخور بكوني خريجاً من هذه الأكاديمية."</p>
-          <div class="test-author">
-            <div class="test-avatar"><i class="fas fa-user-circle"></i></div>
-            <div><strong>عبدالرحمن القحطاني</strong><span>خريج — طالب طب بجامعة الملك سعود</span></div>
-          </div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"المنهج المتوازن بين الدين والدنيا هو ما جعلني أختار أكاديمية الرياض لأبنائي الثلاثة. ولله الحمد لم أندم لحظة."</p>
-          <div class="test-author">
-            <div class="test-avatar"><i class="fas fa-user-circle"></i></div>
-            <div><strong>أم سارة</strong><span>ولي أمر — أم لثلاثة طلاب</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA ===== -->
-  <section class="section cta">
-    <div class="container cta-content">
-      <h2>سجل الآن وانطلق في رحلة <span class="gold">العلم والتميز</span></h2>
-      <p>التسجيل للعام الدراسي 1448-1449 هـ مفتوح. المقاعد محدودة — سارع بالالتحاق.</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">تسجيل <i class="fas fa-arrow-left"></i></a>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> أكاديمية <strong>الرياض</strong></a>
-        <p>نحو جيل متمكن يجمع بين الأصالة والعصر — منذ 2001.</p>
-        <div class="social">
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>روابط سريعة</h4>
-        <a href="about.html">عن الأكاديمية</a>
-        <a href="programs.html">البرامج</a>
-        <a href="contact.html">التسجيل</a>
-      </div>
-      <div class="footer-col">
-        <h4>تواصل معنا</h4>
-        <p><i class="fas fa-map-marker-alt"></i> الرياض — حي النرجس</p>
-        <p><i class="fas fa-phone"></i> 920011234</p>
-        <p><i class="fas fa-envelope"></i> info@alriyadh-academy.edu.sa</p>
-      </div>
-    </div>
-    <div class="footer-bottom container">
-      <p>© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,55 +1,167 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>جامعة المستقبل السعودي | Saudi Future University – جامعة رقمية مبتكرة</title>
-  <meta name="description" content="جامعة المستقبل السعودي — أول جامعة رقمية في المملكة تقدم برامج البكالوريوس والماجستير عبر منصة تعليمية ذكية.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>جامعة المستقبل السعودي | Saudi Future University</title>
+<meta name="description" content="أول جامعة رقمية في المملكة — برامج بكالوريوس وماجستير عبر منصة ذكية">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><i class="fas fa-university"></i><span>جامعة <strong>المستقبل</strong></span></a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="about.html">عن الجامعة</a>
-        <a href="programs.html">التخصصات</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+<div id="loading"><div class="loader"></div></div>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 50 50" width="46" height="46">
+        <defs><linearGradient id="upg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6d28d9"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient></defs>
+        <rect x="2" y="2" width="46" height="46" rx="10" fill="url(#upg)" stroke="rgba(245,158,11,.3)" stroke-width="1.5"/>
+        <text x="25" y="20" text-anchor="middle" fill="#fff" font-size="12" font-weight="900" font-family="sans-serif">SFU</text>
+        <text x="25" y="40" text-anchor="middle" fill="rgba(255,255,255,.7)" font-size="5">DIGITAL</text>
+      </svg>
+      <span class="logo-text">جامعة المستقبل <strong>السعودي</strong></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="about.html">عن الجامعة</a>
+      <a href="programs.html">البرامج</a>
+      <a href="contact.html">اتصل بنا</a>
     </div>
-  </header>
+    <div class="nav-controls">
+      <button id="langToggle" class="lang-btn">EN</button>
+      <button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-tagline">التعليم العالي في المملكة — بلا حدود</div>
-      <h1>جامعتك <span class="gold">رقمية</span> — شهادتك <span class="gold">عالمية</span></h1>
-      <p>جامعة المستقبل السعودي تجمع بين الجودة الأكاديمية والمرونة الرقمية. ادرس أينما كنت واحصل على شهادة معتمدة من وزارة التعليم.</p>
-      <div class="hero-btns">
-        <a href="programs.html" class="btn btn-primary">استعرض التخصصات <i class="fas fa-arrow-left"></i></a>
-        <a href="contact.html" class="btn btn-outline">قدم الآن</a>
+<section class="hero">
+  <div class="hero-bg-uni"></div>
+  <div class="container" style="position:relative;z-index:2;padding:130px 20px 60px">
+    <div class="hero-grid-uni">
+      <div class="hero-text-uni">
+        <div class="hero-tag-uni"><i class="fas fa-microchip"></i> أول جامعة رقمية في المملكة</div>
+        <h1>تعليم بلا حدود<br><span class="gold-uni">مستقبل بلا قيود</span></h1>
+        <p>جامعة المستقبل السعودي — أول جامعة رقمية معتمدة بالكامل في المملكة. ادرس عبر الإنترنت، احصل على شهادة معتمدة، وابنِ مستقبلك من أي مكان في العالم.</p>
+        <div class="hero-cta-uni">
+          <a href="programs.html" class="btn btn-primary-uni"><i class="fas fa-graduation-cap"></i> استعرض التخصصات</a>
+          <a href="about.html" class="btn btn-outline-uni">لماذا SFU؟</a>
+        </div>
+        <div class="hero-stats-uni">
+          <div><span class="stat-num-uni" data-target="15">0</span><span class="stat-label-uni">+ تخصص</span></div>
+          <div><span class="stat-num-uni" data-target="12000">0</span><span class="stat-label-uni">+ طالب</span></div>
+          <div><span class="stat-num-uni" data-target="45">0</span><span class="stat-label-uni">دولة</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="num" data-target="15">0</span><span class="label">تخصص بكالوريوس</span></div>
-        <div class="stat"><span class="num" data-target="8">0</span><span class="label">برامج ماجستير</span></div>
-        <div class="stat"><span class="num" data-target="25000">0</span><span class="label">طالب وطالبة</span></div>
+      <div class="hero-card-uni">
+        <div class="uni-card-glow"></div>
+        <div class="uni-card">
+          <i class="fas fa-user-graduate"></i>
+          <h3>قدم الآن للفصل القادم</h3>
+          <p>القبول مفتوح — خصم ٢٥٪ للطلاب المسجلين مبكراً</p>
+          <a href="contact.html" class="btn btn-primary-uni" style="width:100%;justify-content:center">تقدم الآن <i class="fas fa-arrow-left"></i></a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-university"></i>جامعة <strong>المستقبل</strong></a><p>جامعة رقمية رائدة — من السعودية للعالم. تأسست 2020.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
-      <div class="footer-col"><h4>روابط</h4><a href="about.html">عن الجامعة</a><a href="programs.html">التخصصات</a><a href="contact.html">التقديم</a></div>
-      <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي القدس</p><p><i class="fas fa-phone"></i> 920044567</p><p><i class="fas fa-envelope"></i> info@saudifuture.edu.sa</p></div>
+<section class="sec">
+  <div class="container">
+    <div class="sec-head"><h2>لماذا <span class="gold-uni">SFU</span>؟</h2><p>جامعة رقمية بالكامل — اعتماد دولي — مرونة كاملة</p></div>
+    <div class="feat-grid-uni">
+      <div class="feat-uni">
+        <div class="feat-uni-icon" style="background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(245,158,11,.1))"><i class="fas fa-laptop"></i></div>
+        <h3>منصة ذكية</h3>
+        <p>محاضرات تفاعلية، ذكاء اصطناعي لتخصيص مسار التعلم، واختبارات تكيفية — كل ذلك عبر منصتنا الحصرية.</p>
+      </div>
+      <div class="feat-uni">
+        <div class="feat-uni-icon" style="background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(245,158,11,.1))"><i class="fas fa-certificate"></i></div>
+        <h3>اعتماد دولي</h3>
+        <p>جميع برامجنا معتمدة من وزارة التعليم والاعتماد الأكاديمي الدولي (WASC) — شهاداتنا معترف بها عالمياً.</p>
+      </div>
+      <div class="feat-uni">
+        <div class="feat-uni-icon" style="background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(245,158,11,.1))"><i class="fas fa-clock"></i></div>
+        <h3>تعلم بمرونة</h3>
+        <p>ادرس في أي وقت ومن أي مكان — المحاضرات مسجلة وحية، والتقييمات مستمرة. تناسب المهنيين والطلاب.</p>
+      </div>
+      <div class="feat-uni">
+        <div class="feat-uni-icon" style="background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(245,158,11,.1))"><i class="fas fa-handshake"></i></div>
+        <h3>توظيف وشراكات</h3>
+        <p>شراكات مع ٢٠٠+ شركة في ١٥ دولة — برامج تدريب وتوظيف مباشر لخريجينا في كبرى المؤسسات.</p>
+      </div>
     </div>
-    <div class="footer-bottom container"><p>© 2026 جامعة المستقبل السعودي — جميع الحقوق محفوظة.</p></div>
-  </footer>
-  <script src="script.js"></script>
+  </div>
+</section>
+
+<section class="sec dark-sec">
+  <div class="container">
+    <div class="sec-head"><h2>التخصصات <span class="gold-uni">الرقمية</span></h2></div>
+    <div class="prog-grid-uni">
+      <a href="programs.html" class="prog-uni-card">
+        <i class="fas fa-robot" style="color:#a78bfa"></i>
+        <h3>الذكاء الاصطناعي</h3>
+        <p>تعلم العميق، معالجة اللغات الطبيعية، الرؤية الحاسوبية</p>
+      </a>
+      <a href="programs.html" class="prog-uni-card">
+        <i class="fas fa-chart-line" style="color:#fbbf24"></i>
+        <h3>علوم البيانات</h3>
+        <p>تحليل البيانات الضخمة، BI، التعلم الإحصائي</p>
+      </a>
+      <a href="programs.html" class="prog-uni-card">
+        <i class="fas fa-cloud" style="color:#60a5fa"></i>
+        <h3>الحوسبة السحابية</h3>
+        <p>AWS, Azure, GCP — DevOps وبنية تحتية</p>
+      </a>
+      <a href="programs.html" class="prog-uni-card">
+        <i class="fas fa-shield-halved" style="color:#fca5a5"></i>
+        <h3>الأمن السيبراني</h3>
+        <p>أمن المعلومات، اختبار الاختراق، حوكمة</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec"><div class="container"><div class="sec-head"><h2>طلابنا <span class="gold-uni">حول العالم</span></h2></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+  <div style="background:var(--bg-card);border-radius:var(--radius);padding:24px;border:1px solid rgba(109,40,217,.06)">
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80" style="width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:10px;border:2px solid #a78bfa">
+    <p style="font-size:.82rem;color:var(--text-muted);font-style:italic;line-height:1.7">"درست البكالوريوس وأنا في لندن — الشهادة معتمدة والأساتذة على مستوى عال من الكفاءة."</p>
+    <h4 style="font-size:.88rem;margin-top:8px">نورة القحطاني</h4>
+    <span style="font-size:.72rem;color:var(--accent-uni)">UK — بكالوريوس AI</span>
+  </div>
+  <div style="background:var(--bg-card);border-radius:var(--radius);padding:24px;border:1px solid rgba(109,40,217,.06)">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" style="width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:10px;border:2px solid #a78bfa">
+    <p style="font-size:.82rem;color:var(--text-muted);font-style:italic;line-height:1.7">"الماجستير أونلاين كان أفضل قرار — وفرت وقت وجهد، ورقيبتي الوظيفية زادت."</p>
+    <h4 style="font-size:.88rem;margin-top:8px">عبدالله السيف</h4>
+    <span style="font-size:.72rem;color:var(--accent-uni)">ماجستير Cyber Security</span>
+  </div>
+  <div style="background:var(--bg-card);border-radius:var(--radius);padding:24px;border:1px solid rgba(109,40,217,.06)">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80" style="width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:10px;border:2px solid #a78bfa">
+    <p style="font-size:.82rem;color:var(--text-muted);font-style:italic;line-height:1.7">"جامعة تواكب العصر — المحاضرات تفاعلية والمسابقات بين الطلاب رائعة جداً."</p>
+    <h4 style="font-size:.88rem;margin-top:8px">لمى الشهراني</h4>
+    <span style="font-size:.72rem;color:var(--accent-uni)">بكالوريوس Data Science</span>
+  </div>
+</div></div></section>
+
+<section class="sec cta-sec" style="background:linear-gradient(135deg,#4a1d96,#7c3aed);color:#fff;text-align:center">
+  <div class="container"><h2 style="font-size:2rem;margin-bottom:16px">مستقبلك يبدأ من هنا</h2><p style="color:rgba(255,255,255,.6);margin-bottom:28px">انضم لأكثر من ١٢ ألف طالب حول العالم</p><a href="contact.html" class="btn btn-primary-uni btn-lg" style="background:#fbbf24;color:#4a1d96">قدم الآن <i class="fas fa-arrow-left"></i></a></div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="nav-logo" style="margin-bottom:14px"><svg viewBox="0 0 50 50" width="40" height="40"><rect x="2" y="2" width="46" height="46" rx="10" fill="url(#upg)" stroke="rgba(245,158,11,.3)" stroke-width="1.5"/><text x="25" y="20" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">SFU</text></svg><span class="logo-text" style="font-size:.95rem">جامعة المستقبل <strong>السعودي</strong></span></div>
+      <p>أول جامعة رقمية معتمدة بالكامل في المملكة — منذ 2020.</p>
+      <div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+    </div>
+    <div class="footer-col"><h4>روابط</h4><a href="about.html">عن الجامعة</a><a href="programs.html">التخصصات</a><a href="contact.html">القبول</a><a href="#">المنح الدراسية</a></div>
+    <div class="footer-col"><h4>التخصصات</h4><a href="programs.html">الذكاء الاصطناعي</a><a href="programs.html">علوم البيانات</a><a href="programs.html">الحوسبة السحابية</a><a href="programs.html">الأمن السيبراني</a></div>
+    <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي القدس</p><p><i class="fas fa-phone"></i> 920044556</p><p><i class="fas fa-envelope"></i> info@sfu.edu.sa</p></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 جامعة المستقبل السعودي — جميع الحقوق محفوظة.</p></div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

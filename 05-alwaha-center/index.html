@@ -1,82 +1,120 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مركز الواحة | Al-Waha Center – مركز تعليم مجتمعي في جدة</title>
-  <meta name="description" content="مركز الواحة للتعليم المجتمعي في جدة — دورات تدريبية وبرامج تطويرية للأطفال والكبار في بيئة إبداعية داعمة.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>مركز الواحة | Al-Waha Community Center</title>
+<meta name="description" content="مركز الواحة للتعلم المجتمعي — جدة. برامج فنية، رقمية، ولغوية للأطفال والكبار.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><i class="fas fa-seedling"></i><span>مركز <strong>الواحة</strong></span></a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="about.html">عن المركز</a>
-        <a href="programs.html">برامجنا</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </header>
+<div id="loading"><div class="loader"></div></div>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-icon"><i class="fas fa-seedling"></i></div>
-      <h1>مرحباً بك في <span class="coral">الواحة</span> — حيث <span class="coral">يتعلّم</span> الجميع</h1>
-      <p>مركز تعليمي مجتمعي في جدة يقدم برامج تعليمية وتدريبية للأطفال والكبار في أجواء إبداعية داعمة ومحفزة.</p>
-      <div class="hero-btns">
-        <a href="programs.html" class="btn btn-primary">استعرض برامجنا <i class="fas fa-arrow-left"></i></a>
-        <a href="about.html" class="btn btn-outline">عن المركز</a>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 60 60" width="48" height="48">
+        <circle cx="30" cy="30" r="28" fill="#e87a5d" stroke="#f5a97b" stroke-width="1.5"/>
+        <path d="M30 12 Q38 22 34 34 Q30 42 26 34 Q22 22 30 12" fill="rgba(255,255,255,.5)"/>
+        <path d="M15 48 Q30 40 45 48" stroke="#f5a97b" stroke-width="1.5" fill="none"/>
+        <text x="30" y="30" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold" font-family="serif">و</text>
+      </svg>
+      <span class="logo-text">مركز <strong>الواحة</strong></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="about.html">عن المركز</a>
+      <a href="programs.html">برامجنا</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="nav-controls">
+      <button id="langToggle" class="lang-btn">EN</button>
+      <button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg-waha" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80')"></div>
+  <div class="hero-overlay-waha"></div>
+  <div class="container hero-content-waha">
+    <div class="hero-tag-waha"><i class="fas fa-seedling"></i> مركز تعلم مجتمعي</div>
+    <h1>مكانك <span class="coral">تتعلم</span><br>وتنمي <span class="sand">مهاراتك</span></h1>
+    <p>مركز الواحة — وجهتك للتعلم والإبداع في جدة. برامج فنية، رقمية، ولغوية للأطفال والكبار في بيئة محفزة وآمنة.</p>
+    <div class="hero-cta">
+      <a href="programs.html" class="btn btn-primary-waha">برامجنا <i class="fas fa-arrow-left"></i></a>
+      <a href="about.html" class="btn btn-outline-waha">اكتشف المركز</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="container">
+    <div class="sec-head"><h2>ماذا تقدم <span class="coral">الواحة</span>؟</h2><p>برامج متنوعة تناسب جميع الأعمار والاهتمامات</p></div>
+    <div class="waha-grid">
+      <div class="waha-card">
+        <div class="waha-icon" style="background:rgba(232,122,93,.12)"><i class="fas fa-paint-brush" style="color:#e87a5d"></i></div>
+        <h3>الفنون والإبداع</h3>
+        <p>رسم، نحت، فخار، موسيقى — لجميع المستويات والأعمار.</p>
+      </div>
+      <div class="waha-card">
+        <div class="waha-icon" style="background:rgba(245,169,123,.12)"><i class="fas fa-code" style="color:#f5a97b"></i></div>
+        <h3>البرمجة والتقنية</h3>
+        <p>برمجة للأطفال، تصميم مواقع، أساسيات الحاسب.</p>
+      </div>
+      <div class="waha-card">
+        <div class="waha-icon" style="background:rgba(155,193,188,.12)"><i class="fas fa-language" style="color:#9bc1bc"></i></div>
+        <h3>اللغات</h3>
+        <p>الإنجليزية، الفرنسية، التركية — محادثة وقواعد.</p>
+      </div>
+      <div class="waha-card">
+        <div class="waha-icon" style="background:rgba(232,122,93,.12)"><i class="fas fa-hand-sparkles" style="color:#e87a5d"></i></div>
+        <h3>الحرف اليدوية</h3>
+        <p>تطريز، نسج، إكسسوارات يدوية — إبداع بيديك.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section features">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">ماذا نقدم؟</span>
-        <h2>برامج <span class="coral">متنوعة</span> لجميع <span class="coral">الأعمار</span></h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-paint-brush"></i></div><h3>فنون وإبداع</h3><p>رسم، موسيقى، مسرح وفنون يدوية للأطفال والناشئة.</p></div>
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-laptop"></i></div><h3>مهارات رقمية</h3><p>برمجة، تصميم جرافيك، أساسيات الحاسب للصغار والكبار.</p></div>
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-book-open"></i></div><h3>لغات وتواصل</h3><p>الإنجليزية، التركية، والفرنسية — بممارسة تفاعلية.</p></div>
-      </div>
+<section class="sec sand-sec">
+  <div class="container">
+    <div class="sec-head"><h2>لماذا <span class="coral">الواحة</span>؟</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;text-align:center">
+      <div class="why-card"><i class="fas fa-heart"></i><h4>بيئة آمنة</h4><p>نرعى أطفالكم كما نرعى طلابنا</p></div>
+      <div class="why-card"><i class="fas fa-user-tie"></i><h4>مدربون معتمدون</h4><p>كفاءات بخبرات عالمية</p></div>
+      <div class="why-card"><i class="fas fa-clock"></i><h4>برامج مرنة</h4><p>مواعيد تناسب الجميع</p></div>
+      <div class="why-card"><i class="fas fa-users"></i><h4>مجموعات صغيرة</h4><p>تعلم أفضل وتفاعل أقوى</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section vibe">
-    <div class="container">
-      <div class="vibe-grid">
-        <div class="vibe-card"><i class="fas fa-smile"></i><h3>أطفال</h3><p>4 – 12 سنة</p><span>برامج ترفيهية تعليمية</span></div>
-        <div class="vibe-card"><i class="fas fa-fire"></i><h3>ناشئة</h3><p>13 – 17 سنة</p><span>تطوير مهارات وقيادة</span></div>
-        <div class="vibe-card"><i class="fas fa-user-tie"></i><h3>كبار</h3><p>18+ سنة</p><span>تدريب مهني وتطوير ذاتي</span></div>
-      </div>
-    </div>
-  </section>
+<section class="sec"><div class="container"><div class="sec-head"><h2>كلمة <span class="coral">المؤسس</span></h2></div>
+  <div style="display:flex;align-items:center;gap:24px;background:var(--bg-card);border-radius:var(--radius);padding:28px;border:1px solid rgba(245,169,123,.08)">
+    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&q=80" alt="" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--coral);flex-shrink:0">
+    <div><p style="font-size:.95rem;line-height:1.8;color:var(--text-muted);font-style:italic">"في الواحة، نؤمن بأن كل إنسان لديه موهبة تنتظر من يكتشفها. هدفنا توفير بيئة تعليمية داعمة تطلق العنان للإبداع وتغذي حب التعلم مدى الحياة."</p><cite style="display:block;margin-top:10px;color:var(--coral);font-style:normal;font-weight:600">— أ. حصة الغامدي، مؤسسة المركز</cite></div>
+  </div>
+</div></section>
 
-  <section class="section cta">
-    <div class="container cta-content">
-      <h2>انضم إلى <span class="coral">مجتمع</span> الواحة اليوم</h2>
-      <p>سجل الآن واحصل على أول جلسة مجانية — تعلم، ابتكر، تطور.</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">سجل الآن <i class="fas fa-arrow-left"></i></a>
-    </div>
-  </section>
+<section class="sec cta-sec" style="background:linear-gradient(135deg,#e87a5d,#c9644a);color:#fff;text-align:center">
+  <div class="container"><h2 style="font-size:2rem;margin-bottom:16px">تعال نتعلم ونبدع معاً</h2><p style="color:rgba(255,255,255,.7);margin-bottom:28px">سجل الآن في برامجنا المتنوعة — أول جلسة مجانية</p><a href="contact.html" class="btn" style="background:#fff;color:#c9644a;padding:16px 38px;border-radius:12px;font-weight:700">سجل الآن <i class="fas fa-paper-plane"></i></a></div>
+</section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-seedling"></i>مركز <strong>الواحة</strong></a><p>نحو مجتمع متعلم ومبدع — في جدة منذ 2015.</p><div class="social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-snapchat"></i></a></div></div>
-      <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المركز</a><a href="programs.html">برامجنا</a><a href="contact.html">التسجيل</a></div>
-      <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> جدة — حي الشاطئ، شارع فلسطين</p><p><i class="fas fa-phone"></i> 920055678</p><p><i class="fas fa-envelope"></i> info@alwaha-center.edu.sa</p></div>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="nav-logo" style="margin-bottom:14px"><svg viewBox="0 0 60 60" width="42" height="42"><circle cx="30" cy="30" r="28" fill="#e87a5d" stroke="#f5a97b" stroke-width="1.5"/><path d="M30 12 Q38 22 34 34 Q30 42 26 34 Q22 22 30 12" fill="rgba(255,255,255,.5)"/><text x="30" y="32" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold" font-family="serif">و</text></svg><span class="logo-text" style="font-size:1rem">مركز <strong>الواحة</strong></span></div>
+      <p>مركز تعلم مجتمعي يطلق الإبداع — في جدة منذ 2015.</p>
+      <div class="social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-snapchat"></i></a></div>
     </div>
-    <div class="footer-bottom container"><p>© 2026 مركز الواحة — جميع الحقوق محفوظة.</p></div>
-  </footer>
-  <script src="script.js"></script>
+    <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المركز</a><a href="programs.html">برامجنا</a><a href="contact.html">التسجيل</a></div>
+    <div class="footer-col"><h4>البرامج</h4><a href="programs.html">الفنون</a><a href="programs.html">البرمجة</a><a href="programs.html">اللغات</a><a href="programs.html">الحرف اليدوية</a></div>
+    <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> جدة — حي الشاطئ</p><p><i class="fas fa-phone"></i> 920055678</p><p><i class="fas fa-envelope"></i> info@alwaha-center.edu.sa</p></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 مركز الواحة — جميع الحقوق محفوظة.</p></div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

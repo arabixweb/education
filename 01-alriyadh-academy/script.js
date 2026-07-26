@@ -1,61 +1,72 @@
-// ===== Al-Riyadh Academy — Script =====
+// أكاديمية الرياض — Script
+document.addEventListener('DOMContentLoaded', () => {
+  // Loading Screen
+  setTimeout(() => document.getElementById('loading')?.classList.add('hide'), 800);
 
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
-hamburger?.addEventListener('click', () => nav?.classList.toggle('open'));
-
-// Close nav on link click (mobile)
-document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav?.classList.remove('open')));
-
-// Sticky header effect
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
-    header.style.background = 'rgba(31,42,46,0.97)';
-  } else {
-    header.style.background = 'rgba(31,42,46,0.92)';
+  // Mobile Menu
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
   }
-});
 
-// Counter animation
-const counters = document.querySelectorAll('.num');
-const speed = 120;
+  // Language Toggle
+  const langToggle = document.getElementById('langToggle');
+  let currentLang = 'ar';
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      langToggle.textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+      document.querySelectorAll('[data-ar]').forEach(el => {
+        el.textContent = currentLang === 'ar' ? el.dataset.ar : el.dataset.en;
+      });
+    });
+  }
 
-const animateCounters = () => {
-  counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target');
-    const increment = target / speed;
-    const updateCount = () => {
-      const count = +counter.innerText;
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        requestAnimationFrame(updateCount);
-      } else {
-        counter.innerText = target;
+  // Scroll Animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.feat-card, .prog-card, .program-full-card').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+
+  // Counter Animation
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        if (!target) return;
+        let current = 0;
+        const step = Math.ceil(target / 60);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = current.toLocaleString();
+        }, 30);
+        counterObserver.unobserve(el);
       }
-    };
-    updateCount();
-  });
-};
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat-num').forEach(el => counterObserver.observe(el));
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounters();
-      observer.disconnect();
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+      navbar.style.background = 'rgba(13,17,23,.96)';
+      navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,.3)';
+    } else {
+      navbar.style.background = 'rgba(13,17,23,.88)';
+      navbar.style.boxShadow = 'none';
     }
-  });
-}, { threshold: 0.5 });
-
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) observer.observe(heroStats);
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });

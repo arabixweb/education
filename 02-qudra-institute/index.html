@@ -1,143 +1,205 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>معهد قدرة | Qudra Institute – تدريب تقني ومهني في السعودية</title>
-  <meta name="description" content="معهد قدرة — أول معهد تدريبي تقني ومهني في السعودية يقدم دورات في البرمجة، الذكاء الاصطناعي، الأمن السيبراني، والإدارة بمناهج عالمية.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>معهد قدرة | Qudra Institute</title>
+<meta name="description" content="معهد قدرة للتدريب التقني والمهني — دورات احترافية في البرمجة، التصميم، والأمن السيبراني.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><i class="fas fa-bolt"></i><span>معهد <strong>قدرة</strong></span></a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="about.html">عن المعهد</a>
-        <a href="courses.html">الدورات</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <span class="hero-badge">رؤية 2030 — تمكين الكفاءات الوطنية</span>
-      <h1>حوِّل <span class="blue">مهاراتك</span> إلى <span class="blue">قدرة</span> تُحدث فرقاً</h1>
-      <p>معهد قدرة يقدم برامج تدريبية تقنية ومهنية معتمدة، صممها خبراء لتواكب متطلبات سوق العمل السعودي والعالمي.</p>
-      <div class="hero-btns">
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 60 60" width="44" height="44">
+        <rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="2"/>
+        <path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.8"/>
+        <text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text>
+      </svg>
+      <span class="logo-text">معهد <strong>قدرة</strong></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="about.html">عن المعهد</a>
+      <a href="courses.html">الدورات</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="nav-controls">
+      <button id="langToggle" class="lang-btn">EN</button>
+      <button id="menuToggle" class="menu-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero modern split -->
+<section class="hero">
+  <div class="hero-shape"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-tag"><i class="fas fa-bolt"></i> تدريب تقني احترافي</div>
+      <h1>ابنِ <span class="blue-glow">قدرتك</span><br>واصنع مستقبلك</h1>
+      <p>دورات عملية في البرمجة، الذكاء الاصطناعي، التصميم، والأمن السيبراني — مع شهادات معتمدة وتوظيف مباشر.</p>
+      <div class="hero-cta">
         <a href="courses.html" class="btn btn-primary">استعرض الدورات <i class="fas fa-arrow-left"></i></a>
-        <a href="about.html" class="btn btn-outline">تعرف علينا</a>
+        <a href="about.html" class="btn btn-outline">تعرف علينا <i class="fas fa-info-circle"></i></a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><span class="num blue" data-target="85">0</span><span class="label">دورة تدريبية</span></div>
-        <div class="stat"><span class="num blue" data-target="12000">0</span><span class="label">متخرج</span></div>
-        <div class="stat"><span class="num blue" data-target="92">0</span><span class="label">نسبة التوظيف %</span></div>
+        <div><span class="stat-num" data-target="50">0</span><span class="stat-label">+ دورة</span></div>
+        <div><span class="stat-num" data-target="5000">0</span><span class="stat-label">+ متدرب</span></div>
+        <div><span class="stat-num" data-target="92">0</span><span class="stat-label">% توظيف</span></div>
       </div>
     </div>
-  </section>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <pre><span class="kw">const</span> <span class="fn">qudra</span> = {<br>  name: <span class="str">"معهد قدرة"</span>,<br>  mission: <span class="str">"تمكين الشباب"</span>,<br>  <span class="cm">// since 2018</span><br>  graduates: <span class="num">5000</span>+<br>};<br><span class="fn">console</span>.<span class="fn">log</span>(qudra);</pre>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
 
-  <section class="section features">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">لماذا معهد قدرة؟</span>
-        <h2>نحن نصنع <span class="blue">الفرق</span> بثلاثة <span class="blue">مميزات</span></h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-laptop-code"></i></div><h3>مناهج تطبيقية</h3><p>نسبة التطبيق العملي تتجاوز 70% في جميع دوراتنا. تتعلم بالمشاريع الحقيقية وليس النظري فقط.</p></div>
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-certificate"></i></div><h3>شهادات معتمدة</h3><p>شهاداتنا معتمدة من المؤسسة العامة للتدريب التقني والمهني وشركائنا العالميين (Microsoft, Cisco, AWS).</p></div>
-        <div class="feature-card"><div class="feat-icon"><i class="fas fa-briefcase"></i></div><h3>ضمان التوظيف</h3><p>نقدم شراكة توظيف مع أكثر من 200 شركة سعودية وعالمية — نسبة توظيف خريجينا تتجاوز 92%.</p></div>
-      </div>
-    </div>
-  </section>
+<!-- Partners -->
+<section class="sec" style="padding:30px 0;background:var(--bg-card)">
+  <div class="container" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;opacity:.4">
+    <span style="font-size:1.2rem;font-weight:700">شركاؤنا:</span>
+    <i class="fab fa-microsoft" style="font-size:2rem"></i>
+    <i class="fab fa-google" style="font-size:2rem"></i>
+    <i class="fab fa-amazon" style="font-size:2rem"></i>
+    <i class="fab fa-apple" style="font-size:2rem"></i>
+    <i class="fab fa-meta" style="font-size:2rem"></i>
+  </div>
+</section>
 
-  <section class="section courses-preview">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">الدورات الأكثر طلباً</span>
-        <h2>اعرف <span class="blue">المستقبل</span> وتدرب <span class="blue">عليه</span></h2>
+<!-- Features -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head">
+      <h2>لماذا <span class="blue">قدرة</span>؟</h2>
+      <p>نحن نصنع الفرق — تدريب عملي، مدربون خبراء، ونتائج ملموسة</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>منهج عملي</h3>
+        <p>٨٠٪ من وقت الدورة تطبيق عملي ومشاريع حقيقية — لا نظري فقط.</p>
       </div>
-      <div class="courses-grid">
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#0a2558,#1a3f7a);"><i class="fas fa-robot"></i></div><div class="course-body"><div class="course-tag">تقني</div><h3>الذكاء الاصطناعي</h3><p>من الصفر إلى بناء نماذج تعلم آلي وتطبيقات ذكية باستخدام Python.</p><div class="course-meta"><span><i class="far fa-clock"></i> 12 أسبوع</span><span><i class="fas fa-user-graduate"></i> متاح</span><span class="course-price">6,900 ر.س</span></div></div></div>
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#0d2f6e,#1e4f9e);"><i class="fas fa-shield-halved"></i></div><div class="course-body"><div class="course-tag">تقني</div><h3>الأمن السيبراني</h3><p>احمِ الشبكات والأنظمة — تدريب عملي على اختبار الاختراق والدفاع الرقمي.</p><div class="course-meta"><span><i class="far fa-clock"></i> 16 أسبوع</span><span><i class="fas fa-user-graduate"></i> ممتلئ</span><span class="course-price">8,900 ر.س</span></div></div></div>
-        <div class="course-card"><div class="course-img" style="background:linear-gradient(135deg,#092156,#1a3a7e);"><i class="fas fa-code"></i></div><div class="course-body"><div class="course-tag">تقني</div><h3>تطوير الويب والموبايل</h3><p>Full-stack Web &amp; Mobile — React, Node.js, Flutter — مشروع تخرج متكامل.</p><div class="course-meta"><span><i class="far fa-clock"></i> 14 أسبوع</span><span><i class="fas fa-user-graduate"></i> متاح</span><span class="course-price">7,900 ر.س</span></div></div></div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-users"></i></div>
+        <h3>مدربون خبراء</h3>
+        <p>كل مدرب لديه ٨+ سنوات خبرة في المجال مع شهادات مهنية دولية.</p>
       </div>
-      <div class="section-cta">
-        <a href="courses.html" class="btn btn-primary">عرض كل الدورات <i class="fas fa-arrow-left"></i></a>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-certificate"></i></div>
+        <h3>شهادات معتمدة</h3>
+        <p>شهادات من المؤسسة العامة للتدريب التقني والمهني وشركاء دوليين.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>توظيف مباشر</h3>
+        <p>شراكات مع ١٠٠+ شركة تقنية توظف خريجينا فور التخرج.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section process">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">خطوات التسجيل</span>
-        <h2>ثلاث <span class="blue">خطوات</span> فقط نحو <span class="blue">مستقبل</span> مهني واعد</h2>
-      </div>
-      <div class="process-steps">
-        <div class="step"><div class="step-num">1</div><h3>اختر مسارك</h3><p>تصفح الدورات واختر ما يناسب طموحك وجدولك.</p></div>
-        <div class="step"><div class="step-num">2</div><h3>سجل الآن</h3><p>املأ النموذج وأكمل عملية الدفع الآمنة.</p></div>
-        <div class="step"><div class="step-num">3</div><h3>ابدأ رحلة التعلم</h3><p>انضم إلى منصتنا التفاعلية وابدأ التدريب فوراً.</p></div>
-      </div>
+<!-- Courses preview -->
+<section class="sec dark-sec">
+  <div class="container">
+    <div class="sec-head">
+      <h2>أشهر <span class="blue">الدورات</span></h2>
+      <p>اختر مسارك المهني وابدأ رحلة التعلم</p>
     </div>
-  </section>
+    <div class="course-grid">
+      <a href="courses.html" class="course-card" style="--bg:#0d2137">
+        <div class="course-icon"><i class="fab fa-python"></i></div>
+        <h3>تطوير الويب</h3>
+        <p>HTML, CSS, JavaScript, React, Node.js — من الصفر إلى الاحتراف</p>
+        <span class="course-meta"><i class="far fa-clock"></i> ١٢ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ٢٠ متدرب</span>
+      </a>
+      <a href="courses.html" class="course-card" style="--bg:#1a0d30">
+        <div class="course-icon"><i class="fas fa-brain"></i></div>
+        <h3>الذكاء الاصطناعي</h3>
+        <p>Machine Learning, Deep Learning, NLP — مشاريع عملية بالبيانات الحقيقية</p>
+        <span class="course-meta"><i class="far fa-clock"></i> ١٦ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ١٥ متدرب</span>
+      </a>
+      <a href="courses.html" class="course-card" style="--bg:#1a2a1a">
+        <div class="course-icon"><i class="fas fa-shield-halved"></i></div>
+        <h3>الأمن السيبراني</h3>
+        <p>اختبار الاختراق، تحليل الثغرات، أمن الشبكات — معمل افتراضي متكامل</p>
+        <span class="course-meta"><i class="far fa-clock"></i> ٢٠ أسبوع <span class="dot">·</span> <i class="fas fa-users"></i> ١٢ متدرب</span>
+      </a>
+      <a href="courses.html" class="course-card" style="--bg:#2a1a0d">
+        <div class="course-icon"><i class="fas fa-palette"></i></div>
+        <h3>التصميم الرقمي</h3>
+        <p>UX/UI, Figma, Adobe XD, تصميم تجربة المستخدم — مشاريع حقيقية</p>
+        <span class="course-meta"><i class="far fa-clock"></i> ١٠ أسابيع <span class="dot">·</span> <i class="fas fa-users"></i> ٢٠ متدرب</span>
+      </a>
+    </div>
+    <div class="text-center" style="margin-top:40px">
+      <a href="courses.html" class="btn btn-primary">جميع الدورات <i class="fas fa-arrow-left"></i></a>
+    </div>
+  </div>
+</section>
 
-  <section class="section partners">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">شركاؤنا</span>
-        <h2>نفتخر <span class="blue">بشراكتنا</span> مع أبرز <span class="blue">الجهات</span></h2>
+<!-- Testimonials -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head"><h2>ماذا قال <span class="blue">خريجونا</span>؟</h2></div>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" alt="خريج">
+        <h4>سارة العتيبي</h4>
+        <span>مطور واجهات — شركة STC</span>
+        <p>"غيرت قدرة مساري المهني بالكامل. بعد ٦ شهور من التخرج حصلت على وظيفة في أكبر شركة اتصالات."</p>
       </div>
-      <div class="partner-logos">
-        <span>Microsoft</span><span>Cisco</span><span>AWS</span><span>Google</span><span>Oracle</span><span>IBM</span>
+      <div class="testimonial-card">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80" alt="خريج">
+        <h4>فيصل الدوسري</h4>
+        <span>مهندس أمن سيبراني — SITE</span>
+        <p>"دورة الأمن السيبراني في قدرة كانت الأفضل. المدربون خبراء والمختبرات مجهزة بأحدث التقنيات."</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80" alt="خريج">
+        <h4>نورة الشمري</h4>
+        <span>مصممة UX — زين</span>
+        <p>"المنهج العملي والتطبيق على مشاريع حقيقية هو ما يميز قدرة. أنصح الجميع بالتسجيل!"</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section testimonials">
-    <div class="container">
-      <div class="section-head">
-        <span class="badge">قصص نجاح</span>
-        <h2>ماذا قال <span class="blue">خريجونا</span> عن تجربتهم؟</h2>
-      </div>
-      <div class="test-grid">
-        <div class="test-card"><div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"دورة الأمن السيبراني في معهد قدرة غيرت مسيرتي المهنية بالكامل. حصلت على شهادة ووظيفة خلال 3 أشهر من التخرج!"</p><div class="test-author"><div class="test-avatar"><i class="fas fa-user-circle"></i></div><div><strong>نوف الشمري</strong><span>محللة أمن سيبراني — STC</span></div></div></div>
-        <div class="test-card"><div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"المشاريع التطبيقية في دورة البرمجة أهلتني لدخول سوق العمل وأنا أثق بقدراتي. أنصح كل طالب تقني بالالتحاق بقدرة."</p><div class="test-author"><div class="test-avatar"><i class="fas fa-user-circle"></i></div><div><strong>سعد الغامدي</strong><span>مطور برمجيات — شركة علم</span></div></div></div>
-        <div class="test-card"><div class="test-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"بيئة تعليمية احترافية، مدربون خبراء في المجال، ودعم وظيفي مستمر — تجربة لا تتكرر."</p><div class="test-author"><div class="test-avatar"><i class="fas fa-user-circle"></i></div><div><strong>ريم الحارثي</strong><span>مهندسة ذكاء اصطناعي — SDAIA</span></div></div></div>
-      </div>
-    </div>
-  </section>
+<!-- CTA -->
+<section class="sec cta-sec" style="background:linear-gradient(135deg,#0044aa,#002266);color:#fff;text-align:center">
+  <div class="container">
+    <h2 style="font-size:2rem;margin-bottom:16px">جاهز تبدأ رحلة قدرة؟</h2>
+    <p style="color:rgba(255,255,255,.7);margin-bottom:28px">سجل الآن واستفد من خصم ٢٠٪ على أول دورة</p>
+    <a href="contact.html" class="btn btn-primary btn-lg" style="background:#fff;color:#0044aa">سجل الآن <i class="fas fa-paper-plane"></i></a>
+  </div>
+</section>
 
-  <section class="section cta">
-    <div class="container cta-content">
-      <h2>هل أنت مستعد <span class="blue">للاستثمار</span> في نفسك؟</h2>
-      <p>سجل اليوم في إحدى دوراتنا وابدأ رحلة التميز المهني.</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">سجل الآن <i class="fas fa-arrow-left"></i></a>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="nav-logo" style="margin-bottom:14px">
+        <svg viewBox="0 0 60 60" width="40" height="40"><rect x="2" y="2" width="56" height="56" rx="12" fill="#1a2a4a" stroke="#00d4ff" stroke-width="1.5"/><path d="M18 20 L30 14 L42 20 L42 36 L30 46 L18 36 Z" fill="rgba(0,212,255,.15)" stroke="#00d4ff" stroke-width="1.5"/><text x="30" y="44" text-anchor="middle" fill="#00d4ff" font-size="20" font-weight="bold" font-family="Tajawal,sans-serif">ق</text></svg>
+        <span class="logo-text" style="font-size:1rem">معهد <strong>قدرة</strong></span>
+      </div>
+      <p>معهد التدريب التقني الرائد في المملكة — منذ 2018.</p>
+      <div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-snapchat"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
     </div>
-  </section>
+    <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a><a href="#">المدونة</a></div>
+    <div class="footer-col"><h4>الدورات</h4><a href="courses.html">تطوير الويب</a><a href="courses.html">الذكاء الاصطناعي</a><a href="courses.html">الأمن السيبراني</a><a href="courses.html">التصميم الرقمي</a></div>
+    <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي المروج</p><p><i class="fas fa-phone"></i> 920022334</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p><p><i class="fas fa-clock"></i> ٨:٠٠ ص — ١٠:٠٠ م</p></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 معهد قدرة — جميع الحقوق محفوظة.</p></div>
+</footer>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a href="index.html" class="logo"><i class="fas fa-bolt"></i>معهد <strong>قدرة</strong></a>
-        <p>تمكين الكفاءات الوطنية لسوق العمل — منذ 2018.</p>
-        <div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
-      </div>
-      <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a></div>
-      <div class="footer-col">
-        <h4>تواصل</h4>
-        <p><i class="fas fa-map-marker-alt"></i> الرياض — حي العليا، طريق الملك فهد</p>
-        <p><i class="fas fa-phone"></i> 920022345</p>
-        <p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p>
-      </div>
-    </div>
-    <div class="footer-bottom container"><p>© 2026 معهد قدرة — جميع الحقوق محفوظة.</p></div>
-  </footer>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
