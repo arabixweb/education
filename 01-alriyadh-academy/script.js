@@ -14,7 +14,8 @@
       if (!val) return;
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
       if (el.tagName === 'OPTION') { el.textContent = val.replace(/<[^>]+>/g,''); return; }
-      el.innerHTML = val;
+      if (el.hasAttribute('data-i18n-html') || val.indexOf('<') !== -1) { el.innerHTML = val; return; }
+      el.textContent = val;
     });
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
