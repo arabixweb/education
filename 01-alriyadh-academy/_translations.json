@@ -1,0 +1,1010 @@
+{
+  "about_أكا": {
+    "ar": "© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.footer-bottom > p"
+  },
+  "about_الر": {
+    "ar": "الرياض — طريق الملك عبدالله",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_عنا": {
+    "ar": "عن الأكاديمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_الب": {
+    "ar": "البرامج",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_اتص": {
+    "ar": "اتصل بنا",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > nav.navbar > div.nav-container > div.nav-links"
+  },
+  "about_en": {
+    "ar": "EN",
+    "en": "",
+    "tag": "button",
+    "page": "html > body > nav.navbar > div.nav-container > div.nav-contr"
+  },
+  "about_عنأ": {
+    "ar": "عن أكاديمية",
+    "en": "",
+    "tag": "h1",
+    "page": "html > body > section.page-banner > div.container > h1"
+  },
+  "about_شري": {
+    "ar": "شريكك الموثوق في التعليم منذ 1995",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.page-banner > div.container > p"
+  },
+  "about_حكا": {
+    "ar": "حكاية",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec > div.container > div.about-grid >"
+  },
+  "about_الت": {
+    "ar": "التميز",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > section.sec.dark-sec > div.container > div.val"
+  },
+  "about_تأس": {
+    "ar": "تأسست أكاديمية الرياض عام 1995 بهدف تقديم تعليم متميز يواكب المعايير العالمية مع الحفاظ على القيم الإسلامية والعربية الأصيلة. على مدار أكثر من 25 عاماً، تخرج من الأكاديمية أكثر من 10 آلاف طالب وطالبة أصبحوا قادة في مجالاتهم.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.about-grid >"
+  },
+  "about_نؤم": {
+    "ar": "نؤمن بأن لكل طالب قدرات فريدة تستحق الرعاية والتنمية. لذلك نقدم بيئة تعليمية محفزة تشجع على الإبداع والابتكار مع توفير أحدث التقنيات التعليمية.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.about-grid >"
+  },
+  "about_حصل": {
+    "ar": "حصلت الأكاديمية على العديد من الجوائز المحلية والدولية، منها جائزة التميز التعليمي لعام 2023 من منظمة اليونسكو، وجائزة أفضل مؤسسة تعليمية في الشرق الأوسط 2024.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.about-grid >"
+  },
+  "about_قيم": {
+    "ar": "قيمنا",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec.dark-sec > div.container > div.sec"
+  },
+  "about_الج": {
+    "ar": "الجامعي",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.sec-head > h"
+  },
+  "about_الم": {
+    "ar": "المكتبة الرقمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_الأ": {
+    "ar": "الأصالة",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > section.sec.dark-sec > div.container > div.val"
+  },
+  "about_الا": {
+    "ar": "الابتكار",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > section.sec.dark-sec > div.container > div.val"
+  },
+  "about_اعت": {
+    "ar": "اعتماد أحدث أساليب التعليم والتقنية",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec > div.container > div.val"
+  },
+  "about_أعل": {
+    "ar": "أعلى معايير الجودة الأكاديمية",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec > div.container > div.val"
+  },
+  "about_الح": {
+    "ar": "الحرم",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec > div.container > div.sec-head > h"
+  },
+  "about_بيئ": {
+    "ar": "بيئة تعليمية متكاملة على أحدث طراز",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.sec-head > p"
+  },
+  "about_مؤس": {
+    "ar": "مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_روا": {
+    "ar": "روابط",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_الخ": {
+    "ar": "الخدمات الطلابية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_برا": {
+    "ar": "برامج",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_علو": {
+    "ar": "علوم الحاسب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_اله": {
+    "ar": "الهندسة",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_الط": {
+    "ar": "الطب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_إدا": {
+    "ar": "إدارة الأعمال",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_توا": {
+    "ar": "تواصل",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_9200": {
+    "ar": "920011223",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_info": {
+    "ar": "info@riyadh-academy.edu.sa",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "about_٧٠٠": {
+    "ar": "٧:٠٠ ص — ٩:٠٠ م",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_أكا": {
+    "ar": "© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.footer-bottom > p"
+  },
+  "contact_الر": {
+    "ar": "الرياض — طريق الملك عبدالله",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_عنا": {
+    "ar": "عن الأكاديمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_الب": {
+    "ar": "البرامج",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_اتص": {
+    "ar": "اتصل",
+    "en": "",
+    "tag": "h1",
+    "page": "html > body > section.page-banner > div.container > h1"
+  },
+  "contact_en": {
+    "ar": "EN",
+    "en": "",
+    "tag": "button",
+    "page": "html > body > nav.navbar > div.nav-container > div.nav-contr"
+  },
+  "contact_بنا": {
+    "ar": "بنا",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.page-banner > div.container > h1 > spa"
+  },
+  "contact_نحن": {
+    "ar": "نحن هنا لمساعدتك — تواصل معنا بأي وقت",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.page-banner > div.container > p"
+  },
+  "contact_الم": {
+    "ar": "المكتبة الرقمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_اله": {
+    "ar": "الهندسة",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_الا": {
+    "ar": "الاستفسارات الأكاديمية",
+    "en": "",
+    "tag": "option",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_info": {
+    "ar": "info@riyadh-academy.edu.sa",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_موا": {
+    "ar": "مواعيد العمل",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_الس": {
+    "ar": "السبت — الخميس: ٧:٠٠ ص — ٩:٠٠ م الجمعة: مغلق",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_رقم": {
+    "ar": "رقم الجوال *",
+    "en": "",
+    "tag": "label",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_نوع": {
+    "ar": "نوع الاستفسار",
+    "en": "",
+    "tag": "label",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_الق": {
+    "ar": "القبول",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec.dark-sec > div.container > div.sec"
+  },
+  "contact_الش": {
+    "ar": "الشؤون المالية",
+    "en": "",
+    "tag": "option",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_أخر": {
+    "ar": "أخرى",
+    "en": "",
+    "tag": "option",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_إرس": {
+    "ar": "إرسال",
+    "en": "",
+    "tag": "button",
+    "page": "html > body > section.sec > div.container > div.contact-grid"
+  },
+  "contact_مبا": {
+    "ar": "مباشر",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec.dark-sec > div.container > div.sec"
+  },
+  "contact_قدم": {
+    "ar": "قدم الآن للفصل القادم — الأماكن محدودة",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec > div.container > div.sec"
+  },
+  "contact_تقد": {
+    "ar": "تقديم طلب قبول",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > section.sec.dark-sec > div.container > div > a"
+  },
+  "contact_تحم": {
+    "ar": "تحميل الدليل التعريفي",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > section.sec.dark-sec > div.container > div > a"
+  },
+  "contact_مؤس": {
+    "ar": "مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_روا": {
+    "ar": "روابط",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_الخ": {
+    "ar": "الخدمات الطلابية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_برا": {
+    "ar": "برامج",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_علو": {
+    "ar": "علوم الحاسب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_الط": {
+    "ar": "الطب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_إدا": {
+    "ar": "إدارة الأعمال",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_توا": {
+    "ar": "تواصل",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_9200": {
+    "ar": "920011223",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "contact_٧٠٠": {
+    "ar": "٧:٠٠ ص — ٩:٠٠ م",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_أكا": {
+    "ar": "© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.footer-bottom > p"
+  },
+  "index_الر": {
+    "ar": "الرياض — طريق الملك عبدالله",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_عنا": {
+    "ar": "عن الأكاديمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_الب": {
+    "ar": "البرامج",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_اتص": {
+    "ar": "اتصل بنا",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > nav.navbar > div.nav-container > div.nav-links"
+  },
+  "index_en": {
+    "ar": "EN",
+    "en": "",
+    "tag": "button",
+    "page": "html > body > nav.navbar > div.nav-container > div.nav-contr"
+  },
+  "index_منذ": {
+    "ar": "منذ ١٩٩٥ — Since 1995",
+    "en": "",
+    "tag": "div",
+    "page": "html > body > section.hero > div.hero-content > div"
+  },
+  "index_شري": {
+    "ar": "شريكك في",
+    "en": "",
+    "tag": "h1",
+    "page": "html > body > section.hero > div.hero-content > h1"
+  },
+  "index_الت": {
+    "ar": "التميز التعليمي",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.hero > div.hero-content > h1 > span"
+  },
+  "index_نحو": {
+    "ar": "نحو جيل واعٍ ومبدع — أكثر من ١٠ آلاف خريج وأكثر من ٢٠ برنامجاً تعليمياً معتمداً.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.hero > div.hero-content > p"
+  },
+  "index_برا": {
+    "ar": "برامج",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_اكت": {
+    "ar": "اكتشف المزيد",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > section.hero > div.hero-content > div.hero-cta"
+  },
+  "index_0": {
+    "ar": "0",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.hero > div.hero-content > div.hero-sta"
+  },
+  "index_عام": {
+    "ar": "عاماً من التميز",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.hero > div.hero-content > div.hero-sta"
+  },
+  "index_خري": {
+    "ar": "خريج",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.hero > div.hero-content > div.hero-sta"
+  },
+  "index_برن": {
+    "ar": "برنامج طبي متكامل مع تدريب سريري",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_لما": {
+    "ar": "لماذا ؟",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec > div.container > div.sec-head > h"
+  },
+  "index_أكث": {
+    "ar": "أكثر من ٢٠٠ عضو هيئة تدريس من حملة الدكتوراه والماجستير من أفضل الجامعات العالمية.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_تعل": {
+    "ar": "تعليم معتمد",
+    "en": "",
+    "tag": "h3",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_جمي": {
+    "ar": "جميع برامجنا معتمدة من وزارة التعليم السعودية ومنظمة الاعتماد الأكاديمي الدولية.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_كفا": {
+    "ar": "كفاءات متميزة",
+    "en": "",
+    "tag": "h3",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_بيئ": {
+    "ar": "بيئة محفزة",
+    "en": "",
+    "tag": "h3",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_حرم": {
+    "ar": "حرم جامعي متكامل بمساحة ٥٠ ألف متر مربع يشمل مختبرات ومكتبات ومرافق رياضية.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_شرا": {
+    "ar": "شراكات عالمية",
+    "en": "",
+    "tag": "h3",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_اتف": {
+    "ar": "اتفاقيات تبادل طلابي مع ١٥ جامعة في ٨ دول حول العالم.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.features-gri"
+  },
+  "index_الأ": {
+    "ar": "الأكاديمية",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_مسا": {
+    "ar": "مسارات تعليمية متنوعة تناسب جميع الطموحات",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_بكا": {
+    "ar": "بكالوريوس",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_علو": {
+    "ar": "علوم الحاسب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_الذ": {
+    "ar": "الذكاء الاصطناعي، الأمن السيبراني، وهندسة البرمجيات",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_دبل": {
+    "ar": "دبلوم",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_إدا": {
+    "ar": "إدارة الأعمال",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_قيا": {
+    "ar": "قيادة، تسويق، وريادة أعمال",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_ماج": {
+    "ar": "ماجستير",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_اله": {
+    "ar": "الهندسة",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_هند": {
+    "ar": "هندسة مدنية، كهربائية، وميكانيكية",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_الط": {
+    "ar": "الطب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_است": {
+    "ar": "استعرض جميع البرامج",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > section.sec.dark-sec.programs-preview > div.co"
+  },
+  "index_كلم": {
+    "ar": "كلمة",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec > div.container > div.testimonial-"
+  },
+  "index_الم": {
+    "ar": "المكتبة الرقمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_نؤم": {
+    "ar": "\"نؤمن في أكاديمية الرياض أن التعليم ليس مجرد نقل للمعرفة، بل بناء للإنسان والمجتمع. نسعى دائماً لتقديم تعليم متميز يجمع بين القيم الأصيلة وأحدث المناهج العالمية.\"",
+    "en": "",
+    "tag": "blockquote",
+    "page": "html > body > section.sec > div.container > div.testimonial-"
+  },
+  "index_دعب": {
+    "ar": "— د. عبدالعزيز السليم، مدير الأكاديمية",
+    "en": "",
+    "tag": "cite",
+    "page": "html > body > section.sec > div.container > div.testimonial-"
+  },
+  "index_ابد": {
+    "ar": "ابدأ رحلتك معنا اليوم",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec.cta-sec > div.container > h2"
+  },
+  "index_سجل": {
+    "ar": "سجل الآن وانطلق نحو مستقبل مشرق",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec.cta-sec > div.container > p"
+  },
+  "index_تسج": {
+    "ar": "تسجيل الآن",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > section.sec.cta-sec > div.container > a"
+  },
+  "index_مؤس": {
+    "ar": "مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_روا": {
+    "ar": "روابط",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_الخ": {
+    "ar": "الخدمات الطلابية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_توا": {
+    "ar": "تواصل",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_9200": {
+    "ar": "920011223",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_info": {
+    "ar": "info@riyadh-academy.edu.sa",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "index_٧٠٠": {
+    "ar": "٧:٠٠ ص — ٩:٠٠ م",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_أكا": {
+    "ar": "© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.footer-bottom > p"
+  },
+  "programs_الر": {
+    "ar": "الرياض — طريق الملك عبدالله",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_عنا": {
+    "ar": "عن الأكاديمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_الب": {
+    "ar": "البرامج",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_اتص": {
+    "ar": "اتصل بنا",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > nav.navbar > div.nav-container > div.nav-links"
+  },
+  "programs_en": {
+    "ar": "EN",
+    "en": "",
+    "tag": "button",
+    "page": "html > body > nav.navbar > div.nav-container > div.nav-contr"
+  },
+  "programs_برا": {
+    "ar": "برامج",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_الأ": {
+    "ar": "الأمن السيبراني",
+    "en": "",
+    "tag": "h3",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_اخت": {
+    "ar": "اختر مسارك نحو المستقبل — أكثر من ٢٠ برنامجاً معتمداً",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.page-banner > div.container > p"
+  },
+  "programs_بكا": {
+    "ar": "بكالوريوس",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_علو": {
+    "ar": "علوم الحاسب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_برن": {
+    "ar": "برنامج ماجستير تنفيذي لإعداد القادة — محاضرات مسائية وعبر الإنترنت، بالتعاون مع جامعات بريطانية وأمريكية.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_٤سن": {
+    "ar": "٤ سنوات",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_١٢٠": {
+    "ar": "١٢٠ طالباً سنوياً",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_إدا": {
+    "ar": "إدارة الأعمال",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_تخص": {
+    "ar": "تخصصات في التسويق الرقمي، ريادة الأعمال، الإدارة المالية، والقيادة. شراكات مع كبرى الشركات السعودية للتدريب.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_١٥٠": {
+    "ar": "١٥٠ طالباً سنوياً",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_اله": {
+    "ar": "الهندسة",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_هند": {
+    "ar": "هندسة مدنية، كهربائية، ميكانيكية، وكيميائية — مناهج معتمدة دولياً ومختبرات مجهزة بأحدث المعدات.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_٥سن": {
+    "ar": "٥ سنوات",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_٢٠٠": {
+    "ar": "٢٠٠ طالباً سنوياً",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_الط": {
+    "ar": "الطب",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_٦سن": {
+    "ar": "٦ سنوات",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_٨٠ط": {
+    "ar": "٨٠ طالباً سنوياً",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_الص": {
+    "ar": "الصيدلة الإكلينيكية",
+    "en": "",
+    "tag": "h3",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_٦٠ط": {
+    "ar": "٦٠ طالباً سنوياً",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_دبل": {
+    "ar": "دبلوم متخصص في أمن المعلومات، اختبار الاختراق، وتحليل الثغرات — بالتعاون مع الهيئة الوطنية للأمن السيبراني.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_الل": {
+    "ar": "اللغة العربية لغير الناطقين بها",
+    "en": "",
+    "tag": "h3",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_سنة": {
+    "ar": "سنة - سنتان",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_مجم": {
+    "ar": "مجموعات صغيرة",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_سنت": {
+    "ar": "سنتان",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_٥٠ط": {
+    "ar": "٥٠ طالباً سنوياً",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_ماج": {
+    "ar": "ماجستير",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_١٥س": {
+    "ar": "١.٥ سنة",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_دفع": {
+    "ar": "دفعة ٣٠ طالباً",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec > div.container > div.programs-ful"
+  },
+  "programs_ممي": {
+    "ar": "مميزات",
+    "en": "",
+    "tag": "h2",
+    "page": "html > body > section.sec.dark-sec > div.container > div.sec"
+  },
+  "programs_الد": {
+    "ar": "الدراسة معنا",
+    "en": "",
+    "tag": "span",
+    "page": "html > body > section.sec.dark-sec > div.container > div.sec"
+  },
+  "programs_اعت": {
+    "ar": "اعتماد أكاديمي",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > section.sec.dark-sec > div.container > div > d"
+  },
+  "programs_منح": {
+    "ar": "منح دراسية",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > section.sec.dark-sec > div.container > div > d"
+  },
+  "programs_توظ": {
+    "ar": "توظيف بعد التخرج",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > section.sec.dark-sec > div.container > div > d"
+  },
+  "programs_مؤس": {
+    "ar": "مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_روا": {
+    "ar": "روابط",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_الخ": {
+    "ar": "الخدمات الطلابية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_الم": {
+    "ar": "المكتبة الرقمية",
+    "en": "",
+    "tag": "a",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_توا": {
+    "ar": "تواصل",
+    "en": "",
+    "tag": "h4",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_9200": {
+    "ar": "920011223",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_info": {
+    "ar": "info@riyadh-academy.edu.sa",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  },
+  "programs_٧٠٠": {
+    "ar": "٧:٠٠ ص — ٩:٠٠ م",
+    "en": "",
+    "tag": "p",
+    "page": "html > body > footer.footer > div.container.footer-grid > di"
+  }
+}

@@ -1,415 +1,185 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-lang="ar">
+
+<html data-lang="ar" dir="rtl" lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>أكاديمية الرياض | Al Riyadh Academy</title>
-<meta name="description" content="أكاديمية الرياض - مؤسسة تعليمية رائدة في الرياض تجمع بين الأصالة والحداثة منذ 1995.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+<meta content="أكاديمية الرياض - مؤسسة تعليمية رائدة في الرياض تجمع بين الأصالة والحداثة منذ 1995." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Cairo:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
 <div id="loading">
-  <div class="loader"></div>
+<div class="loader"></div>
 </div>
-
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 60 60" width="50" height="50">
-        <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a5c2a"/><stop offset="100%" stop-color="#c9a84c"/></linearGradient></defs>
-        <circle cx="30" cy="30" r="28" fill="url(#lg)" stroke="#c9a84c" stroke-width="2"/>
-        <text x="30" y="24" text-anchor="middle" fill="#c9a84c" font-size="18" font-weight="bold" font-family="serif">أ</text>
-        <text x="30" y="44" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="sans-serif">RIYADH</text>
-        <path d="M20 48 Q30 38 40 48" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
-      </svg>
-      <span class="logo-text">أكاديمية <strong>الرياض</strong></span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="active">الرئيسية</a>
-      <a href="about.html">عن الأكاديمية</a>
-      <a href="programs.html">البرامج</a>
-      <a href="contact.html">اتصل بنا</a>
-    </div>
-    <div class="nav-controls">
-      <button id="langToggle" class="lang-btn" aria-label="Switch to English">EN</button>
-      <button id="menuToggle" class="menu-btn" aria-label="القائمة"><span></span><span></span><span></span></button>
-    </div>
-  </div>
+<div class="nav-container">
+<a class="nav-logo" href="index.html">
+<svg height="50" viewbox="0 0 60 60" width="50">
+<defs><lineargradient id="lg" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#1a5c2a"></stop><stop offset="100%" stop-color="#c9a84c"></stop></lineargradient></defs>
+<circle cx="30" cy="30" fill="url(#lg)" r="28" stroke="#c9a84c" stroke-width="2"></circle>
+<text fill="#c9a84c" font-family="serif" font-size="18" font-weight="bold" text-anchor="middle" x="30" y="24">أ</text>
+<text data-i18n="riyadh" fill="#fff" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle" x="30" y="44">RIYADH</text>
+<path d="M20 48 Q30 38 40 48" fill="none" stroke="#c9a84c" stroke-width="1.5"></path>
+</svg>
+<span class="logo-text" data-i18n="أكاد">أكاديمية <strong data-i18n="الري">الرياض</strong></span>
+</a>
+<div class="nav-links" id="navLinks">
+<a class="active" data-i18n="الرئ" href="index.html">الرئيسية</a>
+<a data-i18n="عنال" href="about.html">عن الأكاديمية</a>
+<a data-i18n="البر" href="programs.html">البرامج</a>
+<a data-i18n="اتصل" href="contact.html">اتصل بنا</a>
+</div>
+<div class="nav-controls">
+<button aria-label="Switch to English" class="lang-btn" data-i18n="en" id="langToggle">EN</button>
+<button aria-label="القائمة" class="menu-btn" id="menuToggle"><span></span><span></span><span></span></button>
+</div>
+</div>
 </nav>
-
 <section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1600&q=80')"></div>
-  <div class="hero-content">
-    <div class="hero-badge">منذ ١٩٩٥ — Since 1995</div>
-    <h1>شريكك في <span class="gold">التميز التعليمي</span></h1>
-    <p>برنامجاً تعليمياً معتمداً.</p>
-    <div class="hero-cta">
-      <a href="programs.html" class="btn btn-primary">برامجنا <i class="fas fa-arrow-left"></i></a>
-      <a href="about.html" class="btn btn-outline">اكتشف المزيد</a>
-    </div>
-    <div class="hero-stats">
-      <div><span class="stat-num" data-target="25">0</span><span class="stat-label">عاماً من التميز</span></div>
-      <div><span class="stat-num" data-target="10000">0</span><span class="stat-label">خريج</span></div>
-      <div><span class="stat-num" data-target="20">0</span><span class="stat-label">برنامج</span></div>
-    </div>
-  </div>
-  <div class="scroll-indicator"><span></span></div>
+<div class="hero-overlay"></div>
+<div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=1600&amp;q=80')"></div>
+<div class="hero-content">
+<div class="hero-badge" data-i18n="منذ١">منذ ١٩٩٥ — Since 1995</div>
+<h1 data-i18n="شريك">شريكك في <span class="gold" data-i18n="التم">التميز التعليمي</span></h1>
+<p data-i18n="نحوج">نحو جيل واعٍ ومبدع — أكثر من ١٠ آلاف خريج وأكثر من ٢٠ برنامجاً تعليمياً معتمداً.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" data-i18n="برام" href="programs.html">برامجنا <i class="fas fa-arrow-left"></i></a>
+<a class="btn btn-outline" data-i18n="اكتش" href="about.html">اكتشف المزيد</a>
+</div>
+<div class="hero-stats">
+<div><span class="stat-num" data-target="25">0</span><span class="stat-label" data-i18n="عاما">عاماً من التميز</span></div>
+<div><span class="stat-num" data-target="10000">0</span><span class="stat-label" data-i18n="خريج">خريج</span></div>
+<div><span class="stat-num" data-target="20">0</span><span class="stat-label" data-i18n="برنا">برنامج</span></div>
+</div>
+</div>
+<div class="scroll-indicator"><span></span></div>
 </section>
-
 <section class="sec">
-  <div class="container">
-    <div class="sec-head">
-      <h2>لماذا <span class="gold">أكاديمية الرياض</span>؟</h2>
-      <p>أكثر من ربع قرن من العطاء التعليمي يجمع بين الأصالة والابتكار</p>
-    </div>
-    <div class="features-grid">
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-graduation-cap"></i></div>
-        <h3>تعليم معتمد</h3>
-        <p>جميع برامجنا معتمدة من وزارة التعليم السعودية ومنظمة الاعتماد الأكاديمي الدولية.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-chalkboard-user"></i></div>
-        <h3>كفاءات متميزة</h3>
-        <p>أكثر من ٢٠٠ عضو هيئة تدريس من حملة الدكتوراه والماجستير من أفضل الجامعات العالمية.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-building-columns"></i></div>
-        <h3>بيئة محفزة</h3>
-        <p>حرم جامعي متكامل بمساحة ٥٠ ألف متر مربع يشمل مختبرات ومكتبات ومرافق رياضية.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><i class="fas fa-globe"></i></div>
-        <h3>شراكات عالمية</h3>
-        <p>اتفاقيات تبادل طلابي مع ١٥ جامعة في ٨ دول حول العالم.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="sec-head">
+<h2 data-i18n="لماذ">لماذا <span class="gold" data-i18n="أكاد_2">أكاديمية الرياض</span>؟</h2>
+<p data-i18n="أكثر">أكثر من ربع قرن من العطاء التعليمي يجمع بين الأصالة والابتكار</p>
+</div>
+<div class="features-grid">
+<div class="feat-card">
+<div class="feat-icon"><i class="fas fa-graduation-cap"></i></div>
+<h3 data-i18n="تعلي">تعليم معتمد</h3>
+<p data-i18n="جميع">جميع برامجنا معتمدة من وزارة التعليم السعودية ومنظمة الاعتماد الأكاديمي الدولية.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon"><i class="fas fa-chalkboard-user"></i></div>
+<h3 data-i18n="كفاء">كفاءات متميزة</h3>
+<p data-i18n="أكثر_2">أكثر من ٢٠٠ عضو هيئة تدريس من حملة الدكتوراه والماجستير من أفضل الجامعات العالمية.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon"><i class="fas fa-building-columns"></i></div>
+<h3 data-i18n="بيئة">بيئة محفزة</h3>
+<p data-i18n="حرمج">حرم جامعي متكامل بمساحة ٥٠ ألف متر مربع يشمل مختبرات ومكتبات ومرافق رياضية.</p>
+</div>
+<div class="feat-card">
+<div class="feat-icon"><i class="fas fa-globe"></i></div>
+<h3 data-i18n="شراك">شراكات عالمية</h3>
+<p data-i18n="اتفا">اتفاقيات تبادل طلابي مع ١٥ جامعة في ٨ دول حول العالم.</p>
+</div>
+</div>
+</div>
 </section>
-
 <section class="sec dark-sec programs-preview">
-  <div class="container">
-    <div class="sec-head">
-      <h2>برامجنا <span class="gold">الأكاديمية</span></h2>
-      <p>مسارات تعليمية متنوعة تناسب جميع الطموحات</p>
-    </div>
-    <div class="prog-grid">
-      <a href="programs.html" class="prog-card">
-        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80')"></div>
-        <div class="prog-body">
-          <span class="prog-level">بكالوريوس</span>
-          <h3>علوم الحاسب</h3>
-          <p>الذكاء الاصطناعي، الأمن السيبراني، وهندسة البرمجيات</p>
-        </div>
-      </a>
-      <a href="programs.html" class="prog-card">
-        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80')"></div>
-        <div class="prog-body">
-          <span class="prog-level">دبلوم</span>
-          <h3>إدارة الأعمال</h3>
-          <p>قيادة، تسويق، وريادة أعمال</p>
-        </div>
-      </a>
-      <a href="programs.html" class="prog-card">
-        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1576602976047-174e57a47881?w=600&q=80')"></div>
-        <div class="prog-body">
-          <span class="prog-level">ماجستير</span>
-          <h3>الهندسة</h3>
-          <p>هندسة مدنية، كهربائية، وميكانيكية</p>
-        </div>
-      </a>
-      <a href="programs.html" class="prog-card">
-        <div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1555431189-0fabf2667795?w=600&q=80')"></div>
-        <div class="prog-body">
-          <span class="prog-level">بكالوريوس</span>
-          <h3>الطب والجراحة</h3>
-          <p>برنامج طبي متكامل مع تدريب سريري</p>
-        </div>
-      </a>
-    </div>
-    <div class="text-center" style="margin-top:40px">
-      <a href="programs.html" class="btn btn-primary">استعرض جميع البرامج <i class="fas fa-arrow-left"></i></a>
-    </div>
-  </div>
+<div class="container">
+<div class="sec-head">
+<h2 data-i18n="برام_2">برامجنا <span class="gold" data-i18n="الأك">الأكاديمية</span></h2>
+<p data-i18n="مسار">مسارات تعليمية متنوعة تناسب جميع الطموحات</p>
+</div>
+<div class="prog-grid">
+<a class="prog-card" href="programs.html">
+<div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&amp;q=80')"></div>
+<div class="prog-body">
+<span class="prog-level" data-i18n="بكال">بكالوريوس</span>
+<h3 data-i18n="علوم">علوم الحاسب</h3>
+<p data-i18n="الذك">الذكاء الاصطناعي، الأمن السيبراني، وهندسة البرمجيات</p>
+</div>
+</a>
+<a class="prog-card" href="programs.html">
+<div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&amp;q=80')"></div>
+<div class="prog-body">
+<span class="prog-level" data-i18n="دبلو">دبلوم</span>
+<h3 data-i18n="إدار">إدارة الأعمال</h3>
+<p data-i18n="قياد">قيادة، تسويق، وريادة أعمال</p>
+</div>
+</a>
+<a class="prog-card" href="programs.html">
+<div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1576602976047-174e57a47881?w=600&amp;q=80')"></div>
+<div class="prog-body">
+<span class="prog-level" data-i18n="ماجس">ماجستير</span>
+<h3 data-i18n="الهن">الهندسة</h3>
+<p data-i18n="هندس">هندسة مدنية، كهربائية، وميكانيكية</p>
+</div>
+</a>
+<a class="prog-card" href="programs.html">
+<div class="prog-img" style="background-image:url('https://images.unsplash.com/photo-1555431189-0fabf2667795?w=600&amp;q=80')"></div>
+<div class="prog-body">
+<span class="prog-level" data-i18n="بكال_2">بكالوريوس</span>
+<h3 data-i18n="الطب">الطب والجراحة</h3>
+<p data-i18n="برنا_2">برنامج طبي متكامل مع تدريب سريري</p>
+</div>
+</a>
+</div>
+<div class="text-center" style="margin-top:40px">
+<a class="btn btn-primary" data-i18n="استع" href="programs.html">استعرض جميع البرامج <i class="fas fa-arrow-left"></i></a>
+</div>
+</div>
 </section>
-
 <section class="sec">
-  <div class="container">
-    <div class="testimonial-wrap">
-      <h2>كلمة <span class="gold">المدير</span></h2>
-      <div class="director-msg">
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="مدير الأكاديمية" class="director-img">
-        <blockquote>
+<div class="container">
+<div class="testimonial-wrap">
+<h2 data-i18n="كلمة">كلمة <span class="gold" data-i18n="المد">المدير</span></h2>
+<div class="director-msg">
+<img alt="مدير الأكاديمية" class="director-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&amp;q=80"/>
+<blockquote data-i18n="نؤمن">
           "نؤمن في أكاديمية الرياض أن التعليم ليس مجرد نقل للمعرفة، بل بناء للإنسان والمجتمع. نسعى دائماً لتقديم تعليم متميز يجمع بين القيم الأصيلة وأحدث المناهج العالمية."
-          <cite>— د. عبدالعزيز السليم، مدير الأكاديمية</cite>
-        </blockquote>
-      </div>
-    </div>
-  </div>
+          <cite data-i18n="دعبد">— د. عبدالعزيز السليم، مدير الأكاديمية</cite>
+</blockquote>
+</div>
+</div>
+</div>
 </section>
-
 <section class="sec cta-sec" style="background:linear-gradient(135deg,#1a5c2a,#0d3318);color:#fff;text-align:center">
-  <div class="container">
-    <h2 style="font-size:2rem;margin-bottom:16px">ابدأ رحلتك معنا اليوم</h2>
-    <p style="color:rgba(255,255,255,.7);margin-bottom:28px">سجل الآن وانطلق نحو مستقبل مشرق</p>
-    <a href="contact.html" class="btn btn-primary btn-lg">تسجيل الآن <i class="fas fa-paper-plane"></i></a>
-  </div>
+<div class="container">
+<h2 data-i18n="ابدأ" style="font-size:2rem;margin-bottom:16px">ابدأ رحلتك معنا اليوم</h2>
+<p data-i18n="سجلا" style="color:rgba(255,255,255,.7);margin-bottom:28px">سجل الآن وانطلق نحو مستقبل مشرق</p>
+<a class="btn btn-primary btn-lg" data-i18n="تسجي" href="contact.html">تسجيل الآن <i class="fas fa-paper-plane"></i></a>
+</div>
 </section>
-
 <footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-col">
-      <div class="nav-logo" style="margin-bottom:14px">
-        <svg viewBox="0 0 60 60" width="40" height="40">
-          <circle cx="30" cy="30" r="28" fill="#1a5c2a" stroke="#c9a84c" stroke-width="2"/>
-          <text x="30" y="24" text-anchor="middle" fill="#c9a84c" font-size="18" font-weight="bold" font-family="serif">أ</text>
-          <text x="30" y="44" text-anchor="middle" fill="#fff" font-size="7" font-weight="bold">RIYADH</text>
-        </svg>
-        <span class="logo-text" style="font-size:1rem">أكاديمية الرياض</span>
-      </div>
-      <p>مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.</p>
-      <div class="social">
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-snapchat"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-    <div class="footer-col"><h4>روابط</h4><a href="about.html">عن الأكاديمية</a><a href="programs.html">البرامج</a><a href="contact.html">الخدمات الطلابية</a><a href="#">المكتبة الرقمية</a></div>
-    <div class="footer-col"><h4>برامج</h4><a href="programs.html">علوم الحاسب</a><a href="programs.html">الهندسة</a><a href="programs.html">الطب</a><a href="programs.html">إدارة الأعمال</a></div>
-    <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — طريق الملك عبدالله</p><p><i class="fas fa-phone"></i> 920011223</p><p><i class="fas fa-envelope"></i> info@riyadh-academy.edu.sa</p><p><i class="fas fa-clock"></i> ٧:٠٠ ص — ٩:٠٠ م</p></div>
-  </div>
-  <div class="footer-bottom"><p>أكاديمية الرياض — جميع الحقوق محفوظة.</p></div>
+<div class="container footer-grid">
+<div class="footer-col">
+<div class="nav-logo" style="margin-bottom:14px">
+<svg height="40" viewbox="0 0 60 60" width="40">
+<circle cx="30" cy="30" fill="#1a5c2a" r="28" stroke="#c9a84c" stroke-width="2"></circle>
+<text fill="#c9a84c" font-family="serif" font-size="18" font-weight="bold" text-anchor="middle" x="30" y="24">أ</text>
+<text data-i18n="riyadh_2" fill="#fff" font-size="7" font-weight="bold" text-anchor="middle" x="30" y="44">RIYADH</text>
+</svg>
+<span class="logo-text" data-i18n="أكاد_3" style="font-size:1rem">أكاديمية الرياض</span>
+</div>
+<p data-i18n="مؤسس">مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.</p>
+<div class="social">
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="#"><i class="fab fa-snapchat"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+<div class="footer-col"><h4 data-i18n="رواب">روابط</h4><a data-i18n="عنال_2" href="about.html">عن الأكاديمية</a><a data-i18n="البر_2" href="programs.html">البرامج</a><a data-i18n="الخد" href="contact.html">الخدمات الطلابية</a><a data-i18n="المك" href="#">المكتبة الرقمية</a></div>
+<div class="footer-col"><h4 data-i18n="برام_3">برامج</h4><a data-i18n="علوم_2" href="programs.html">علوم الحاسب</a><a data-i18n="الهن_2" href="programs.html">الهندسة</a><a data-i18n="الطب_2" href="programs.html">الطب</a><a data-i18n="إدار_2" href="programs.html">إدارة الأعمال</a></div>
+<div class="footer-col"><h4 data-i18n="تواص">تواصل</h4><p data-i18n="الري_2"><i class="fas fa-map-marker-alt"></i> الرياض — طريق الملك عبدالله</p><p data-i18n="920011"><i class="fas fa-phone"></i> 920011223</p><p data-i18n="infor"><i class="fas fa-envelope"></i> info@riyadh-academy.edu.sa</p><p data-i18n="٧٠٠ص"><i class="fas fa-clock"></i> ٧:٠٠ ص — ٩:٠٠ م</p></div>
+</div>
+<div class="footer-bottom"><p data-i18n="أ">© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.</p></div>
 </footer>
-
-<script>window.__i18n={"ar": {"site_name": "أكاديمية الرياض", "site_tagline": "التعليم في أبهى صوره", "nav_home": "الرئيسية", "nav_about": "عن الأكاديمية", "nav_programs": "البرامج", "nav_contact": "اتصل بنا", "lang_btn": "EN", "lang_btn_alt": "عربي", "hero_tag": "منارة علم وتربية", "hero_title": "أكاديمية <strong>الرياض</strong><br>حيث <span class='gold'>التميز</span> يبدأ", "hero_desc": "أكاديمية رائدة في تعليم العلوم والآداب بمناهج عصرية وكوادر تعليمية متميزة. نعد طلابنا لمستقبل مشرق منذ ٢٠١٠.", "hero_cta_primary": "تعرف على برامجنا", "hero_cta_secondary": "اكتشف الأكاديمية", "hero_stat1": "خريج", "hero_stat2": "برنامج", "hero_stat3": "معلم", "sec_why_title": "لماذا <span class='gold'>أكاديمية الرياض</span>؟", "sec_why_desc": "٢٥ عاماً من التميز في التعليم — رؤية واضحة، منهج متطور، بيئة محفزة", "feat1_title": "مناهج حديثة", "feat1_desc": "نعتمد أحدث المناهج العالمية المطورة وفق رؤية المملكة ٢٠٣٠ مع التركيز على المهارات الرقمية.", "feat2_title": "كوادر متميزة", "feat2_desc": "معلمون مؤهلون من أفضل الجامعات المحلية والعالمية، يمتلكون خبرات تربوية واسعة.", "feat3_title": "بيئة تفاعلية", "feat3_desc": "مختبرات علمية، مكتبة رقمية، أنشطة لا منهجية — كل ذلك في حرم جامعي متكامل.", "feat4_title": "متابعة فردية", "feat4_desc": "نظام متابعة شخصية لكل طالب مع تقارير دورية للأهالي وخطط دعم مخصصة.", "page_title_about": "عن <span class='gold'>أكاديمية الرياض</span>", "about_heading": "مسيرة <span class='gold'>عطاء</span>", "about_p1": "تأسست أكاديمية الرياض عام ٢٠١٠ بموجب ترخيص من وزارة التعليم، بهدف تقديم تعليم متميز يجمع بين الأصالة والحداثة. منذ انطلاقتها، خرّجت الأكاديمية أكثر من ٥٠٠٠ طالب وطالبة التحقوا بأعرق الجامعات المحلية والعالمية.", "about_p2": "تمتد مساحة الحرم الجامعي على ٥٠ ألف متر مربع، ويضم ٣ مباني تعليمية مجهزة بأحدث التقنيات، ومكتبة مركزية تضم أكثر من ٣٠ ألف عنوان، وملاعب رياضية ومنشآت فنية.", "about_p3": "نفخر بشراكاتنا مع ١٥ جامعة دولية وبرامج تبادل طلابي مع مؤسسات تعليمية في أمريكا وبريطانيا وكندا.", "about_stat1_label": "خريج", "about_stat2_label": "متر مربع", "about_stat3_label": "جامعة شريكة", "page_title_programs": "برامجنا <span class='gold'>الأكاديمية</span>", "programs_intro": "برامج متنوعة تناسب جميع الاهتمامات والمراحل الدراسية", "prog1_title": "مسار العلوم", "prog1_desc": "فيزياء، كيمياء، أحياء — مع مختبرات متطورة ومشاريع بحثية", "prog1_meta": "٣ سنوات", "prog2_title": "مسار التقنية", "prog2_desc": "برمجة، ذكاء اصطناعي، روبوتكس — إعداد لمستقبل رقمي واعد", "prog2_meta": "٤ سنوات", "prog3_title": "مسار اللغات", "prog3_desc": "إنجليزية، فرنسية، صينية — مع مختبر لغات وبرامج تبادل دولي", "prog3_meta": "٣ سنوات", "prog4_title": "مسار الفنون", "prog4_desc": "فنون بصرية، مسرح، موسيقى — إطلاق العنان للإبداع", "prog4_meta": "٣ سنوات", "prog5_title": "التحضير الجامعي", "prog5_desc": "برنامج مكثف لتأهيل الطلاب للقبول في الجامعات السعودية والعالمية", "prog5_meta": "سنة واحدة", "prog6_title": "التعليم عن بُعد", "prog6_desc": "منصة تعليمية متكاملة — دروس مباشرة ومسجلة تناسب الجميع", "prog6_meta": "حسب البرنامج", "page_title_contact": "اتصل بنا — القبول والتسجيل", "contact_heading": "تواصل مع <span class='gold'>الأكاديمية</span>", "form_heading": "طلب التسجيل", "form_name": "الاسم الكامل", "form_name_ph": "أدخل اسمك", "form_email": "البريد الإلكتروني", "form_email_ph": "example@email.com", "form_phone": "رقم الجوال", "form_phone_ph": "05xxxxxxxx", "form_program": "البرنامج المطلوب", "form_program_ph": "اختر البرنامج", "form_message": "رسالتك", "form_message_ph": "اكتب رسالتك هنا", "form_submit": "إرسال الطلب", "form_success": "تم إرسال طلبك بنجاح! سنتواصل معك قريباً.", "form_prog1": "مسار العلوم", "form_prog2": "مسار التقنية", "form_prog3": "مسار اللغات", "form_prog4": "مسار الفنون", "form_prog5": "التحضير الجامعي", "form_prog6": "التعليم عن بُعد", "footer_desc": "أكاديمية رياضية رائدة — تعليم يجمع بين الأصالة والحداثة.", "footer_links": "روابط", "footer_progs": "البرامج", "footer_contact": "تواصل", "footer_prog1": "مسار العلوم", "footer_prog2": "مسار التقنية", "footer_prog3": "مسار اللغات", "footer_copy": "أكاديمية الرياض — جميع الحقوق محفوظة.", "breadcrumb_home": "الرئيسية", "breadcrumb_about": "عن الأكاديمية", "breadcrumb_programs": "البرامج", "breadcrumb_contact": "اتصل بنا", "cta_title": "ابدأ رحلة التميز اليوم", "cta_desc": "سجل الآن وكن جزءاً من قصتنا", "cta_btn": "تسجيل الآن", "founder_quote": "التعليم هو أقوى سلاح يمكنك استخدامه لتغيير العالم. في أكاديمية الرياض، نزرع بذور المعرفة ونرعى عقول المستقبل.", "founder_name": "— د. عبدالرحمن آل الشيخ، المؤسس", "why1_title": "بيئة محفزة", "why1_desc": "حرم جامعي متكامل يلهم الإبداع", "why2_title": "اعتماد دولي", "why2_desc": "شهادات معترف بها عالمياً", "why3_title": "نشاطات متنوعة", "why3_desc": "رياضة، فنون، تطوع ورحلات", "why4_title": "دعم مستمر", "why4_desc": "مرشد أكاديمي لكل طالب", "back_to_top": "العودة للأعلى", "contact_address": "الرياض — حي النرجس", "contact_phone": "٩٢٠٠٠١٢٣٤", "contact_email": "info@riyadh-academy.edu.sa", "contact_hours": "٧:٣٠ صباحاً — ٣:٠٠ مساءً (الأحد — الخميس)", "contact_hours_label": "ساعات العمل", "address_label": "العنوان", "phone_label": "الهاتف", "email_label": "البريد الإلكتروني"}, "en": {"site_name": "Al-Riyadh Academy", "site_tagline": "Education at Its Finest", "nav_home": "Home", "nav_about": "About Us", "nav_programs": "Programs", "nav_contact": "Contact", "lang_btn": "عربي", "lang_btn_alt": "EN", "hero_tag": "A Beacon of Knowledge", "hero_title": "Al-Riyadh <strong>Academy</strong><br>Where <span class='gold'>Excellence</span> Begins", "hero_desc": "A leading academy teaching sciences and arts with modern curricula and distinguished faculty. Preparing our students for a bright future since 2010.", "hero_cta_primary": "Explore Programs", "hero_cta_secondary": "Discover Academy", "hero_stat1": "Graduates", "hero_stat2": "Programs", "hero_stat3": "Teachers", "sec_why_title": "Why <span class='gold'>Al-Riyadh Academy</span>?", "sec_why_desc": "25 years of excellence in education — clear vision, advanced curriculum, inspiring environment", "feat1_title": "Modern Curriculum", "feat1_desc": "We adopt the latest global curricula aligned with Saudi Vision 2030, with focus on digital skills.", "feat2_title": "Distinguished Staff", "feat2_desc": "Qualified teachers from top local and international universities with extensive educational expertise.", "feat3_title": "Interactive Environment", "feat3_desc": "Science labs, digital library, extracurricular activities — all in an integrated campus.", "feat4_title": "Individual Mentoring", "feat4_desc": "Personal tracking system for each student with periodic reports and customized support plans.", "page_title_about": "About <span class='gold'>Al-Riyadh Academy</span>", "about_heading": "A Journey <span class='gold'>of Excellence</span>", "about_p1": "Founded in 2010 under the Ministry of Education license, Al-Riyadh Academy aims to provide distinguished education blending tradition with modernity. Since its inception, the academy has graduated over 5,000 students who joined prestigious universities locally and abroad.", "about_p2": "The campus spans 50,000 square meters, featuring 3 educational buildings equipped with latest technology, a central library with over 30,000 titles, sports facilities and arts centers.", "about_p3": "We pride ourselves on partnerships with 15 international universities and student exchange programs with institutions in the US, UK, and Canada.", "about_stat1_label": "Graduates", "about_stat2_label": "Square Meters", "about_stat3_label": "Partner Universities", "page_title_programs": "Our <span class='gold'>Programs</span>", "programs_intro": "Diverse programs for all interests and academic levels", "prog1_title": "Science Track", "prog1_desc": "Physics, Chemistry, Biology — with advanced labs and research projects", "prog1_meta": "3 Years", "prog2_title": "Technology Track", "prog2_desc": "Programming, AI, Robotics — preparing for a promising digital future", "prog2_meta": "4 Years", "prog3_title": "Languages Track", "prog3_desc": "English, French, Chinese — with language lab and international exchange programs", "prog3_meta": "3 Years", "prog4_title": "Arts Track", "prog4_desc": "Visual arts, theater, music — unleashing creativity", "prog4_meta": "3 Years", "prog5_title": "University Prep", "prog5_desc": "Intensive program preparing students for admission to Saudi and international universities", "prog5_meta": "1 Year", "prog6_title": "Distance Learning", "prog6_desc": "Integrated online platform — live and recorded classes for everyone", "prog6_meta": "Varies", "page_title_contact": "Contact — Admissions & Registration", "contact_heading": "Get in <span class='gold'>Touch</span>", "form_heading": "Registration Form", "form_name": "Full Name", "form_name_ph": "Enter your name", "form_email": "Email", "form_email_ph": "example@email.com", "form_phone": "Phone Number", "form_phone_ph": "05xxxxxxxx", "form_program": "Desired Program", "form_program_ph": "Select a program", "form_message": "Your Message", "form_message_ph": "Type your message here", "form_submit": "Submit Application", "form_success": "Your application has been submitted! We will contact you soon.", "form_prog1": "Science Track", "form_prog2": "Technology Track", "form_prog3": "Languages Track", "form_prog4": "Arts Track", "form_prog5": "University Prep", "form_prog6": "Distance Learning", "footer_desc": "A leading Riyadh academy — education blending tradition with modernity.", "footer_links": "Links", "footer_progs": "Programs", "footer_contact": "Contact", "footer_prog1": "Science Track", "footer_prog2": "Technology Track", "footer_prog3": "Languages Track", "footer_copy": "Al-Riyadh Academy — All Rights Reserved.", "breadcrumb_home": "Home", "breadcrumb_about": "About Us", "breadcrumb_programs": "Programs", "breadcrumb_contact": "Contact", "cta_title": "Start Your Excellence Journey", "cta_desc": "Register now and be part of our story", "cta_btn": "Register Now", "founder_quote": "Education is the most powerful weapon to change the world. At Al-Riyadh Academy, we plant the seeds of knowledge and nurture the minds of tomorrow.", "founder_name": "— Dr. Abdulrahman Al-Sheikh, Founder", "why1_title": "Inspiring Environment", "why1_desc": "Integrated campus inspiring creativity", "why2_title": "Accreditation", "why2_desc": "Globally recognized certificates", "why3_title": "Activities", "why3_desc": "Sports, arts, volunteering, trips", "why4_title": "Ongoing Support", "why4_desc": "Academic advisor for every student", "back_to_top": "Back to Top", "contact_address": "Riyadh — Al Narjis District", "contact_phone": "920001234", "contact_email": "info@riyadh-academy.edu.sa", "contact_hours": "7:30 AM — 3:00 PM (Sun — Thu)", "contact_hours_label": "Hours", "address_label": "Address", "phone_label": "Phone", "email_label": "Email"}};</script>
-<script src="script.js"></script>
-
-<script>التعليم في أبهى صوره",
-    "nav_home": "الرئيسية",
-    "nav_about": "عن الأكاديمية",
-    "nav_programs": "البرامج",
-    "nav_contact": "اتصل بنا",
-    "lang_btn": "EN",
-    "lang_btn_alt": "عربي",
-    "hero_tag": "منارة علم وتربية",
-    "hero_title": "أكاديمية <strong>الرياض</strong><br>حيث <span class='gold'>التميز</span> يبدأ",
-    "hero_desc": "أكاديمية رائدة في تعليم العلوم والآداب بمناهج عصرية وكوادر تعليمية متميزة. نعد طلابنا لمستقبل مشرق منذ ٢٠١٠.",
-    "hero_cta_primary": "تعرف على برامجنا",
-    "hero_cta_secondary": "اكتشف الأكاديمية",
-    "hero_stat1": "خريج",
-    "hero_stat2": "برنامج",
-    "hero_stat3": "معلم",
-    "sec_why_title": "لماذا <span class='gold'>أكاديمية الرياض</span>؟",
-    "sec_why_desc": "٢٥ عاماً من التميز في التعليم — رؤية واضحة، منهج متطور، بيئة محفزة",
-    "feat1_title": "مناهج حديثة",
-    "feat1_desc": "نعتمد أحدث المناهج العالمية المطورة وفق رؤية المملكة ٢٠٣٠ مع التركيز على المهارات الرقمية.",
-    "feat2_title": "كوادر متميزة",
-    "feat2_desc": "معلمون مؤهلون من أفضل الجامعات المحلية والعالمية، يمتلكون خبرات تربوية واسعة.",
-    "feat3_title": "بيئة تفاعلية",
-    "feat3_desc": "مختبرات علمية، مكتبة رقمية، أنشطة لا منهجية — كل ذلك في حرم جامعي متكامل.",
-    "feat4_title": "متابعة فردية",
-    "feat4_desc": "نظام متابعة شخصية لكل طالب مع تقارير دورية للأهالي وخطط دعم مخصصة.",
-    "page_title_about": "عن <span class='gold'>أكاديمية الرياض</span>",
-    "about_heading": "مسيرة <span class='gold'>عطاء</span>",
-    "about_p1": "تأسست أكاديمية الرياض عام ٢٠١٠ بموجب ترخيص من وزارة التعليم، بهدف تقديم تعليم متميز يجمع بين الأصالة والحداثة. منذ انطلاقتها، خرّجت الأكاديمية أكثر من ٥٠٠٠ طالب وطالبة التحقوا بأعرق الجامعات المحلية والعالمية.",
-    "about_p2": "تمتد مساحة الحرم الجامعي على ٥٠ ألف متر مربع، ويضم ٣ مباني تعليمية مجهزة بأحدث التقنيات، ومكتبة مركزية تضم أكثر من ٣٠ ألف عنوان، وملاعب رياضية ومنشآت فنية.",
-    "about_p3": "نفخر بشراكاتنا مع ١٥ جامعة دولية وبرامج تبادل طلابي مع مؤسسات تعليمية في أمريكا وبريطانيا وكندا.",
-    "about_stat1_label": "خريج",
-    "about_stat2_label": "متر مربع",
-    "about_stat3_label": "جامعة شريكة",
-    "page_title_programs": "برامجنا <span class='gold'>الأكاديمية</span>",
-    "programs_intro": "برامج متنوعة تناسب جميع الاهتمامات والمراحل الدراسية",
-    "prog1_title": "مسار العلوم",
-    "prog1_desc": "فيزياء، كيمياء، أحياء — مع مختبرات متطورة ومشاريع بحثية",
-    "prog1_meta": "٣ سنوات",
-    "prog2_title": "مسار التقنية",
-    "prog2_desc": "برمجة، ذكاء اصطناعي، روبوتكس — إعداد لمستقبل رقمي واعد",
-    "prog2_meta": "٤ سنوات",
-    "prog3_title": "مسار اللغات",
-    "prog3_desc": "إنجليزية، فرنسية، صينية — مع مختبر لغات وبرامج تبادل دولي",
-    "prog3_meta": "٣ سنوات",
-    "prog4_title": "مسار الفنون",
-    "prog4_desc": "فنون بصرية، مسرح، موسيقى — إطلاق العنان للإبداع",
-    "prog4_meta": "٣ سنوات",
-    "prog5_title": "التحضير الجامعي",
-    "prog5_desc": "برنامج مكثف لتأهيل الطلاب للقبول في الجامعات السعودية والعالمية",
-    "prog5_meta": "سنة واحدة",
-    "prog6_title": "التعليم عن بُعد",
-    "prog6_desc": "منصة تعليمية متكاملة — دروس مباشرة ومسجلة تناسب الجميع",
-    "prog6_meta": "حسب البرنامج",
-    "page_title_contact": "اتصل بنا — القبول والتسجيل",
-    "contact_heading": "تواصل مع <span class='gold'>الأكاديمية</span>",
-    "form_heading": "طلب التسجيل",
-    "form_name": "الاسم الكامل",
-    "form_name_ph": "أدخل اسمك",
-    "form_email": "البريد الإلكتروني",
-    "form_email_ph": "example@email.com",
-    "form_phone": "رقم الجوال",
-    "form_phone_ph": "05xxxxxxxx",
-    "form_program": "البرنامج المطلوب",
-    "form_program_ph": "اختر البرنامج",
-    "form_message": "رسالتك",
-    "form_message_ph": "اكتب رسالتك هنا",
-    "form_submit": "إرسال الطلب",
-    "form_success": "تم إرسال طلبك بنجاح! سنتواصل معك قريباً.",
-    "form_prog1": "مسار العلوم",
-    "form_prog2": "مسار التقنية",
-    "form_prog3": "مسار اللغات",
-    "form_prog4": "مسار الفنون",
-    "form_prog5": "التحضير الجامعي",
-    "form_prog6": "التعليم عن بُعد",
-    "footer_desc": "أكاديمية رياضية رائدة — تعليم يجمع بين الأصالة والحداثة.",
-    "footer_links": "روابط",
-    "footer_progs": "البرامج",
-    "footer_contact": "تواصل",
-    "footer_prog1": "مسار العلوم",
-    "footer_prog2": "مسار التقنية",
-    "footer_prog3": "مسار اللغات",
-    "footer_copy": "أكاديمية الرياض — جميع الحقوق محفوظة.",
-    "breadcrumb_home": "الرئيسية",
-    "breadcrumb_about": "عن الأكاديمية",
-    "breadcrumb_programs": "البرامج",
-    "breadcrumb_contact": "اتصل بنا",
-    "cta_title": "ابدأ رحلة التميز اليوم",
-    "cta_desc": "سجل الآن وكن جزءاً من قصتنا",
-    "cta_btn": "تسجيل الآن",
-    "founder_quote": "التعليم هو أقوى سلاح يمكنك استخدامه لتغيير العالم. في أكاديمية الرياض، نزرع بذور المعرفة ونرعى عقول المستقبل.",
-    "founder_name": "— د. عبدالرحمن آل الشيخ، المؤسس",
-    "why1_title": "بيئة محفزة",
-    "why1_desc": "حرم جامعي متكامل يلهم الإبداع",
-    "why2_title": "اعتماد دولي",
-    "why2_desc": "شهادات معترف بها عالمياً",
-    "why3_title": "نشاطات متنوعة",
-    "why3_desc": "رياضة، فنون، تطوع ورحلات",
-    "why4_title": "دعم مستمر",
-    "why4_desc": "مرشد أكاديمي لكل طالب",
-    "back_to_top": "العودة للأعلى",
-    "contact_address": "الرياض — حي النرجس",
-    "contact_phone": "٩٢٠٠٠١٢٣٤",
-    "contact_email": "info@riyadh-academy.edu.sa",
-    "contact_hours": "٧:٣٠ صباحاً — ٣:٠٠ مساءً (الأحد — الخميس)",
-    "contact_hours_label": "ساعات العمل",
-    "address_label": "العنوان",
-    "phone_label": "الهاتف",
-    "email_label": "البريد الإلكتروني"
-  },
-  "en": {
-    "site_name": "Al-Riyadh Academy",
-    "site_tagline": "Education at Its Finest",
-    "nav_home": "Home",
-    "nav_about": "About Us",
-    "nav_programs": "Programs",
-    "nav_contact": "Contact",
-    "lang_btn": "عربي",
-    "lang_btn_alt": "EN",
-    "hero_tag": "A Beacon of Knowledge",
-    "hero_title": "Al-Riyadh <strong>Academy</strong><br>Where <span class='gold'>Excellence</span> Begins",
-    "hero_desc": "A leading academy teaching sciences and arts with modern curricula and distinguished faculty. Preparing our students for a bright future since 2010.",
-    "hero_cta_primary": "Explore Programs",
-    "hero_cta_secondary": "Discover Academy",
-    "hero_stat1": "Graduates",
-    "hero_stat2": "Programs",
-    "hero_stat3": "Teachers",
-    "sec_why_title": "Why <span class='gold'>Al-Riyadh Academy</span>?",
-    "sec_why_desc": "25 years of excellence in education — clear vision, advanced curriculum, inspiring environment",
-    "feat1_title": "Modern Curriculum",
-    "feat1_desc": "We adopt the latest global curricula aligned with Saudi Vision 2030, with focus on digital skills.",
-    "feat2_title": "Distinguished Staff",
-    "feat2_desc": "Qualified teachers from top local and international universities with extensive educational expertise.",
-    "feat3_title": "Interactive Environment",
-    "feat3_desc": "Science labs, digital library, extracurricular activities — all in an integrated campus.",
-    "feat4_title": "Individual Mentoring",
-    "feat4_desc": "Personal tracking system for each student with periodic reports and customized support plans.",
-    "page_title_about": "About <span class='gold'>Al-Riyadh Academy</span>",
-    "about_heading": "A Journey <span class='gold'>of Excellence</span>",
-    "about_p1": "Founded in 2010 under the Ministry of Education license, Al-Riyadh Academy aims to provide distinguished education blending tradition with modernity. Since its inception, the academy has graduated over 5,000 students who joined prestigious universities locally and abroad.",
-    "about_p2": "The campus spans 50,000 square meters, featuring 3 educational buildings equipped with latest technology, a central library with over 30,000 titles, sports facilities and arts centers.",
-    "about_p3": "We pride ourselves on partnerships with 15 international universities and student exchange programs with institutions in the US, UK, and Canada.",
-    "about_stat1_label": "Graduates",
-    "about_stat2_label": "Square Meters",
-    "about_stat3_label": "Partner Universities",
-    "page_title_programs": "Our <span class='gold'>Programs</span>",
-    "programs_intro": "Diverse programs for all interests and academic levels",
-    "prog1_title": "Science Track",
-    "prog1_desc": "Physics, Chemistry, Biology — with advanced labs and research projects",
-    "prog1_meta": "3 Years",
-    "prog2_title": "Technology Track",
-    "prog2_desc": "Programming, AI, Robotics — preparing for a promising digital future",
-    "prog2_meta": "4 Years",
-    "prog3_title": "Languages Track",
-    "prog3_desc": "English, French, Chinese — with language lab and international exchange programs",
-    "prog3_meta": "3 Years",
-    "prog4_title": "Arts Track",
-    "prog4_desc": "Visual arts, theater, music — unleashing creativity",
-    "prog4_meta": "3 Years",
-    "prog5_title": "University Prep",
-    "prog5_desc": "Intensive program preparing students for admission to Saudi and international universities",
-    "prog5_meta": "1 Year",
-    "prog6_title": "Distance Learning",
-    "prog6_desc": "Integrated online platform — live and recorded classes for everyone",
-    "prog6_meta": "Varies",
-    "page_title_contact": "Contact — Admissions & Registration",
-    "contact_heading": "Get in <span class='gold'>Touch</span>",
-    "form_heading": "Registration Form",
-    "form_name": "Full Name",
-    "form_name_ph": "Enter your name",
-    "form_email": "Email",
-    "form_email_ph": "example@email.com",
-    "form_phone": "Phone Number",
-    "form_phone_ph": "05xxxxxxxx",
-    "form_program": "Desired Program",
-    "form_program_ph": "Select a program",
-    "form_message": "Your Message",
-    "form_message_ph": "Type your message here",
-    "form_submit": "Submit Application",
-    "form_success": "Your application has been submitted! We will contact you soon.",
-    "form_prog1": "Science Track",
-    "form_prog2": "Technology Track",
-    "form_prog3": "Languages Track",
-    "form_prog4": "Arts Track",
-    "form_prog5": "University Prep",
-    "form_prog6": "Distance Learning",
-    "footer_desc": "A leading Riyadh academy — education blending tradition with modernity.",
-    "footer_links": "Links",
-    "footer_progs": "Programs",
-    "footer_contact": "Contact",
-    "footer_prog1": "Science Track",
-    "footer_prog2": "Technology Track",
-    "footer_prog3": "Languages Track",
-    "footer_copy": "Al-Riyadh Academy — All Rights Reserved.",
-    "breadcrumb_home": "Home",
-    "breadcrumb_about": "About Us",
-    "breadcrumb_programs": "Programs",
-    "breadcrumb_contact": "Contact",
-    "cta_title": "Start Your Excellence Journey",
-    "cta_desc": "Register now and be part of our story",
-    "cta_btn": "Register Now",
-    "founder_quote": "Education is the most powerful weapon to change the world. At Al-Riyadh Academy, we plant the seeds of knowledge and nurture the minds of tomorrow.",
-    "founder_name": "— Dr. Abdulrahman Al-Sheikh, Founder",
-    "why1_title": "Inspiring Environment",
-    "why1_desc": "Integrated campus inspiring creativity",
-    "why2_title": "Accreditation",
-    "why2_desc": "Globally recognized certificates",
-    "why3_title": "Activities",
-    "why3_desc": "Sports, arts, volunteering, trips",
-    "why4_title": "Ongoing Support",
-    "why4_desc": "Academic advisor for every student",
-    "back_to_top": "Back to Top",
-    "contact_address": "Riyadh — Al Narjis District",
-    "contact_phone": "920001234",
-    "contact_email": "info@riyadh-academy.edu.sa",
-    "contact_hours": "7:30 AM — 3:00 PM (Sun — Thu)",
-    "contact_hours_label": "Hours",
-    "address_label": "Address",
-    "phone_label": "Phone",
-    "email_label": "Email"
-  }
-};</script>
+<script>window.__i18n={"ar": {"riyadh": "RIYADH", "أكاد": "أكاديمية", "الري": "الرياض", "الرئ": "الرئيسية", "عنال": "عن الأكاديمية", "البر": "البرامج", "اتصل": "اتصل بنا", "en": "EN", "منذ١": "منذ ١٩٩٥ — Since 1995", "شريك": "شريكك في", "التم": "التميز التعليمي", "نحوج": "نحو جيل واعٍ ومبدع — أكثر من ١٠ آلاف خريج وأكثر من ٢٠ برنامجاً تعليمياً معتمداً.", "برام": "برامجنا", "اكتش": "اكتشف المزيد", "عاما": "عاماً من التميز", "خريج": "خريج", "برنا": "برنامج", "لماذ": "لماذا ؟", "أكاد_2": "أكاديمية الرياض", "أكثر": "أكثر من ربع قرن من العطاء التعليمي يجمع بين الأصالة والابتكار", "تعلي": "تعليم معتمد", "جميع": "جميع برامجنا معتمدة من وزارة التعليم السعودية ومنظمة الاعتماد الأكاديمي الدولية.", "كفاء": "كفاءات متميزة", "أكثر_2": "أكثر من ٢٠٠ عضو هيئة تدريس من حملة الدكتوراه والماجستير من أفضل الجامعات العالمية.", "بيئة": "بيئة محفزة", "حرمج": "حرم جامعي متكامل بمساحة ٥٠ ألف متر مربع يشمل مختبرات ومكتبات ومرافق رياضية.", "شراك": "شراكات عالمية", "اتفا": "اتفاقيات تبادل طلابي مع ١٥ جامعة في ٨ دول حول العالم.", "برام_2": "برامجنا", "الأك": "الأكاديمية", "مسار": "مسارات تعليمية متنوعة تناسب جميع الطموحات", "بكال": "بكالوريوس", "علوم": "علوم الحاسب", "الذك": "الذكاء الاصطناعي، الأمن السيبراني، وهندسة البرمجيات", "دبلو": "دبلوم", "إدار": "إدارة الأعمال", "قياد": "قيادة، تسويق، وريادة أعمال", "ماجس": "ماجستير", "الهن": "الهندسة", "هندس": "هندسة مدنية، كهربائية، وميكانيكية", "بكال_2": "بكالوريوس", "الطب": "الطب والجراحة", "برنا_2": "برنامج طبي متكامل مع تدريب سريري", "استع": "استعرض جميع البرامج", "كلمة": "كلمة", "المد": "المدير", "نؤمن": "\"نؤمن في أكاديمية الرياض أن التعليم ليس مجرد نقل للمعرفة، بل بناء للإنسان والمجتمع. نسعى دائماً لتقديم تعليم متميز يجمع بين القيم الأصيلة وأحدث المناهج العالمية.\"", "دعبد": "— د. عبدالعزيز السليم، مدير الأكاديمية", "ابدأ": "ابدأ رحلتك معنا اليوم", "سجلا": "سجل الآن وانطلق نحو مستقبل مشرق", "تسجي": "تسجيل الآن", "riyadh_2": "RIYADH", "أكاد_3": "أكاديمية الرياض", "مؤسس": "مؤسسة تعليمية رائدة في المملكة العربية السعودية منذ 1995.", "رواب": "روابط", "عنال_2": "عن الأكاديمية", "البر_2": "البرامج", "الخد": "الخدمات الطلابية", "المك": "المكتبة الرقمية", "برام_3": "برامج", "علوم_2": "علوم الحاسب", "الهن_2": "الهندسة", "الطب_2": "الطب", "إدار_2": "إدارة الأعمال", "تواص": "تواصل", "الري_2": "الرياض — طريق الملك عبدالله", "920011": "920011223", "infor": "info@riyadh-academy.edu.sa", "٧٠٠ص": "٧:٠٠ ص — ٩:٠٠ م", "أ": "© 2026 أكاديمية الرياض — جميع الحقوق محفوظة."}, "en": {"riyadh": "RIYADH", "أكاد": "Academy", "الري": "Riyadh", "الرئ": "Home", "عنال": "About Us", "البر": "Programs", "اتصل": "Contact", "en": "EN", "منذ١": "Since 1995", "شريك": "Your Partner in", "التم": "Educational Excellence", "نحوج": "Towards a conscious, creative generation — over 10,000 graduates and 20+ accredited programs.", "برام": "Our Programs", "اكتش": "Discover More", "عاما": "Years of Excellence", "خريج": "Graduates", "برنا": "Programs", "لماذ": "Why ?", "أكاد_2": "Al-Riyadh Academy", "أكثر": "Over a quarter century of educational excellence blending tradition with innovation", "تعلي": "Accredited Education", "جميع": "All programs accredited by the Saudi Ministry of Education and international bodies.", "كفاء": "Distinguished Staff", "أكثر_2": "Over 200 faculty members with PhDs and Masters from top global universities.", "بيئة": "Inspiring Environment", "حرمج": "Integrated 50,000 sqm campus with labs, libraries, and sports facilities.", "شراك": "Global Partnerships", "اتفا": "Student exchange with 15 universities in 8 countries.", "برام_2": "Our Programs", "الأك": "the Academy", "مسار": "Diverse educational paths for all ambitions", "بكال": "Bachelor's", "علوم": "Computer Science", "الذك": "AI, Cybersecurity, and Software Engineering", "دبلو": "Diploma", "إدار": "Business Admin", "قياد": "Leadership, Marketing, Entrepreneurship", "ماجس": "Master's", "الهن": "Engineering", "هندس": "Civil, Electrical, Mechanical Engineering", "بكال_2": "Bachelor's", "الطب": "Medicine & Surgery", "برنا_2": "Integrated medical program with clinical training", "استع": "View All Programs", "كلمة": "Message from", "المد": "the Director", "نؤمن": "\"At Al-Riyadh Academy, we believe education is not just transferring knowledge, but building individuals and society. We blend authentic values with the latest global curricula.\"", "دعبد": "— Dr. Abdulaziz Al-Saleem, Academy Director", "ابدأ": "Start Your Journey Today", "سجلا": "Register now for a bright future", "تسجي": "Register Now", "riyadh_2": "RIYADH", "أكاد_3": "Al-Riyadh Academy", "مؤسس": "A leading educational institution in Saudi Arabia since 1995.", "رواب": "Links", "عنال_2": "About Us", "البر_2": "Programs", "الخد": "Student Services", "المك": "Digital Library", "برام_3": "Programs", "علوم_2": "Computer Science", "الهن_2": "Engineering", "الطب_2": "Medicine", "إدار_2": "Business Admin", "تواص": "Contact", "الري_2": "Riyadh — King Abdullah Road, PO Box 84122, Riyadh 11671", "920011": "920011223", "infor": "info@riyadh-academy.edu.sa", "٧٠٠ص": "7:00 AM — 9:00 PM", "أ": "© 2026 Al-Riyadh Academy — All Rights Reserved."}};</script><script src="script.js"></script>
 </body>
 </html>

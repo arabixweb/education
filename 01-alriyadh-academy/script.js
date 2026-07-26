@@ -1,161 +1,98 @@
-// 01 Alriyadh Academy — Final Script: i18n toggle + polish
-document.addEventListener('DOMContentLoaded', () => {
-  // ===== Loading Screen =====
-  const loadingEl = document.getElementById('loading');
-  if (loadingEl) setTimeout(() => loadingEl.classList.add('hide'), 600);
+(function() {
+  'use strict';
+  var LS = 'aracademy_lang';
+  var current = localStorage.getItem(LS) || 'ar';
+  document.documentElement.lang = current;
+  document.documentElement.dir = current === 'ar' ? 'rtl' : 'ltr';
 
-  // ===== Mobile Menu =====
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-  }
-
-  // ===== Active Nav Link =====
-  if (navLinks) {
-    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-    navLinks.querySelectorAll('a').forEach(a => {
-      const href = a.getAttribute('href');
-      a.classList.toggle('active', href === currentFile || (currentFile === '' && href === 'index.html'));
+  function apply(lang) {
+    var dict = window.__i18n && window.__i18n[lang];
+    if (!dict) return;
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      var val = dict[key];
+      if (!val) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+      if (el.tagName === 'OPTION') { el.textContent = val.replace(/<[^>]+>/g,''); return; }
+      el.innerHTML = val;
     });
-  }
-
-  // ===== i18n: bidirectional runtime matching =====
-  const langToggle = document.getElementById('langToggle');
-  let currentLang = 'ar';
-
-  function cleanText(s) { return (s || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(); }
-
-  // Build lookup: cleanedText -> key (from both languages)
-  const lookup = {};
-  if (window.__i18n) {
-    for (const lang of ['ar', 'en']) {
-      const dict = window.__i18n[lang] || {};
-      for (const [key, value] of Object.entries(dict)) {
-        const c = cleanText(value);
-        if (c.length >= 2) lookup[c] = key;
-      }
-    }
-  }
-
-  function tagElements() {
-    // Tag translatable elements by matching their text against the lookup
-    document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,button,li,label,cite,option,strong,em,small,div').forEach(el => {
-      if (el.hasAttribute('data-i18n')) return;
-      // Skip elements with element children EXCEPT allowed inline tags (span, strong, em, i, b)
-      const badChild = Array.from(el.children).some(c => !['SPAN','STRONG','EM','I','B','BR'].includes(c.tagName));
-      if (badChild) return;
-      const text = cleanText(el.textContent);
-      if (text.length < 2) return;
-      const key = lookup[text];
-      if (key) el.setAttribute('data-i18n', key);
-    });
-  }
-
-  function applyTranslation(lang) {
-    if (!window.__i18n || !window.__i18n[lang]) return;
-    const dict = window.__i18n[lang];
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const trans = dict[key];
-      if (!trans) return;
-      if (el.tagName === 'OPTION') { el.textContent = cleanText(trans); }
-      else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { /* placeholders below */ }
-      else el.innerHTML = trans;
-    });
-    // Placeholders
-    document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
-      const ph = el.getAttribute('data-i18n-ph');
-      if (ph && dict[ph]) el.placeholder = dict[ph];
-    });
-    if (langToggle) langToggle.textContent = lang === 'ar' ? 'EN' : 'عربي';
-    // Page title
-    const titleKey = document.title && lookup[cleanText(document.title)];
-    if (titleKey && dict[titleKey]) document.title = cleanText(dict[titleKey]);
+    var btn = document.getElementById('langToggle');
+    if (btn) btn.textContent = lang === 'ar' ? 'EN' : '\u0639\u0631\u0628\u064A';
+    current = lang;
+    localStorage.setItem(LS, lang);
   }
 
-  if (langToggle && window.__i18n) {
-    tagElements();
-    const saved = localStorage.getItem('edu_lang');
-    if (saved === 'en') { currentLang = 'en'; applyTranslation('en'); }
-    langToggle.addEventListener('click', () => {
-      currentLang = currentLang === 'ar' ? 'en' : 'ar';
-      localStorage.setItem('edu_lang', currentLang);
-      applyTranslation(currentLang);
-    });
-  }
-
-  // ===== Scroll Animations =====
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); observer.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in, [class*="feat-"], [class*="prog-"], [class*="waha-"], .why-card, .program-full-card').forEach(el => {
-    if (!el.classList.contains('fade-in')) el.classList.add('fade-in');
-    observer.observe(el);
-  });
-
-  // ===== Counter Animation =====
-  const counterObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseInt(el.dataset.target);
-      if (!target || el.dataset.animated === 'true') return;
-      el.dataset.animated = 'true';
-      let current = 0;
-      const step = Math.max(1, Math.ceil(target / 50));
-      const timer = setInterval(() => {
-        current = Math.min(current + step, target);
-        el.textContent = current.toLocaleString() + '+';
-        if (current >= target) clearInterval(timer);
-      }, 20);
-      counterObserver.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
-
-  // ===== Back to Top =====
-  let backToTop = document.getElementById('backToTop');
-  if (!backToTop) {
-    backToTop = document.createElement('button');
-    backToTop.id = 'backToTop';
-    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTop.setAttribute('aria-label', 'Back to top');
-    backToTop.style.cssText = 'position:fixed;bottom:24px;left:24px;z-index:999;width:44px;height:44px;border-radius:12px;background:#0d5c3f;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transform:translateY(20px);transition:0.4s;box-shadow:0 4px 16px rgba(0,0,0,.3);pointer-events:none;';
-    document.body.appendChild(backToTop);
-    window.addEventListener('scroll', () => {
-      const show = window.scrollY > 400;
-      backToTop.style.opacity = show ? '1' : '0';
-      backToTop.style.transform = show ? 'translateY(0)' : 'translateY(20px)';
-      backToTop.style.pointerEvents = show ? 'auto' : 'none';
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
-
-  // ===== Form Handling =====
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"], button:not([type])');
-      if (btn) btn.disabled = true;
-      const dict = window.__i18n && window.__i18n[currentLang];
-      const msgBox = document.createElement('div');
-      msgBox.style.cssText = 'padding:14px 18px;margin-top:16px;border-radius:10px;background:rgba(74,222,128,.15);color:#4ade80;text-align:center;font-weight:600;';
-      msgBox.textContent = (dict && dict.form_success) || (currentLang === 'ar' ? '✓ تم إرسال الطلب بنجاح!' : '✓ Submitted successfully!');
-      form.appendChild(msgBox);
-      setTimeout(() => { form.reset(); if (btn) btn.disabled = false; }, 2000);
-      setTimeout(() => msgBox.remove(), 4500);
+  document.addEventListener('DOMContentLoaded', function() {
+    var loading = document.getElementById('loading');
+    if (loading) setTimeout(function() { loading.classList.add('hide'); }, 600);
+    var menu = document.getElementById('menuToggle');
+    var nav = document.getElementById('navLinks');
+    if (menu && nav) {
+      menu.addEventListener('click', function() { nav.classList.toggle('open'); });
+      nav.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { nav.classList.remove('open'); });
+      });
+    }
+    if (nav) {
+      var cf = window.location.pathname.split('/').pop() || 'index.html';
+      nav.querySelectorAll('a').forEach(function(a) {
+        var h = a.getAttribute('href');
+        if (h === cf || (cf === 'index.html' && (h === 'index.html' || h === ''))) a.classList.add('active');
+      });
+    }
+    var toggle = document.getElementById('langToggle');
+    if (toggle && window.__i18n) {
+      apply(current);
+      toggle.addEventListener('click', function() { apply(current === 'ar' ? 'en' : 'ar'); });
+    }
+    // Counter animation
+    new IntersectionObserver(function(es) {
+      es.forEach(function(e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var target = parseInt(el.getAttribute('data-target'));
+        if (!target || el.getAttribute('data-animated') === 'true') return;
+        el.setAttribute('data-animated', 'true');
+        var cur = 0;
+        var step = Math.max(1, Math.ceil(target / 50));
+        var tmr = setInterval(function() {
+          cur = Math.min(cur + step, target);
+          el.firstChild.textContent = cur.toLocaleString();
+          if (cur >= target) clearInterval(tmr);
+        }, 20);
+      });
+    }, { threshold: 0.5 }).observe(document.querySelectorAll('[data-target]'));
+    new IntersectionObserver(function(es) {
+      es.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('show'); } });
+    }, { threshold: 0.1 }).observe(document.querySelectorAll('.feat-card, .prog-card, .sec-head, .director-msg, .hero-content'));
+    var bt = document.getElementById('backToTop') || (function() {
+      var b = document.createElement('button');
+      b.id = 'backToTop'; b.innerHTML = '<i class="fas fa-arrow-up"></i>';
+      b.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:999;width:44px;height:44px;border-radius:12px;background:#1a5c2a;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transform:translateY(20px);transition:0.4s;box-shadow:0 4px 16px rgba(0,0,0,.3);pointer-events:none;';
+      document.body.appendChild(b);
+      window.addEventListener('scroll', function() {
+        var s = window.scrollY > 400;
+        b.style.opacity = s ? '1' : '0';
+        b.style.transform = s ? 'translateY(0)' : 'translateY(20px)';
+        b.style.pointerEvents = s ? 'auto' : 'none';
+      });
+      b.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      return b;
+    })();
+    document.querySelectorAll('form').forEach(function(f) {
+      f.addEventListener('submit', function(e) { e.preventDefault();
+        var btn = f.querySelector('button[type="submit"]');
+        if (btn) btn.disabled = true;
+        var dict = window.__i18n && window.__i18n[current];
+        var m = document.createElement('div');
+        m.style.cssText = 'padding:14px 18px;margin-top:16px;border-radius:10px;background:rgba(74,222,128,.15);color:#4ade80;text-align:center;font-weight:600;';
+        m.textContent = (dict && dict.form_success) || (current === 'ar' ? '\u2713 \u062A\u0645 \u0627\u0644\u0625\u0631\u0633\u0627\u0644!' : '\u2713 Submitted!');
+        f.appendChild(m);
+        setTimeout(function() { f.reset(); if (btn) btn.disabled = false; }, 2000);
+        setTimeout(function() { m.remove(); }, 4500);
+      });
     });
   });
-
-  // ===== Smooth scroll =====
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
-});
+})();
