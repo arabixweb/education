@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عن الأكاديمية | أكاديمية الرياض</title>
+  <meta name="description" content="تعرف على أكاديمية الرياض – تاريخها، رؤيتها، رسالتها، وفريقها التعليمي.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner { padding: 140px 0 60px; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; text-align: center; }
+    .page-banner h1 { font-family: var(--font-ar); font-size: 2.5rem; }
+    .page-banner p { color: rgba(255,255,255,0.7); max-width: 600px; margin: 10px auto 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 60px; }
+    .about-grid.reverse { direction: ltr; }
+    .about-grid.reverse > * { direction: rtl; }
+    .about-grid img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .value-card { text-align: center; padding: 30px 20px; background: var(--bg-white); border-radius: var(--radius); box-shadow: var(--shadow); transition: 0.3s; }
+    .value-card:hover { transform: translateY(-5px); }
+    .value-card i { font-size: 2rem; color: var(--accent); margin-bottom: 12px; }
+    .value-card h4 { font-family: var(--font-ar); margin-bottom: 8px; }
+    .value-card p { font-size: 0.9rem; color: var(--text-muted); }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .team-card { text-align: center; padding: 40px 20px; background: var(--bg-white); border-radius: var(--radius); box-shadow: var(--shadow); transition: 0.3s; }
+    .team-card:hover { transform: translateY(-5px); }
+    .team-card img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; }
+    .team-card h4 { font-family: var(--font-ar); }
+    .team-card span { font-size: 0.85rem; color: var(--accent); }
+    .team-card p { font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i><span>أكاديمية <strong>الرياض</strong></span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html" class="active">عن الأكاديمية</a>
+        <a href="programs.html">البرامج</a>
+        <a href="contact.html">اتصل بنا</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <h1>عن أكاديمية الرياض</h1>
+      <p>تعرف على قصتنا، رؤيتنا، وفريقنا الذي يجعل الفرق.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="badge">قصتنا</span>
+          <h2 style="font-family:var(--font-ar);font-size:1.8rem;margin-bottom:16px;">رحلة <span class="gold">التميز</span> منذ 2001</h2>
+          <p style="color:var(--text-muted);margin-bottom:16px;">انطلقت أكاديمية الرياض في عام 2001 بحلم بسيط — إنشاء مؤسسة تعليمية تقدم منهاجاً إسلامياً متكاملاً إلى جانب أفضل الممارسات التربوية الحديثة. بدأنا بصف واحد و 15 طالباً، واليوم نحن حرم جامعي يضم أكثر من 1800 طالب وطالبة.</p>
+          <p style="color:var(--text-muted);">على مدار أكثر من ربع قرن، ظللنا أوفياء لرسالتنا: تخريج جيل مسلم معاصر يعتز بدينه، ويتقن علوم عصره، ويخدم وطنه ومجتمعه.</p>
+        </div>
+        <div><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%231b4d3d'/%3E%3Cpath d='M200 100 L400 100 L450 250 L150 250 Z' fill='%232a6b50'/%3E%3Crect x='180' y='130' width='80' height='120' rx='10' fill='%233a8a68'/%3E%3Crect x='340' y='130' width='80' height='120' rx='10' fill='%233a8a68'/%3E%3Crect x='260' y='100' width='80' height='150' rx='10' fill='%23c9a84c'/%3E%3Ctext x='300' y='200' text-anchor='middle' fill='white' font-size='14' font-family='sans'%3Eنحو القمة%3C/text%3E%3C/svg%3E" alt="رحلة الأكاديمية"></div>
+      </div>
+
+      <div class="about-grid reverse">
+        <div><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%231b4d3d'/%3E%3Ccircle cx='300' cy='200' r='120' fill='%232a6b50'/%3E%3Ccircle cx='300' cy='200' r='80' fill='%23c9a84c'/%3E%3Ctext x='300' y='210' text-anchor='middle' fill='%231b4d3d' font-size='40' font-weight='bold' font-family='sans'%3Eرؤية%3C/text%3E%3C/svg%3E" alt="رؤيتنا"></div>
+        <div>
+          <span class="badge">رؤيتنا ورسالتنا</span>
+          <h2 style="font-family:var(--font-ar);font-size:1.8rem;margin-bottom:16px;">ما <span class="gold">نؤمن</span> به ونعمل <span class="gold">من أجله</span></h2>
+          <p style="color:var(--text-muted);"><strong>الرؤية:</strong> الريادة في تقديم تعليم إسلامي معاصر يُخرج قادةً مؤثرين على المستوى المحلي والعالمي.</p>
+          <p style="color:var(--text-muted);"><strong>الرسالة:</strong> توفير بيئة تعليمية محفزة تجمع بين القرآن الكريم والعلوم العصرية، وتنمي الشخصية المتكاملة للطالب علمياً وإيمانياً ومهارياً.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-white);">
+    <div class="container">
+      <div class="section-head">
+        <span class="badge">قيمنا</span>
+        <h2>المبادئ التي <span class="gold">نقوم</span> عليها</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card"><i class="fas fa-hand-holding-heart"></i><h4>الإخلاص</h4><p>نعمل لوجه الله في كل ما نقدمه للطالب والمجتمع.</p></div>
+        <div class="value-card"><i class="fas fa-lightbulb"></i><h4>التميز</h4><p>لا نقبل إلا بأفضل المعايير في التعليم والتقييم.</p></div>
+        <div class="value-card"><i class="fas fa-people-arrows"></i><h4>الشراكة</h4><p>نبني جسوراً متينة بين المدرسة والأسرة والمجتمع.</p></div>
+        <div class="value-card"><i class="fas fa-tree"></i><h4>الاستدامة</h4><p>نستثمر في بناء إنسان قادر على العطاء والعمل المستمر.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="badge">فريق القيادة</span>
+        <h2>نخبة من <span class="gold">القادة</span> التربويين</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-light));margin:0 auto 12px;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-ar);font-weight:700;">أ.د</div><h4>أ.د. عبدالله القاسم</h4><span>المدير العام</span><p>دكتوراه في التربية الإسلامية – جامعة الإمام محمد بن سعود.</p></div>
+        <div class="team-card"><div style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--primary-light),var(--primary));margin:0 auto 12px;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-ar);font-weight:700;">د.</div><h4>د. محمد العتيبي</h4><span>نائب المدير للشؤون الأكاديمية</span><p>دكتوراه في المناهج وطرق التدريس – جامعة الملك سعود.</p></div>
+        <div class="team-card"><div style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#b8942e);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-ar);font-weight:700;">أ.</div><h4>أ. خالد الحازمي</h4><span>مدير شؤون الطلاب</span><p>ماجستير في الإدارة التربوية – خبرة 18 عاماً في المجال التعليمي.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> أكاديمية <strong>الرياض</strong></a>
+        <p>نحو جيل متمكن يجمع بين الأصالة والعصر — منذ 2001.</p>
+        <div class="social">
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <a href="about.html">عن الأكاديمية</a>
+        <a href="programs.html">البرامج</a>
+        <a href="contact.html">التسجيل</a>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <p><i class="fas fa-map-marker-alt"></i> الرياض — حي النرجس</p>
+        <p><i class="fas fa-phone"></i> 920011234</p>
+        <p><i class="fas fa-envelope"></i> info@alriyadh-academy.edu.sa</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

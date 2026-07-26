@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>البرامج | أكاديمية الرياض</title>
+  <meta name="description" content="برامج أكاديمية الرياض التعليمية: المرحلة الابتدائية، المتوسطة، الثانوية، ودورات التطوير المهني.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner { padding: 140px 0 60px; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; text-align: center; }
+    .page-banner h1 { font-family: var(--font-ar); font-size: 2.5rem; }
+    .page-banner p { color: rgba(255,255,255,0.7); max-width: 600px; margin: 10px auto 0; }
+    .prog-detail { background: var(--bg-white); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); margin-bottom: 30px; }
+    .prog-detail h3 { font-family: var(--font-ar); font-size: 1.4rem; margin-bottom: 12px; }
+    .prog-detail h3 span { color: var(--accent); }
+    .prog-detail p { color: var(--text-muted); margin-bottom: 16px; }
+    .prog-detail ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .prog-detail ul li::before { content: "✓ "; color: var(--accent); font-weight: bold; }
+    .fee-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .fee-table th, .fee-table td { padding: 14px 20px; text-align: center; border-bottom: 1px solid #eee; }
+    .fee-table th { background: var(--primary); color: white; font-family: var(--font-ar); }
+    .fee-table tr:hover { background: #f8f6f2; }
+    @media (max-width: 768px) {
+      .prog-detail ul { grid-template-columns: 1fr; }
+      .fee-table th, .fee-table td { padding: 10px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i><span>أكاديمية <strong>الرياض</strong></span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">عن الأكاديمية</a>
+        <a href="programs.html" class="active">البرامج</a>
+        <a href="contact.html">اتصل بنا</a>
+      </nav>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <h1>برامجنا الأكاديمية</h1>
+      <p>اكتشف مسارات التعليم المتكاملة التي نقدمها لطلابنا.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="prog-detail">
+        <h3>📚 <span>المرحلة الابتدائية</span></h3>
+        <p>المرحلة التأسيسية التي تبني الأساس العلمي والإيماني للطالب. نركز على إتقان القراءة والكتابة والحساب، مع برنامج مكثف لتحفيظ القرآن الكريم.</p>
+        <ul>
+          <li>القرآن الكريم والتجويد</li>
+          <li>اللغة العربية (قراءة، كتابة، نصوص)</li>
+          <li>الرياضيات — أنشطة تفاعلية</li>
+          <li>العلوم — استكشاف وتجارب</li>
+          <li>اللغة الإنجليزية — منهج عالمي</li>
+          <li>التربية الفنية والبدنية</li>
+        </ul>
+      </div>
+
+      <div class="prog-detail">
+        <h3>🏫 <span>المرحلة المتوسطة</span></h3>
+        <p>تعمق في العلوم الشرعية واللغوية والعلمية. نبدأ برامج التوجيه الأكاديمي والمهني لمساعدة الطالب على اكتشاف مساره.</p>
+        <ul>
+          <li>التفسير والحديث والفقه</li>
+          <li>النحو والصرف والبلاغة</li>
+          <li>الرياضيات المتقدمة</li>
+          <li>الفيزياء والكيمياء — معملياً</li>
+          <li>التاريخ والجغرافيا</li>
+          <li>مهارات البحث والتفكير الناقد</li>
+        </ul>
+      </div>
+
+      <div class="prog-detail">
+        <h3>🎓 <span>المرحلة الثانوية</span></h3>
+        <p>مساران متخصصان يعدان الطالب للالتحاق بالجامعات المحلية والعالمية. بالإضافة إلى برنامج الإعداد لاختبارات القدرات والتحصيلي.</p>
+        <p><strong>المسار الشرعي:</strong> الفقه المقارن، أصول الفقه، العقيدة، التفسير التحليلي، الخطابة.</p>
+        <p><strong>المسار التطبيقي:</strong> الرياضيات المتقدمة، الفيزياء، الكيمياء، الأحياء، البرمجة وتقنية المعلومات.</p>
+      </div>
+
+      <div class="prog-detail">
+        <h3>💼 <span>برامج التطوير المهني</span></h3>
+        <p>دورات تدريبية للمهنيين والطلاب في أحدث المجالات، بشهادات معتمدة من المؤسسة العامة للتدريب التقني والمهني.</p>
+        <ul>
+          <li>القيادة والإدارة التربوية</li>
+          <li>البرمجة وتطوير الويب</li>
+          <li>الذكاء الاصطناعي وتحليل البيانات</li>
+          <li>مهارات اللغة الإنجليزية — TOEFL/IELTS</li>
+          <li>الخطابة والإلقاء</li>
+        </ul>
+      </div>
+
+      <div class="section-head" style="margin-top:60px;">
+        <span class="badge">الرسوم الدراسية</span>
+        <h2>خطط <span class="gold">الدفع</span> والرسوم <span class="gold">التنافسية</span></h2>
+      </div>
+      <table class="fee-table">
+        <tr><th>المرحلة</th><th>الرسوم السنوية (ريال سعودي)</th><th>خيارات الدفع</th></tr>
+        <tr><td>الابتدائية</td><td>28,000</td><td>دفعة واحدة / قسطين / 4 أقساط</td></tr>
+        <tr><td>المتوسطة</td><td>32,000</td><td>دفعة واحدة / قسطين / 4 أقساط</td></tr>
+        <tr><td>الثانوية</td><td>36,000</td><td>دفعة واحدة / قسطين / 4 أقساط</td></tr>
+        <tr><td>دورات مهنية</td><td>تبدأ من 2,500</td><td>حسب الدورة</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> أكاديمية <strong>الرياض</strong></a>
+        <p>نحو جيل متمكن يجمع بين الأصالة والعصر — منذ 2001.</p>
+        <div class="social">
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <a href="about.html">عن الأكاديمية</a>
+        <a href="programs.html">البرامج</a>
+        <a href="contact.html">التسجيل</a>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <p><i class="fas fa-map-marker-alt"></i> الرياض — حي النرجس</p>
+        <p><i class="fas fa-phone"></i> 920011234</p>
+        <p><i class="fas fa-envelope"></i> info@alriyadh-academy.edu.sa</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 أكاديمية الرياض — جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

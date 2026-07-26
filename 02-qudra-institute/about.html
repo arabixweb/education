@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عن المعهد | معهد قدرة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner { padding: 130px 0 50px; background: linear-gradient(135deg,var(--primary-dark),var(--primary)); color: white; text-align: center; }
+    .page-banner h1 { font-size: 2.5rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 50px; }
+    .about-grid img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+    .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .stats-row .stat-box { background: var(--bg-white); padding: 24px; border-radius: var(--radius); text-align: center; box-shadow: var(--shadow); }
+    .stats-row .stat-box h3 { color: var(--accent); font-size: 1.8rem; }
+    @media (max-width:768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><i class="fas fa-bolt"></i><span>معهد <strong>قدرة</strong></span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html" class="active">عن المعهد</a>
+        <a href="courses.html">الدورات</a>
+        <a href="contact.html">اتصل بنا</a>
+      </nav>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <section class="page-banner"><div class="container"><h1>عن معهد قدرة</h1><p style="color:rgba(255,255,255,0.7);">نبني قدرات الوطن — تدريب تقني ومهني بمستوى عالمي.</p></div></section>
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div><span class="badge">من نحن</span><h2 style="font-size:1.8rem;margin-bottom:16px;">أكثر من <span class="blue">معهد</span> — منصة <span class="blue">تمكين</span> وطنية</h2><p style="color:var(--text-muted);margin-bottom:14px;">تأسس معهد قدرة عام 2018م استجابة للحاجة المتزايدة للكفاءات التقنية المؤهلة في سوق العمل السعودي. نقدم أكثر من 85 دورة تدريبية في مجالات التقنية والإدارة، صممت بالتعاون مع خبراء عالميين.</p><p style="color:var(--text-muted);">رؤيتنا واضحة: أن نكون الخيار الأول للشباب السعودي الطموح نحو مسيرة مهنية ناجحة في قطاع التقنية والأعمال.</p></div>
+        <div><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%230a2558'/%3E%3Ccircle cx='300' cy='200' r='140' fill='%231a3f7a'/%3E%3Ctext x='300' y='215' text-anchor='middle' fill='%232b7fff' font-size='50' font-weight='bold'%3Eقدرة%3C/text%3E%3C/svg%3E" alt="عن المعهد"></div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box"><h3>2018</h3><p>عام التأسيس</p></div>
+        <div class="stat-box"><h3>85+</h3><p>دورة تدريبية</p></div>
+        <div class="stat-box"><h3>12,000+</h3><p>خريج وخريجة</p></div>
+        <div class="stat-box"><h3>92%</h3><p>نسبة التوظيف</p></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-bolt"></i>معهد <strong>قدرة</strong></a><p>تمكين الكفاءات الوطنية لسوق العمل — منذ 2018.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="footer-col"><h4>روابط</h4><a href="about.html">عن المعهد</a><a href="courses.html">الدورات</a><a href="contact.html">التسجيل</a></div>
+      <div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي العليا</p><p><i class="fas fa-phone"></i> 920022345</p><p><i class="fas fa-envelope"></i> info@qudra-institute.edu.sa</p></div>
+    </div>
+    <div class="footer-bottom container"><p>© 2026 معهد قدرة — جميع الحقوق محفوظة.</p></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

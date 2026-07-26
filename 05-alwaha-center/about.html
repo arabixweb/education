@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عن المركز | مركز الواحة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner { padding: 130px 0 50px; background: linear-gradient(135deg,#2c2520,#4d3e36); color: white; text-align: center; }
+    .page-banner h1 { font-size: 2.5rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 40px; }
+    .about-grid img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+    @media (max-width:768px) { .about-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header"><div class="container header-inner"><a href="index.html" class="logo"><i class="fas fa-seedling"></i><span>مركز <strong>الواحة</strong></span></a><nav class="nav" id="nav"><a href="index.html">الرئيسية</a><a href="about.html" class="active">عن المركز</a><a href="programs.html">برامجنا</a><a href="contact.html">اتصل بنا</a></nav><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></header>
+  <section class="page-banner"><div class="container"><h1>عن مركز الواحة</h1><p style="color:rgba(255,255,255,0.7);">نحو مجتمع متعلم ومبدع.</p></div></section>
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div><span class="badge">قصتنا</span><h2 style="font-size:1.6rem;margin-bottom:16px;">من <span class="coral">فكرة</span> إلى <span class="coral">واحة</span> تعليمية</h2><p style="color:var(--text-muted);margin-bottom:14px;">انطلق مركز الواحة عام 2015 في جدة بحلم بسيط: إنشاء مساحة تعليمية مجتمعية تتيح للجميع — أطفالاً وكباراً — فرصة التعلم والإبداع في بيئة داعمة.</p><p style="color:var(--text-muted);">اليوم، يقدم المركز أكثر من 25 برنامجاً تعليمياً وتدريبياً، ويخدم أكثر من 5,000 مستفيد سنوياً.</p></div>
+        <div><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23c7574a'/%3E%3Ccircle cx='300' cy='200' r='100' fill='%23e8a87c'/%3E%3Ctext x='300' y='215' text-anchor='middle' fill='%232c2520' font-size='28' font-weight='bold'%3Eالواحة%3C/text%3E%3C/svg%3E" alt="المركز"></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"><div class="container footer-inner"><div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-seedling"></i>مركز <strong>الواحة</strong></a><p>نحو مجتمع متعلم ومبدع — في جدة منذ 2015.</p><div class="social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-snapchat"></i></a></div></div><div class="footer-col"><h4>روابط</h4><a href="about.html">عن المركز</a><a href="programs.html">برامجنا</a><a href="contact.html">التسجيل</a></div><div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> جدة — حي الشاطئ</p><p><i class="fas fa-phone"></i> 920055678</p><p><i class="fas fa-envelope"></i> info@alwaha-center.edu.sa</p></div></div><div class="footer-bottom container"><p>© 2026 مركز الواحة — جميع الحقوق محفوظة.</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

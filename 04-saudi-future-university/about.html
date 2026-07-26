@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عن الجامعة | جامعة المستقبل السعودي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-banner { padding: 130px 0 50px; background: linear-gradient(135deg,var(--primary-dark),var(--primary)); color: white; text-align: center; }
+    .page-banner h1 { font-size: 2.5rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 40px; }
+    .about-grid img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+    .numbers { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .numbers .box { background: var(--bg-white); padding: 28px 16px; border-radius: var(--radius); text-align: center; box-shadow: var(--shadow); }
+    .numbers .box h3 { color: var(--accent); font-size: 2rem; }
+    .numbers .box p { color: var(--text-muted); font-size: 0.9rem; }
+    @media (max-width:768px) { .about-grid, .numbers { grid-template-columns: 1fr; } .numbers { grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+  <header class="header"><div class="container header-inner"><a href="index.html" class="logo"><i class="fas fa-university"></i><span>جامعة <strong>المستقبل</strong></span></a><nav class="nav" id="nav"><a href="index.html">الرئيسية</a><a href="about.html" class="active">عن الجامعة</a><a href="programs.html">التخصصات</a><a href="contact.html">اتصل بنا</a></nav><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></header>
+  <section class="page-banner"><div class="container"><h1>عن الجامعة</h1><p style="color:rgba(255,255,255,0.7);">جامعة رقمية رائدة تجمع بين الجودة الأكاديمية والمرونة.</p></div></section>
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div><span class="badge">رؤيتنا</span><h2 style="font-size:1.8rem;margin-bottom:16px;">جامعة <span class="gold">بلا حدود</span> — تعليم <span class="gold">بلا تنازل</span></h2><p style="color:var(--text-muted);margin-bottom:14px;">تأسست جامعة المستقبل السعودي عام 2020م تحت رعاية وزارة التعليم، لتكون أول جامعة رقمية متكاملة في المملكة. نقدم برامج البكالوريوس والماجستير عبر منصة تعليمية ذكية تجمع بين المحاضرات المباشرة والتفاعلية والمحتوى المسجل.</p><p style="color:var(--text-muted);">نؤمن بأن التعليم العالي الجيد يجب أن يكون متاحاً للجميع بغض النظر عن الموقع الجغرافي أو الظروف الشخصية.</p></div>
+        <div><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%232d1b69'/%3E%3Cpath d='M200 80 L400 80 L450 250 L150 250 Z' fill='%233a217a'/%3E%3Ccircle cx='300' cy='180' r='60' fill='%23d4a843'/%3E%3Ctext x='300' y='192' text-anchor='middle' fill='%232d1b69' font-size='28' font-weight='bold'%3ESFU%3C/text%3E%3C/svg%3E" alt="الجامعة"></div>
+      </div>
+      <div class="numbers">
+        <div class="box"><h3>15</h3><p>تخصص بكالوريوس</p></div>
+        <div class="box"><h3>8</h3><p>ماجستير</p></div>
+        <div class="box"><h3>25,000+</h3><p>طالب</p></div>
+        <div class="box"><h3>600+</h3><p>عضو هيئة تدريس</p></div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"><div class="container footer-inner"><div class="footer-col"><a href="index.html" class="logo"><i class="fas fa-university"></i>جامعة <strong>المستقبل</strong></a><p>جامعة رقمية رائدة — من السعودية للعالم.</p><div class="social"><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div><div class="footer-col"><h4>روابط</h4><a href="about.html">عن الجامعة</a><a href="programs.html">التخصصات</a><a href="contact.html">التقديم</a></div><div class="footer-col"><h4>تواصل</h4><p><i class="fas fa-map-marker-alt"></i> الرياض — حي القدس</p><p><i class="fas fa-phone"></i> 920044567</p><p><i class="fas fa-envelope"></i> info@saudifuture.edu.sa</p></div></div><div class="footer-bottom container"><p>© 2026 جامعة المستقبل السعودي — جميع الحقوق محفوظة.</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

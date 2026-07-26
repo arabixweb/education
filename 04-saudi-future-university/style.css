@@ -1,0 +1,91 @@
+/* ===== Saudi Future University — Modern Digital University ===== */
+/* Theme: Royal Purple + Bright Gold — Prestigious, innovative, futuristic */
+
+:root {
+  --primary: #2d1b69;
+  --primary-dark: #1a0f3d;
+  --primary-light: #4a2d94;
+  --accent: #d4a843;
+  --accent-light: #e8c55a;
+  --bg-light: #f8f6fd;
+  --bg-white: #ffffff;
+  --text-dark: #1a1230;
+  --text-muted: #5e5280;
+  --radius: 16px;
+  --shadow: 0 8px 30px rgba(45,27,105,0.12);
+  --shadow-lg: 0 20px 60px rgba(45,27,105,0.20);
+  --font: 'Cairo', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text-dark); background: var(--bg-light); line-height: 1.7; direction: rtl; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(26,15,61,0.95); backdrop-filter: blur(12px); }
+.header .container { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; font-size: 1.3rem; }
+.logo i { font-size: 1.5rem; color: var(--accent); }
+.logo strong { color: var(--accent); }
+.nav { display: flex; gap: 28px; }
+.nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+.nav a:hover, .nav a.active { color: var(--accent-light); }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger span { width: 26px; height: 2.5px; background: white; border-radius: 3px; }
+
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 35%, #3a217a 100%); padding-top: 70px; }
+.hero-bg { position: absolute; inset: 0; opacity: 0.06; background: radial-gradient(ellipse at 70% 30%, var(--accent) 0px, transparent 300px); }
+.hero-content { position: relative; z-index: 1; text-align: center; color: white; padding: 80px 0; }
+.hero-tagline { display: inline-block; padding: 6px 24px; background: rgba(212,168,67,0.15); border: 1px solid rgba(212,168,67,0.3); border-radius: 50px; font-size: 0.82rem; font-weight: 600; margin-bottom: 20px; color: var(--accent-light); }
+.hero-content h1 { font-size: 3rem; font-weight: 900; line-height: 1.3; margin-bottom: 18px; }
+.hero-content .gold { color: var(--accent); }
+.hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 640px; margin: 0 auto 32px; }
+.hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 55px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 30px; border-radius: 50px; font-family: var(--font); font-weight: 700; font-size: 1rem; text-decoration: none; transition: 0.3s; }
+.btn-primary { background: var(--accent); color: var(--primary-dark); }
+.btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212,168,67,0.35); }
+.btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.25); color: white; }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.hero-stats { display: flex; justify-content: center; gap: 50px; }
+.stat { text-align: center; }
+.stat .num { display: block; font-size: 2.3rem; font-weight: 900; color: var(--accent); }
+.stat .label { font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+
+.section { padding: 90px 0; }
+.section-head { text-align: center; margin-bottom: 50px; }
+.section-head h2 { font-size: 2rem; font-weight: 700; }
+.section-head .gold { color: var(--accent); }
+.badge { display: inline-block; padding: 6px 20px; background: rgba(212,168,67,0.12); color: var(--accent); border-radius: 50px; font-weight: 600; font-size: 0.85rem; margin-bottom: 12px; }
+
+.features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+.feature-card { background: var(--bg-white); padding: 38px 28px; border-radius: var(--radius); text-align: center; box-shadow: var(--shadow); transition: 0.4s; }
+.feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.feat-icon { width: 66px; height: 66px; margin: 0 auto 18px; background: linear-gradient(135deg, var(--primary-light), var(--primary)); border-radius: 18px; display: flex; align-items: center; justify-content: center; }
+.feat-icon i { font-size: 1.6rem; color: var(--accent); }
+.feature-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.feature-card p { color: var(--text-muted); font-size: 0.93rem; }
+
+.footer { background: var(--primary-dark); color: rgba(255,255,255,0.65); padding: 50px 0 0; }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footer .logo { margin-bottom: 14px; }
+.footer-col p { margin-bottom: 8px; font-size: 0.88rem; }
+.footer-col h4 { color: white; margin-bottom: 14px; }
+.footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 8px; transition: 0.3s; }
+.footer-col a:hover { color: var(--accent); }
+.social { display: flex; gap: 12px; margin-top: 14px; }
+.social a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.55); transition: 0.3s; }
+.social a:hover { border-color: var(--accent); color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 18px 0; margin-top: 36px; text-align: center; font-size: 0.83rem; }
+
+@media (max-width: 992px) {
+  .features-grid { grid-template-columns: repeat(2,1fr); }
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-stats { gap: 30px; flex-wrap: wrap; }
+}
+@media (max-width: 768px) {
+  .nav { display: none; position: absolute; top: 70px; left: 0; right: 0; background: rgba(26,15,61,0.98); flex-direction: column; padding: 20px; }
+  .nav.open { display: flex; }
+  .hamburger { display: flex; }
+  .features-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
